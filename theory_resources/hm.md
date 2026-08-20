@@ -486,9 +486,9 @@ Hamma narsalarning bir xulosasini amalga oshirishingiz mumkin degan xulosaga kel
 
 Faqatgina bunday haydovchi, yo'lning hozirgi kundalik yuklarini yuklagan holda, har qanday favqulodda vaziyatlarda yo'l-transport hodisalaridan qochishga qodir.
 
-Ushbu kasbning tarixi g'ildirakli transportning paydo bo'lishi bilan boshlandi. Birinchi boshqariladigan bug' treylerlari Evropada paydo bo'ldi. Ular hamma narsaning tezligida harakat qilishdi 7 km/soat. Fransiyalik Nikolas Cugno ismlari (ichida bug' tashuvchini ishlab chiqish 1970 yil) va nemis muhandisi Karl Benz tarixga kirdilar, garchi ular turli asrlarda yashagan bo'lsalar ham. Benz benzin bilan ishlaydigan birinchi avtomobilni ixtiro qildi 1885 yil. Mashina biroz tezroq ketayotgan edi, odam nima qilayotgan edi.
+Ushbu kasbning tarixi g'ildirakli transportning paydo bo'lishi bilan boshlangan. Birinchi boshqariladigan bug' aravalari Yevropada paydo bo'lgan bo'lib, ular soatiga atigi 7 km tezlikda harakatlangan. Fransiyalik muhandis Nikola-Jozef Kyunyo (Nicolas-Joseph Cugnot) 1769-yilda bug' bilan yuruvchi arava yaratib, tarixga o'z yurish kuchiga ega bo'lgan birinchi transport vositasini ixtiro qilgan muhandis sifatida kirgan. Nemis muhandisi Karl Benz esa ulardan bir asr keyin, 1885-yilda benzin dvigateli bilan ishlaydigan birinchi avtomobilni yaratdi, bu esa zamonaviy avtomobilsozlik tarixining boshlanishi hisoblanadi.
 
- 1895 yil Rossiyada avtomobil transporti paydo bo'ldi. Uni faqat tajribali haydovchilar boshqarishi mumkin edi – haydovchilar. Birinchi haydovchilar sportchilar edi, shunda taksi haydovchilariga ehtiyoj paydo bo'ldi.
+Vaqt o'tishi bilan avtomobil transporti tobora rivojlanib, uni boshqarish alohida bilim, ko'nikma va mas'uliyat talab qiladigan mustaqil kasbga aylandi. Shu tariqa haydovchilik nafaqat texnik mahoratni, balki yuqori madaniyat va intizomni ham talab qiladigan professional faoliyat sifatida shakllandi.
 Kasb talablariga
 
 Shofyor in'om etilishi kerak:
@@ -545,12 +545,12 @@ Davlat avtomobil inspektsiyasi xodimi bilan uchrashganda haydovchi huquqiga ega:
 
     Haydovchi shaxsidagi malakali mutaxassislar har qanday faoliyat sohasida zarur, yuklarni va yo'lovchilarni tashishga ehtiyoj bo'lgan joyda.
 
-    A toifasi – umumiy og'irligigacha bo'lgan mototsikl yoki mototsiklni boshqarish huquqini beradi 400 kg;
-    B toifasi – gacha og'irlikdagi yo'lovchi avtoulovini boshqarishga imkon beradi 3500 kg gacha ko'taradi 8 odamlar. Ushbu toifadagi haydovchi ishlashga va treylergacha bo'lgan avtomashinani boshqarish huquqiga ega 750 kg.
-    Bilan toifa - ko'proq og'irlikdagi yuk mashinalarini boshqarish qobiliyatini ta'minlaydi 3,5 tonna ( kichik yuk tirkamasi bilan ham).
-    D toifasi - haydovchiga engil tirkamali transport vositalarini boshqarish imkonini beradi,
+    A toifasi – umumiy og'irligi 400 kg gacha bo'lgan mototsikllarni boshqarish huquqini beradi;
+    B toifasi – umumiy og'irligi 3500 kg gacha va 8 tagacha o'rindiqqa ega bo'lgan yengil avtomobillarni boshqarishga imkon beradi. Ushbu toifadagi haydovchi og'irligi 750 kg gacha bo'lgan tirkamali avtomobilni ham boshqarish huquqiga ega.
+    C toifasi – umumiy og'irligi 3,5 tonnadan ortiq bo'lgan yuk mashinalarini (og'irligi 750 kg gacha bo'lgan kichik tirkama bilan ham) boshqarish huquqini beradi.
+    D toifasi - haydovchiga 8 tadan ortiq o'rindiqqa ega bo'lgan yo'lovchi tashish transport vositalarini, ya'ni avtobuslarni boshqarish imkonini beradi.
 
-    BE toifasi , DE yoki Idoralar - og'irligi katta bo'lgan og'ir tirkamali transport vositalarini boshqarish huquqini beradi 750 Kg.
+    BE, CE va DE toifalari – tegishlicha B, C va D toifadagi transport vositalariga og'irligi 750 kg dan ortiq bo'lgan og'ir tirkamalarni ulab boshqarish huquqini beradi.
 
 Ko'nikmalar va xususiyatlar
 
@@ -604,18 +604,17 @@ Daromad
 
 Quyidagi omillar ish haqi darajasiga ta'sir qiladi:
 
-    ish joyi;
-    ishlagan soat soni.
+    ish joyi va tashkilotning faoliyat turi;
+    ishlagan soat soni va bajarilgan ish hajmi;
+    haydovchilik toifasi, malakasi va tajribasi.
 
-Siz xususiy transport bilan shug'ullanishingiz va o'zingiz mijozlarni qidirishingiz mumkin, unda daromad darajasi faqat sizga bog'liq bo'ladi.
+Xususiy tashish faoliyati bilan shug'ullanuvchi haydovchining daromadi ko'proq o'zining mehnat unumdorligiga bog'liq bo'ladi, chunki bunday holatda u mijozlarni o'zi izlaydi va daromad darajasi shu ishning hajmiga qarab belgilanadi.
 
-Avtobus haydovchisining o'rtacha qiymati bor 250 dollar, tramvay va trolleybus qaYerdadir- 300 AQSh dollari.
-
-    Xususiy korxonalar munosib daromad va'da qilmoqda, ammo davlat idoralari odatda doimiy ravishda to'laydilar.
+    Davlat tashkilotlarida ish haqi odatda barqaror va muntazam to'lanadi, xususiy korxonalarda esa daromad nisbatan yuqoriroq bo'lishi mumkin, biroq bu ko'proq ish hajmi va mijozlar soniga bog'liq bo'ladi.
 
 Qanday qilib haydovchi bo'lish kerak?
 
-Eng avvalo, tovuqlar bo'yicha mashg'ulotlardan o'tish va haydovchilik guvohnomasini olish talab qilinadi. ba'zan, ba'zi bir ta'lim o'rta texnik muassasalari ularni o'quv dasturiga kiritadilar.
+Eng avvalo, haydovchilik kurslaridan o'tish va haydovchilik guvohnomasini olish talab qilinadi. Ba'zan ayrim o'rta maxsus ta'lim muassasalari ham bu kurslarni o'z o'quv dasturiga kiritadilar.
 
     Haydovchining kasbida haydovchilik tajribasi ko'proq og'irliklarga ega., nazariyaga qaraganda. Uni sotib olish uchun, minish kerak, minib yurish – benzinning so'nggi tomchigacha.
     
@@ -709,17 +708,31 @@ Haydovchilarning YHQni buzganlik uchun javobgarliklari.
 
 Intizomiy javobgarlik.
 
+Intizomiy javobgarlik – haydovchining o‘z mehnat vazifalarini, ish tartib-intizomini yoki korxona ichki qoidalarini buzganligi uchun ish beruvchi tomonidan qo‘llaniladigan javobgarlik turidir. Bunga hayfsan e’lon qilish, ogohlantirish, mukofotdan mahrum etish yoki ishdan bo‘shatish kabi choralar kiradi. Ko‘pincha ish vaqtida intizomsizlikka yo‘l qo‘yish, texnik xizmat ko‘rsatish talablarini bajarmaslik yoki YHQ buzilishiga oid takroriy holatlar intizomiy javobgarlikka sabab bo‘ladi. Bu javobgarlik turi ko‘pincha og‘irroq huquqbuzarliklarning oldini olishga xizmat qiladi.
+
 Ma'muriy javobgarlik.
+
+Ma’muriy javobgarlik – yo‘l harakati qoidalarini buzganlik uchun eng ko‘p qo‘llaniladigan javobgarlik turi bo‘lib, u O‘zbekiston Respublikasining Ma’muriy javobgarlik to‘g‘risidagi kodeksiga muvofiq belgilanadi. Tezlik chegarasini buzish, svetofor talablariga rioya qilmaslik, xavfsizlik kamarini taqmaslik kabi holatlar uchun haydovchiga jarima solinishi, haydovchilik guvohnomasi ma’lum muddatga olib qo‘yilishi yoki boshqa ma’muriy ta’sir choralari qo‘llanilishi mumkin. Bu javobgarlik turi og‘ir oqibatlarga olib kelmagan, ammo yo‘l harakati xavfsizligiga tahdid soluvchi qoidabuzarliklarga nisbatan qo‘llaniladi.
 
 Fuqarolik javobgarligi.
 
+Fuqarolik javobgarligi – yo‘l-transport hodisasi natijasida boshqa shaxsning mol-mulkiga yoki sog‘lig‘iga yetkazilgan zararni pul yoki boshqa shaklda qoplash majburiyatidan iborat. Ushbu javobgarlik turi Fuqarolik kodeksi normalariga asoslanadi va aybdor haydovchi yoki transport vositasi egasi zimmasiga zarar ko‘rgan tomonga yetkazilgan moddiy hamda ma’naviy zararni to‘lash majburiyatini yuklaydi. Aksariyat hollarda bu javobgarlik majburiy sug‘urta (OSAGO) tizimi orqali amalga oshiriladi, bu esa jabrlanuvchi huquqlarining tezroq va kafolatlangan tarzda tiklanishini ta’minlaydi.
+
 Jinoiy javobgarlik.
+
+Jinoiy javobgarlik – yo‘l harakati qoidalarini og‘ir darajada buzish natijasida inson sog‘lig‘iga jiddiy zarar yetkazilgan yoki o‘lim holatlari yuz bergan taqdirda qo‘llaniladigan eng og‘ir javobgarlik turidir. Bunday holatlarda haydovchi O‘zbekiston Respublikasi Jinoyat kodeksining tegishli moddalari asosida javobgarlikka tortiladi va ozodlikni cheklash yoki ozodlikdan mahrum qilish kabi jazo choralari qo‘llanilishi mumkin. Mast holda transport vositasini boshqarish yoki YHQni qasddan qo‘pol ravishda buzish natijasida sodir bo‘lgan hodisalar ayniqsa qattiq jazolanadi. Shu sababli har bir haydovchi yo‘l harakati qoidalariga rioya qilishning o‘z hayoti va boshqalarning hayoti uchun naqadar muhim ekanini anglashi zarur.
 
 Yo‘l-transport hodisasining ekspertizasi maqsadi va vazifalari. O‘zbekiston Respublikasi Adliya vazirligining sud ekspertiza muassasalarida sud ekspertizasini o‘tkazish tartibi to‘g‘risidagi yo‘riqnoma. Yo‘l-transport hodisasining chizmasini chizish va materiallarni rasmiylashtirish. O‘zbekiston Respublikasining “Sud ekspertizasi to‘g‘risida”gi qonuni. Sud ekspertizasi tayinlash. Sud-avtotexnik ekspertiza. Surishtiruv ishlarini olib borish.
 
+Yo‘l-transport hodisasining sud-avtotexnik ekspertizasi – YTH sodir bo‘lish sababi, mexanizmi va unda ishtirok etgan transport vositalarining texnik holatini mutaxassislar tomonidan maxsus ilmiy-texnik usullar yordamida aniqlash jarayonidir. Ekspertiza davomida transport vositasining tormoz tizimi va boshqa texnik holati, yo‘l qoplamasi va sharoiti, haydovchining harakatlari hamda reaksiya vaqti kabi omillar batafsil tahlil qilinadi, bu esa hodisada kim aybdor ekanini va uning haqiqiy sababini aniq belgilashga yordam beradi. Ekspertiza xulosalari tergov va sud organlari uchun muhim dalil hisoblanadi, shu bilan birga yo‘l infratuzilmasi yoki texnik nazoratdagi kamchiliklarni aniqlab, kelgusida shunga o‘xshash hodisalarning oldini olish uchun ham asos bo‘lib xizmat qiladi.
+
 Avtomototransport sohasidagi sug‘urtalashga doir me'yoriy hujjatlar.
 
+Avtomobil egalarining fuqarolik javobgarligini majburiy sug‘urta qilish (OSAGO) tizimi O‘zbekiston Respublikasining tegishli qonunlari bilan tartibga solinadi. Ushbu sohadagi asosiy me’yoriy hujjatlar transport vositalari egalarining hamda yo‘lovchi va yuk tashuvchilarning fuqarolik javobgarligini majburiy sug‘urta qilish tartibini, sug‘urta badali va tovonini belgilaydigan qoidalarni o‘z ichiga oladi.
+
 Avtomototransport sohasidagi sug‘urtalashning ahamiyati va asosiy tamoyillari.
+
+Majburiy sug‘urtalashning asosiy ahamiyati shundaki, u yo‘l-transport hodisasi natijasida zarar ko‘rgan shaxslarning huquqlarini aybdor haydovchining moliyaviy imkoniyatidan qat’i nazar tezkor va kafolatlangan tarzda tiklashga xizmat qiladi. Shu bilan birga, sug‘urta tizimi haydovchida mas’uliyat hissini kuchaytiradi, chunki qoidabuzarliklar va YTH sodir etish sug‘urta badali miqdoriga hamda haydovchining obro‘siga bevosita ta’sir qiladi. Shu tariqa sug‘urta qonunchiligi nafaqat moddiy kafolat, balki haydovchilik madaniyatini shakllantiruvchi omillardan biri sifatida ham xizmat qiladi.
 
 “Transport vositalari egalarining fuqarolik javobgarligini majburiy sug‘urta qilish to‘g‘risida”gi O‘zbekiston Respublikasining Qonuni.
 
@@ -729,11 +742,15 @@ Sug‘urta qilish tartibi. Erkin va majburiy sug‘urta. Sug‘urta qilish bo‘
 
 Sug‘urta hodisasi.
 
+Sug‘urta hodisasi deb, shartnomada ko‘zda tutilgan sug‘urta tovonining to‘lanishiga asos bo‘ladigan, sug‘urtalangan shaxsning fuqarolik javobgarligini yuzaga keltiruvchi yo‘l-transport hodisasi tan olinadi.
+
 Sug‘urta tovonini to‘lashning asosi va tartiblari.
+
+Sug‘urta tovoni yetkazilgan zararning hajmini belgilovchi hujjatlar, jumladan YTH bo‘yicha tuzilgan chizma, ekspertiza xulosasi va boshqa tegishli materiallar asosida sug‘urta tashkiloti tomonidan belgilangan muddatlarda to‘lanadi. Shu bois har bir haydovchi YTH yuz berganda barcha zarur hujjatlarni to‘g‘ri va o‘z vaqtida rasmiylashtirishning naqadar muhim ekanini tushunishi lozim.
 
  
 
-3-mavzu. Haydovchilarning huquqiy madaniyati.
+Haydovchining huquqiy madaniyati
 
  
 

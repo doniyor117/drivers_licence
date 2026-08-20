@@ -122,7 +122,7 @@ Tegishli ruxsatnomasiz og‘ir vaznli, yirik gabaritli, xavfli yuklarni tashish 
 
  
 
-MJtK – 1252-modda.
+MJtK – 126-modda.
 
     Ko‘zgusimon va (yoki) tusi o‘zgartirilgan (qoraytirilgan) oynali, shuningdek tevarak-atrofni ko‘rishni cheklaydigan qoplamali transport vositalaridan foydalanish
 
@@ -172,7 +172,7 @@ Xorijiy tashuvchilarga tegishli bo‘lgan, shu jumladan ular tomonidan O‘zbeki
 
  
 
-MJtK – 126-modda.
+MJtK – 125-modda.
 
     Transport vositalaridan foydalanish qoidalarini buzish
 
@@ -200,7 +200,7 @@ Transportda belgilangan yong‘in xavfsizligi qoidalarini buzish —fuqarolarga 
 
  
 
-MJtK – 125-modda.
+MJtK – 123-modda.
 
     Transport vositalaridan axlat yoki boshqa narsalarni tashlab yuborish
 
@@ -217,8 +217,6 @@ Mahalliy va uzoq masofaga qatnaydigan poyezdlarda, daryo kemalarida belgilanmaga
 Havo kemalarida tamaki mahsulotini iste’mol qilish, —  bazaviy hisoblash miqdorining ikki baravari miqdorida jarima solishga sabab bo‘ladi.
 
  
-
-MJtK – 123-modda.
 
     Transport vositalaridan foydalanish qoidalarini buzish bo‘yicha ma’muriy javobgarlik holatlari
 
@@ -402,7 +400,7 @@ Xuddi shunday huquqbuzarlik ma’muriy jazo qo‘llanilganidan keyin bir yil dav
 
  
 
-MJtK – 130-modda.
+MJtK – 134-modda.
 
     Haydovchilarning yo‘l harakati qoidalarini buzishi transport vositalarining yoki boshqa mol-mulkning shikastlanishiga olib kelishi
 
@@ -424,7 +422,7 @@ Haydovchining yonida O‘zbekiston Respublikasining ichki ishlar organlari yoxud
 
  
 
-MJtK – 1351-modda.
+MJtK – 137-modda.
 
     Yo‘l-transport hodisasi yuz bergan joydan ketib qolish
 
@@ -494,7 +492,7 @@ Transport vositalari haydovchilarining yo‘l harakati qoidalarini buzishi jabrl
 
 Ancha miqdordagi moddiy zarar deganda, bazaviy hisoblash miqdorining besh baravari miqdoridan oshib ketgan zarar tushuniladi.
 
-MJtK – 134-modda.
+MJtK – 130-modda.
 
     Transport vositalari haydovchilarining temir yo‘lning o‘tish joylaridan o‘tish qoidalarini buzishi
 
@@ -518,7 +516,7 @@ Ushbu huquqbuzarlik ma’muriy jazo ikki marta qo‘llanilganidan keyin bir yil 
 
  
 
-MJtK – 1285-modda.
+MJtK – 128-3-modda.
 
     Transport vositalari haydovchilarining belgilangan harakat tezligini oshirib yuborishi
 
@@ -842,6 +840,8 @@ O‘sha harakat: a) o‘ta xavfli retsidivist tomonidan; b) uyushgan guruh tomon
 
 Qo‘shimcha ma’lumot uchun: O‘zbekiston Respublikasi Oliy Sudi Plenumining 1996 yil 20 dekabrdagi 37-sonli «Transport vositalarini olib qochish ishlari bo‘yicha sud amaliyoti haqida» qarori.
 
+JK – 266-modda.
+
     Transport vositalari harakati yoki ulardan foydalanish xavfsizligi qoidalarini buzish
 
 Transport vositasini boshqaruvchi shaxs tomonidan transport vositalari harakati yoki ulardan foydalanish xavfsizligi qoidalarini buzish badanga o‘rtacha og‘ir yoki og‘ir shikast yetkazilishiga sabab bo‘lsa, —bazaviy hisoblash miqdorining ellik baravarigacha miqdorda jarima yoki uch yuz oltmish soatgacha majburiy jamoat ishlari yoxud uch yilgacha axloq tuzatish ishlari bilan jazolanadi.
@@ -863,8 +863,6 @@ O‘sha qilmish: a) odamlar o‘limiga; b) halokatga; v) boshqa og‘ir oqibatla
 Qo‘shimcha ma’lumot uchun: O‘zbekiston Respublikasining «Yo‘l harakati xavfsizligi to‘g‘risida»gi Qonunining 17 va 18-moddalari, O‘zbekiston Respublikasi Vazirlar Mahkamasining 2012 yil 4 iyuldagi 191-sonli qarori bilan tasdiqlangan «Avtotransport vositalari konstruksiyasining foydalanish shartlari bo‘yicha xavfsizligi to‘g‘risida»gi umumiy texnik reglament va O‘zbekistan Respublikasi Vazirlar Mahkamasining 2022 yil 12 apreldagi 172-sonli qarori bilan tasdiqlangan «Yo‘l harakati qoidalari»ning 180-bandi, O‘zbekiston Respublikasi Oliy sudi Plenumining 2015 yil 26 iyundagi 10-sonli «Transport harakati va undan foydalanish xavfsizligiga qarshi jinoyatlar bilan bog‘liq ishlar yuzasidan sud amaliyotining ayrim masalalari to‘g‘risida»gi qarori.
 
  
-
-JK – 266-modda.
 
 ---
 
@@ -950,7 +948,7 @@ Ayb – javobgarlikka tortishning zarur shartidir. Aybning ikki shakli mavjud: q
 
 Jamiyatda o'rnatilgan va qonun asosida belgilangan tartib yoki umuman ijtimoiy yashash qoidalarini buzish – qonunchilikka zid harakatlar hisoblanadi. Qonunchilikka zid harakatlar o'z xususiyatlariga ko'ra jinoyat, nojo'ya harakat, intizomni buzish shaklida bo'ladi. Ko'p hollarda huquqbuzarlik qonunbuzarlik so'zi bilan hamohang bayon etiladi. Barcha huquqbuzarliklar – jinoyat emas. Shu bilan birga, qonunbuzarliklarning barchasi jinoyat bo'lmasligi mumkin. Jinoyat deb aytish uchun uning o'ziga xos belgilari bo'lishi zarur.
 
-Yo'l – transport hodisasida etkazilgan zarar uchun javobgarlik 133 – modda. Transport vositalari haydovchilarining yo'l harakati qoi  dalarini buzishi, jabrlanuvchiga engil tan jarohati yoki ancha miqdor-da moddiy zarar etkazilishiga olib kelishi – eng kam ish haqining uch baravaridan besh baravarigacha miqdorda jarima solishga yoki transport vositasini boshqarish huquqidan bir yildan uch yil muddatgacha mahrum etishga sabab bo'ladi.
+Yo'l – transport hodisasida etkazilgan zarar uchun javobgarlik 137 – modda. Transport vositalari haydovchilarining yo‘l harakati qoi  dalarini buzishi, jabrlanuvchiga engil tan jarohati yoki ancha miqdor-da moddiy zarar etkazilishiga olib kelishi – eng kam ish haqining uch baravaridan besh baravarigacha miqdorda jarima solishga yoki transport vositasini boshqarish huquqidan bir yildan uch yil muddatgacha mahrum etishga sabab bo'ladi.
 
 Ancha miqdordagi moddiy zarar deganda, eng kam ish haqining uch – besh baravari miqdoridan oshib ketgan zarar tushuniladi.
 
