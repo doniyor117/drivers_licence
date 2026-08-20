@@ -741,6 +741,14 @@ Bu belgi ko‘tarma ko‘prik yoki solda kesib o‘tish joylari oldida, jumladan
 
 Bu belgi daryo yoki suv havzasi qirg'oqlariga chiqish oldidan o'rnatiladi.Aholi punktlarida 50 - 100 metr, aholi punktlaridan tashqarida 150 - 300 metr masofa oldinda o‘rnatiladi. Belgi aholi punktlaridan tashqarida takrorlanadi va ikkinchi belgi 50 metrdan kam bo‘lmagan masofada o‘rnatiladi, hamda haydovchini bunday holatda tezlikni kamaytirib, e'tiborliroq bo‘lishi haqida qayta ogohlantiradi.
 
+    1.11.1. "Xavfli burilish"
+
+Bu belgi radiusi kichik yoki ko‘rinishi cheklangan, o‘ngga burilgan bitta xavfli burilish oldida o‘rnatiladi va haydovchini yo‘lning o‘ngga keskin burilishi borligi haqida ogohlantiradi. Belgi aholi punktlarida 50 - 100 metr, aholi punktlaridan tashqarida 150 - 300 metr masofa oldinda o‘rnatiladi. 1.12.1, 1.12.2 «Xavfli burilishlar» belgilaridan farqli o‘laroq, 1.11.1 belgisi faqat bitta burilish borligini bildiradi, ketma-ket keladigan bir nechta burilishni emas. Haydovchi bunday joylarda tezlikni oldindan kamaytirib, transport vositasi yo‘l chetiga chiqib ketmasligi yoki ag‘darilib ketmasligi uchun ehtiyot choralarini ko‘rishi lozim.
+
+    1.11.2. "Xavfli burilish"
+
+Bu belgi radiusi kichik yoki ko‘rinishi cheklangan, chapga burilgan bitta xavfli burilish oldida o‘rnatiladi va haydovchini yo‘lning chapga keskin burilishi borligi haqida ogohlantiradi. Belgi aholi punktlarida 50 - 100 metr, aholi punktlaridan tashqarida 150 - 300 metr masofa oldinda o‘rnatiladi. 1.12.1, 1.12.2 «Xavfli burilishlar» belgilaridan farqli o‘laroq, 1.11.2 belgisi faqat bitta burilish borligini bildiradi, ketma-ket keladigan bir nechta burilishni emas. Haydovchi bunday joylarda tezlikni oldindan kamaytirib, transport vositasi yo‘l chetiga chiqib ketmasligi yoki ag‘darilib ketmasligi uchun ehtiyot choralarini ko‘rishi lozim.
+
     1.12.1, 1.12.2. "Xavfli burilishlar"
 
 Ushbu belgilar transport vositasi harakatlanayotgan yo'lda ketma-ket bir nechta xavfli burilishlar borligi haqida haydovchini ogohlantiradi.Ular yo‘lning xavfli burilishlari oldidan, aholi  punktlarida  50- 100 metr masofada aholi punktlaridan tashqarida 150 - 300 metr masofada o‘rnatiladi. Haydovchi yo‘lning bunday qismlaridan tezlikni kamaytirib, ehtiyot choralarini ko‘rib, harakatlanishi lozim.
@@ -1663,6 +1671,12 @@ Ushbu yo'l belgisi qoidasini buzgan haydovchi eng kam oylik ish haqining 0,5 bar
     4.6. "Piyodalar yo'lkasi"
 
 Bu belgi o'rnatilgan yo'lda, faqat piyodalarning yurishiga ruxsat etiladi. Belgi yo'l, maydon, saylgoh, yo'lka va alohida ko'chada, butun yo'l kengligi bo'yicha harakatlanish faqat piyodalarga ruxsat etilganligini bildiradi.Transport vositalarining piyodalar uchun mo'ljallangan yo'ldan yurishi taqiqlanadi.
+
+Yo'l belgisi qoidasini buzgan haydovchi eng kam oylik ish haqining 0,5 baravari miqdorida ma'muriy javobgarlikka tortiladi.
+
+    4.6.1 “Piyodalar va velosipedchilarning birgalikdagi harakati tashkil etilgan yo‘lak”
+
+belgisi dumaloq shaklga ega va oq hoshiyali ko‘k fonga ega bo‘lib, unda velosiped va piyodaning ramzi oq rangda, bo‘ylama chiziq bilan ajratilmagan holda, yonma-yon tasvirlangan. Belgi o‘rnatilgan yo‘lak yoki yo‘l qismida piyodalar va velosipedchilar bir xil maydondan birgalikda, alohida ajratilgan chiziq yoki qoplama bo‘lmasdan, foydalanishlari mumkinligini bildiradi. Bu, 4.6.3 — 4.6.6 belgilari bilan belgilanadigan, piyodalar va velosipedchilar uchun yo‘l chizig‘i yoki qoplama turi bilan ikkita alohida yo‘lakka ajratilgan holatlardan farq qiladi. Ushbu belgi ta’sir oralig‘ida velosipedchi piyodalarning xavfsizligini ta’minlagan holda, ularga xalaqit bermasdan harakatlanishi shart. Belgining ta’siri, unda ko‘rsatilgan yo‘lak tugagan joyda yoki 4.6.2 «Piyodalar va velosipedchilarning birgalikdagi harakati tashkil etilgan yo‘lakning oxiri» belgisi o‘rnatilgan joyda yakunlanadi.
 
 Yo'l belgisi qoidasini buzgan haydovchi eng kam oylik ish haqining 0,5 baravari miqdorida ma'muriy javobgarlikka tortiladi.
 
@@ -5338,59 +5352,6 @@ Bunda transport vositasining haqiqiy vazni uni ishlab chiqargan korxona belgilag
 160-band Tashilayotgan yukning vazni va o‘qlarga tushadigan og‘irlik miqdorining taqsimlanishi.
 
 Tashilayotgan yukning vazni va o‘qlarga tushadigan og‘irlik miqdorining taqsimlanishi qonunchilik hujjatlarida belgilangan va ishlab chiqargan korxona tomonidan ushbu transport vositasi uchun belgilangan miqdordan oshmasligi kerak. Har bir transport vositasi uchun uning barcha asosiy texnik ko‘rsatkichlari belgilangan texnik hujjatlar tuziladi. Haydovchi transport vositasiga o‘tirishdan oldin, o‘z yo‘nalishini oqilona rejalashtirish uchun transport vositasida tashish mumkin bo‘lgan yukning ruxsat etilgan maksimal og‘irligini va uning o‘qlar bo‘ylab taqsimlanishini bilishi kerak.
-
-    TЕXNIK KO‘RSATKICHLAR
-    (Shevrolet Labo bortli)
-
-• Ishchi hajmi: 796 sm³
-
-• Quvvat (l/s): 28 ot kuchi.
-
-• Quvvat (kVt/ayl./daqiqa): 21 / 5000
-
-• Transmissiya: 5MT
-
-• Uzatmalar qutisi: mexanik
-
-• Uzatma turi: 2 WD
-
-• Kuzov uzunligi: 3 m 50 sm
-
-• Kuzov kengligi: 1 m 40 sm
-
-• Kuzov balandligi: 1 m 80 sm
-
-• Yoqilg‘i bakining hajmi (l): 36 l
-
-• Yoqilg‘i turi: benzin
-
-• Yoqilg‘i sarfi, shahar/magistral/qo‘shma (l): 8,6 /- / 7,8
-
-• Maksimal tezlik (km/soat): 95 km/soat
-
-• Tezlashuv 0 - 100 km/soat (sek): 30 sek
-
-    USKUNALAR
-
-• Dvigatel 0,8 l karbyurator F8CB
-
-• Mexanik uzatmalar qutisi 5 bosqichli
-
-• Gidravlik tormoz tizimi (old disk, orqa baraban)
-
-• Batareya 12V,35AH
-
-• Haydovchilar uchun asboblar to‘plami
-
-• Generator - 40 AMP
-
-• Zaxira g‘ildirak 155R12
-
-• Po‘lat disk 12 X 4.0, STEEL
-
-• Po‘lat benzin baki
-
-• Old faralarni sozlash funksiyasi
 
     161-band. Yuk tashishda harakatni boshlashdan oldin va harakatlanish vaqtida haydovchining vazifalari
 
