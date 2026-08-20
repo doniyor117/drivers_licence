@@ -557,61 +557,21 @@ Verbal ta’sir - bu so‘z va nutqimiz orqali ko‘rsatadigan ta’sirimizdir. 
 
 Noverbal ta’sirning ma’nosi «nutqsiz»dir. Bunga suhbatdoshlarning fazoda bir - birlariga nisbatan tutgan o‘rinlari, holatlari (yaqin, o‘zoq, intim), qiliqlari, mimika, pantomimika, qarashlar, bir - birini bevosita his qilishlar, tashqi qiyofa, undan chiqayotgan turli signallar (shovqin, hidlar) kiradi.
 
-Sutkaning qorong'i va g'ira-shira vaqtida harakatlanish.
+Haydovchining yo‘ldagi nutqsiz (noverbal) muloqot vositalari
 
-Avtotransport vositasini yetarlicha ko'rinmaslik sharoitida, ya'ni qorong'i paytlarda, tunda boshqarish haydovchidan katta mas'uliyat talab qiladi. Qorong'i tusha boshlashi bilan yo'llarda joylashgan narsalarning ko'rinishi yomonlashadi, avtomobil chiroqlari cheklangan masofalarni ko'rsatadi, haydovchining reaksiya vaqti kunduzgiga qaraganda ikki baravar oshadi. Tunda va yetarlicha ko'rinmaslik sharoitida narsalarning rangini sezish deyarli mumkin emas, ular rangi bilan emas, yorug'ligi bilan bir - biridan farq qiladi. Tunda transport vositasining ko'rinish masofasi kunduzgiga qaraganda ikki baravar kamayadi, lekin haydovchiga u uzoq masofada turgandek tuyuladi.
+Yo‘l harakati jarayonida haydovchilar bir-birlari, piyodalar va boshqa yo‘l harakati qatnashchilari bilan doimiy ravishda so‘zsiz, ya’ni noverbal yo‘l bilan muloqotda bo‘ladilar. Burilish ko‘rsatkichi (indikator)ning o‘z vaqtida yoqilishi haydovchining keyingi manyovri haqida boshqa ishtirokchilarga oldindan xabar beruvchi eng muhim signal hisoblanadi. Ko‘rsatkichni kech yoqish yoki umuman ishlatmaslik boshqa haydovchilarning niyatni noto‘g‘ri baholashiga, natijada to‘qnashuv yoki keskin tormozlashga olib kelishi mumkin.
 
-Nurning bir - birini yutishi oqibatida yo'l qoplamasining ravonligi yaxshidek ko'rinadi. Aslida, yo'ldagi qoramtir tusdagi to'siqlarni ko'rish juda ham yomonlashadi.
+Piyoda bilan ko‘z aloqasini o‘rnatish yo‘l harakatidagi eng muhim noverbal muloqot ko‘rinishlaridan biridir. Piyoda o‘tish joyiga yaqinlashganda ko‘pincha haydovchi bilan ko‘z uchrashtirishga intiladi – shu tariqa u haydovchi o‘zini ko‘rganiga ishonch hosil qiladi. Haydovchi ham piyodaning qarashiga, boshining harakatiga, qadamining sur’atiga qarab uning to‘xtash yoki yo‘lni kesib o‘tish niyatini oldindan taxmin qila oladi. Ko‘z aloqasi o‘rnatilmagan holatlarda haydovchi piyoda uni sezmagan yoki to‘xtamasligi mumkin deb hisoblab, ehtiyotkorlik chorasini oshirishi lozim.
 
-Yo'l qoplamasi ho'l bo'lganida oq rangdagi belgilar, yo'l chiziqlari va xavfsizlik orolchalari kabilarni hatto kunduz kuni ham yaxshi anglab bo'lmaydi, kunning yorug'lik nuri etishmaydigan paytlarida bu yanada murakkablashadi. Bunda g'ildiraklarning yo'l bilan ilashish koeffisientini kamayib ketishini ham unutmaslik kerak.
+Qo‘l ishorasi, bosh bilan imo qilish, farani bir marta miltillatish kabi harakatlar ham haydovchilar o‘rtasida keng tarqalgan noverbal muloqot vositalaridir. Masalan, tor yo‘lda qarama-qarshi haydovchiga farani bir marta miltillatib, unga yo‘l berilayotgani yoki xavf borligi haqida ogohlantirish bildiriladi, qo‘l bilan ishora qilib esa boshqa haydovchiga o‘tib ketishga ruxsat berilishi yoki minnatdorchilik izhor etilishi mumkin.
 
-Shahar yo'llarida harakatlanish.
+Tovush signalining ikki xil vazifasi bor. Xavfsizlik maqsadida berilgan qisqa signal boshqa ishtirokchini yaqinlashib kelayotgan xavfdan ogohlantiradi va bu – muloqotning me’yoriy shakli hisoblanadi. Biroq uzoq, takrorlanuvchi va asabiy tarzda berilgan signal ko‘pincha tajovuzkorlik, jahl yoki noroziliqni ifodalaydi hamda boshqa haydovchida ham salbiy hissiy javob uyg‘otadi. Shu sababli tovush signalidan faqat zarurat tug‘ilganda, xavfsizlikni ta’minlash maqsadida foydalanish tavsiya etiladi.
 
-Yo'l harakati qoidalariga rioya qilingan harakatlanish tezligi qanchalik yuqori bo'lsa, yo'lning o'tkazuvchanlik imkoniyati shuncha yuqori bo'ladi. Shu bois, doimo transport vositalarining haydovchilari tezlikning harakat xavfsizligini ta'minlovchi behavotir me'yorini tanlay bilishlari zarur. Statistik ma'lumotlarga ko'ra, hozirgi kunda 75 - 80 foiz YTH lari tezlikni jilovlab, transportni boshqara olmaslik oqibatida kelib chiqmoqda. Shuning uchun transport vositasining tezligi doimo haydovchining nazoratida bo'lishi shart.
+Muloqot uslubining yo‘ldagi ziddiyatlarga ta’siri
 
-Aholi punktlarida transport vositalari tezligini soatiga 70 kilometrdan oshirmasdan harakatlanishga ruxsat etiladi.
+Haydovchining muloqot uslubi, ya’ni uning boshqa yo‘l harakati qatnashchilariga hamkorlik yoki tajovuzkorlik pozitsiyasidan yondashishi, yo‘ldagi ziddiyatlarning kelib chiqishi yoki oldini olinishida hal qiluvchi ahamiyat kasb etadi. Hamkorlikka asoslangan uslubda haydovchi boshqalarga o‘z vaqtida yo‘l beradi, xato qilgan haydovchiga nisbatan bag‘rikenglik ko‘rsatadi, o‘z niyatini ko‘rsatkich va tezlikni tekis kamaytirish orqali oldindan va aniq bildiradi. Tajovuzkor uslubda esa haydovchi tovush signalini asabiy ishlatadi, farani atayin miltillatib bezovta qiladi, yo‘l bermaydi, oldingi avtomobil bilan oraliq masofani atayin qisqartiradi – bunday xatti-harakatlar “yo‘l tajovuzi” deb ataluvchi holatning kelib chiqishiga sabab bo‘ladi.
 
-Har qanday yo'llarda:
-
-odam tashiyotgan yuk avtomobillariga tezlikni soatiga 60 kilometrdan oshirmasdan;
-
-mexanik transport vositalarini shatakka olgan transport vositalariga tezlikni soatiga 50 kilometrdan oshirmasdan;
-
-xavfli, og'ir vaznli va katta o'lchamli yuklarni tashiyotgan, tashkiliy jamlanmada harakatlanayotgan transport vositalariga YHXB bilan kelishilgan tezlikdan oshirmasdan harakatlanishga ruxsat etiladi.
-
-Haydovchilarga quyidagilar taqiqlanadi:
-
-tezlikni mazkur transport vositasining texnik tavsifnomasida ko'rsatilgan eng yuqori tezlikdan oshirish;
-
-tezlikni transport vositasiga o'rnatilgan taniqlik belgisi, ya'ni "Tezlik cheklangan" belgida ko'rsatilgan qiymatidan oshirish;
-
-zarurat bo'lmaganda, juda past tezlikda harakatlanib, boshqa transport vositalariga xalaqit berish;
-
-yo'l-transport hodisasining oldini olish zarurati bo'lmaganda, keskin tormoz berish.
-
-Qorong'i vaqtda va yetarlicha ko'rinmaydigan sharoitda, shuningdek, tunnellarda harakatlanayotgan barcha transport vositalari:
-
-- yo'lning yoritilmagan qismida uzoqni yoki yaqinni yorituvchi faralarini;
-
-- yo'lning yoritilgan qismida yaqinni yorituvchi faralarini;
-
-- yo'lning yoritilganligidan qat'i nazar, tirkamalarning gabarit chiroqlarini yoqishi kerak.
-
-Transport vositasi yo'lning yoritilmagan qismlarida harakatlanayotganida uzoqni yorituvchi faralar yoqiladi.
-
-Uzoqni yorituvchi faralarning nur taramlari markazga to'plangan holda 100 - 150 metr masofani kuchli yoritadi. Bunday kuchli yoritish qarama-qarshi yo'nalishdagi haydovchilarning ko'zlarini qamashtirishi mumkin. Shuning uchun ulardan foydalanishda belgilangan qoida va talabga rioya qilish kerak.
-
-Tartibga solinmagan chorrahalarda harakat xavfsizligi va tezlik yonlama ko'rinish masofasiga va chorraha hududini haydovchining ish o'rnidan ko'ruvchanligiga bog'liq bo'ladi.
-
-Ba'zi paytlarda chorraha yaqinidagi avtomobillar, ayniqsa, yuk avtomobillari avtobuslarning ko'rinish chegarasini cheklab qo'yishi mumkin. Chorrahada xavfsiz harakatlanish uchun haydovchi avtomobilning tezligini yonlama ko'rinish masofasiga qarab tanlashi kerak.
-
-Haydovchi uchun transport oqimida piyodalar katta xavf tug'diradi. Piyodalar to'plangan yoki ularning paydo bo'lish ehtimoli bo'lgan joylarga, ya'ni piyodalarning o'tish joylari va ularning to'planishi mumkin bo'lgan teatrlar, savdo do'konlari, muassasalar, tashkilotlar, zavodlar va boshqa shunga o'xshash joylarga yaqinlashganida, haydovchi bir paytda piyodalarni, transport vositasining harakatini va yo'ldagi joylashuv holatini ham kuzatishi zarur bo'ladi.
-
-Bunday vaziyatda avtomobilni xavfsiz boshqarish uchun haydovchi yo'l harakati jarayonida vujudga kelishi mumkin bo'lgan xavfli vaziyatlarni oldindan ko'ra bilishi kerak.
-
-Transport oqimida ko'rinish cheklanganligi uchun yengil avtomobil haydovchisi oraliq masofani oshirishi va barcha diqqat - e'tiborini oldingi avtomobil to'xtash ishorasiga qaratishi kerak.
-
-Har qanday xavfli burilish, tepalik va nishablik avtomobil boshqarish xavfini oshiradi. Odatda, keskin burilish oldidan ko'rinishi cheklangan bo'ladi. Keskin burilishlarda harakatlanish xavfsizligini ta'minlashning asosiy chorasi bu tezlikni kamaytirish. Tezlik kamayganda, avtomobilni yonga surilish yoki ag'darilish xavfi kamayadi va qarama-qarshi harakatlanishda, xavfsiz o'tib ketishda zaruriy chora ko'rishga imkoniyat ko'payadi. Burilishlarda avtomobil harakatlanayotganida markazdan qochirma kuch hosil bo'ladi va u avtomobilning yonga sirpanib yoki ag'anab ketishiga ham olib kelishi mumkin.
+Yo‘l tajovuzini kuchaytiruvchi omillarga tirbandlik, vaqt tanqisligi, kuchli hissiy hayajon, charchoq, shuningdek boshqa haydovchining xatosini shaxsiy haqoratdek qabul qilish kiradi. Bunday vaziyatda haydovchi vazminlik saqlashi, boshqa ishtirokchining xatosiga hissiy “javob” qaytarmasligi, tovush signali yoki farani tajovuz vositasiga aylantirmasligi zarur. Ziddiyatni yumshatishning eng samarali yo‘llari – oraliq masofani oshirish, tajovuzkor haydovchidan asta uzoqlashish, uzoq davom etadigan ko‘z aloqasidan saqlanish (chunki bu holat tajovuzkor tomonda qo‘shimcha tahrik uyg‘otishi mumkin) va vaziyatni keskinlashtirmasdan, sabr-toqat bilan harakatlanishdir.
 
 Muloqotning perseptiv jihati – bu kishining kishi tomonidan idrok etilishi, tushunilishi va baholanishi demakdir. Muloqot jarayonida kamida ikki kishi ishtiroq etadi. Kishining qiyofasi, xatti – harakati asosida suhbatdosh haqida tasavvur hosil qilinadi. Bir-birini idrok qilishda quyidagi mehanizmlar g‘oyat muhimdir:
 
@@ -635,191 +595,22 @@ Muloqot turlari
 
 Yoki subyekt- obyektli (monologik) bo'lishi mumkin.
 
-Agar yo'l sirpanchiq bo'lsa, sirpanib ketish ehtimoli yanada ortadi. Burilishlarga yaqinlashayotganda haydovchi harakat tezligini sirpanib ketish sharti bo'yicha bo'lgan chegara tezligidan pasaytirib harakatlanishi kerak. Rulning burilish burchagini asta - sekin ko'paytirib borib, burilishning yarmiga kelganda yana tezlikni oshira boshlashi mumkin. Rulni burayotganda haydovchi rul chambaragini qo'yib yubormasligi va uni doim bitta qo'li bilan ushlab turib, ikkinchisini sirpantirgan holda kerakli holatga o'tkazib so'ng mahkam ushlagach, burishni davom ettiradi.
+Haydovchi – piyoda – haydovchi o‘rtasida o‘zaro tushunish va bashorat qilish mumkinligi
 
-Agar burilishni o'tayotgan paytda qo'shimcha ravishda tezlikni kamaytirishga to'g'ri kelsa, yon tomonga surishning oldini olish uchun dvigatel bilan tormozlash tavsiya etiladi. Ishchi tormozi bilan tormozlash xavfli. Haydovchi burilishga kirishdan oldin tezlikni kamaytirishga qulay vaziyat tanlashi lozim. Burilayotgan paytda tormozlash xavflidir, lekin juda vaqtli tormozlash ham to'g'ri emas. Rul chambaragini burish arafasida tormozlashni tugatish maqsadga muvofiq. Burilishni o'tayotganda akselerator tepkisi yarim bosilgan bo'lishi va uzatmalarni almashtirmaslik maqsadga muvofiqdir. Burilishdan chiqayotganda rul chambaragini burish bilan bir vaqtda tezlikni ravon oshirish mumkin.
+Yo‘l harakati xavfsizligining muhim sharti – bu harakat ishtirokchilarining bir-birlari xatti-harakatini oldindan bashorat qila olishi, ya’ni ularning xulq-atvori bashoratli bo‘lishidir. Haydovchi boshqa haydovchining, piyodaning yoki velosipedchining keyingi harakatini qanchalik aniq taxmin qila olsa, xavfli vaziyatning oldini olish imkoniyati shunchalik yuqori bo‘ladi. Aksincha, kutilmagan, birdaniga o‘zgargan xatti-harakat, masalan, ko‘rsatkichsiz burilish yoki to‘satdan yo‘lga chiqib qolgan piyoda, yo‘l-transport hodisalarining eng ko‘p uchraydigan sabablaridan biri hisoblanadi.
 
-Qisqa va yaxshi ko'rinadigan balandliklardan tezlikni oshirish bilan o'tib ketish mumkin. Agar yo'l balandlikka ko'tariladigan qiyalik bo'lsa, haydovchi pastroq uzatmada avtomobilni tezlashtirib borib, bu balandlikdan o'tishi, agar bu uzatmada dvigatelning quvvati etmay qolsa, past pog'onaga zudlik bilan o'tib olish kerak. Yuqoriga chiqayotganda to'xtash umuman mumkin emas. Balandlik tugayotgan joyda haydovchidan e'tiborni yanada kuchaytirish talab etiladi, chunki balandlikdan keyin tik nishablik boshlanishi mumkin.
+Piyodaning yo‘l chetida to‘xtab turishi, haydovchiga qarashi, qadamini sekinlashtirishi kabi belgilar haydovchiga uning niyatini bashorat qilishga yordam beradi. Xuddi shunday, haydovchining tezligini tekis kamaytirishi, ko‘rsatkichni oldindan yoqishi piyoda va boshqa haydovchilarga uning niyati haqida ishonchli axborot beradi. “Haydovchi ko‘radi, piyoda ko‘radi, ikkalasi ham bir-birini tushunadi” tamoyiliga asoslangan bunday o‘zaro tushunish, ayniqsa tartibga solinmagan piyodalar o‘tish joylarida va chorrahalarda halokatlarning oldini olishning asosiy vositalaridan biridir. Haydovchi – piyoda – haydovchi zanjiridagi har bir bo‘g‘in o‘z niyatini aniq va o‘z vaqtida bildirsa, boshqa ishtirokchilar ham unga mos ravishda harakat qilib, xavfli vaziyatlar ancha kamayadi.
 
-Past qiyalikka tushayotgan g'ildiraklarning yo'l bilan ilashish koeffisienti kamayadi, bu esa o'z navbatida avtomobilning turg'unligini kamayishiga olib keladi. Tormoz berayotganda ilashmani ajratmaslik kerak. Kichik uzatmada pastga harakatlanish va yonilg'i uzatishni kamaytirish tez - tez tormoz berishga bo'lgan ehtiyojni kamaytiradi, bu esa o'z navbatida tormoz barabanini o'ta darajada qizib ketishdan saqlaydi.
+Yo‘l harakatida samarali muloqotga xalaqit beruvchi omillar
 
-Qish vaqtida harakatlanish.
+Yo‘l sharoitida haydovchilar, piyodalar va boshqa ishtirokchilar o‘rtasidagi muloqot bir qator omillar tufayli qiyinlashadi yoki butunlay imkonsiz bo‘lib qoladi:
 
-Qorli yo'llarda faqat g'ildirak shibbalagan izlardan harakatlanish kerak. Biroz bo'lsada, g'ildirak izidan chiqish xavfli oqibatlarga olib kelishi mumkin, chunki yo'l chetidagi ariq va boshqa to'siqlar qor ostida ko'rinmasdan qolishi mumkin. Tezlikni pasaytirib, ehtiyotkorlik bilan harakatlanish kerak. Qor va qor bo'roni ham ko'rinishni yomonlashtiradi. Bunday sharoitlarda ham past tezlikda harakatlanish maqsadga muvofiq.
+- ko‘rish maydonining cheklanganligi – tunda, tumanda, yomg‘irda yoki avtomobil oynasining ifloslanishi natijasida haydovchi boshqa ishtirokchining imo-ishorasini, ko‘z qarashini yoki yuz ifodasini ko‘ra olmay qoladi, bu esa noverbal signallarning yo‘qolishiga olib keladi;
 
-Qor yog'ayotganda avtomobilni xavfsiz boshqarish ancha murakkablashadi. Qor yog'ayotganida haydovchi albatta oyna tozalagichlarni va oynaning isitish tizimini ishga tushirishi kerak. Haydovchi avtomobilni boshqarar ekan, yorug'lik ishoralarining chiroqlari ifloslanib qolishini unutmasligi va ularni tez - tez tozalab turishi zarur bo'ladi.
+- shovqin – dvigatel shovqini, boshqa transport vositalarining tovushi, salondagi baland musiqa haydovchining tovush signalini yoki eshitish orqali beriladigan boshqa ogohlantirishni payqashiga xalaqit beradi;
 
-Kechuv joyi muzlagan davrlarda undan o'tish uchun muzning qalinligi va mustahkamligi tekshiriladi. Buning uchun har 15 - 25 m  masofada muz teshilib, uning qalinligi aniqdanadi. 15 sm qalinlikdagi muz 2 tonna og'irlikdagi avtomobilni, muzning har 5 sm.ga qalinlashishi esa qo'shimcha 1 tonna yukni ko'tara oladi. Muzdan o'tishda avtomobilning eshiklari doim ochiq bo'lishi va haydovchidan boshqa odam kabinada bo'lmasligi kerak.
+- anonimlik effekti – avtomobil kabinasi haydovchini boshqa ishtirokchilardan ma’lum darajada ajratib qo‘yadi, natijada haydovchi o‘zini notanish va “ko‘rinmas” his qilib, yuzma-yuz muloqotda odatda saqlanadigan xushmuomalalik va o‘zini tutish qoidalariga unchalik rioya qilmasligi mumkin; bu psixologik hodisa ba’zi haydovchilarning yo‘lda odatdagidan ko‘ra tajovuzkorroq va qo‘polroq xatti-harakat qilishiga sabab bo‘ladi;
 
-Harakat bir tekis bo'lishi, rul keskin burilishlarsiz va tormoz bermay, to'xtamay davom ettirilishi kerak.
+- vaqt tanqisligi va yuqori tezlik – tezlik oshgan sari signalni qabul qilish va unga javob berish uchun ajratilgan vaqt qisqaradi, natijada ko‘rsatkich yoki boshqa muloqot signali payqalmay qolishi yoki noto‘g‘ri talqin etilishi mumkin.
 
-Muz dars ketsa yoki egilsa, haydovchi cho'chib ketmasdan asta tezlikni oshirib xavfli joydan o'tib olishi kerak. Muzdan avtomobillar kolonna bo'lib o'tishiga to'g'ri kelsa, ular orasidagi masofa 30 - 40 m.dan kam bo'lmasligi kerak. Muzda to'xtab turgan avtomobilni aylanib o'tish taqiqlanadi. Orqaga muzdan o'tishda o'tish yo'laklari orasidagi masofa 70 - 100 m.dan kam bo'lmasligi kerak.
-
-Tuproqli yo‘llarda harakatlanish.
-
-Murakkab yo‘l sharoitlarida, ya’ni tuproqli yo‘llarda, yo‘lsiz joylarda, suv va muz kechuvlarida avtotransport vositasini boshqarish haydovchidan yuqori mahorat va katta tajriba talab qiladi. Quruq holatdagi tuproqli yo‘llarda avtomobil harakatlanishida qiyinchilik ko‘p bo‘lmaydi, lekin ularda har xil to‘siqlar, burilishlar ko‘p bo‘ladi. Tekis va ravon tuproqli yo‘l quruq holatda bo‘lsa, soatiga 50 - 60 km va undan yuqoriroq tezlik bilan harakatlanish mumkin. Yo‘lda o‘nqir - cho‘nqir joylar serob bo‘lsa, uzatmalarni almashtirmasdan bir xil tezlikda harakatlanadilar, ammo rul chambaragini doimo burib, harakat yo‘nalishini o‘zgartirib turishga to‘g‘ri keladi.
-
-Ho‘l tuproqli yo‘l ancha sirpanchiq bo‘ladi, ehtiyot choralari ko‘rilmasa, avtomobil yo‘ldan chiqib ketib, ariqqa tushib ketishi mumkin. Kuchli yomg‘ir yoki qorlar erishi oqibatida tuproqli yo‘llarda oddiy avtomobillar yurish uchun ancha qiyin bo‘lib qoladi. Tuproq suvni shimib, ancha yumshab g‘ildirak botib ketishi uchun qulay bo‘ladi. Ho‘l tuproqli yo‘lda g‘ildirak izlari chuqur qolgan bo‘lsa, yaxshisi shu izlardan yurish xavfsizroq. Chunki yer ostidagi tuproq ko‘lami ancha qotgan bo‘lib, g‘ildirak bilan yaxshi ilashadi va kam qarshilik ko‘rsatadi. G‘ildirak izidan yurganda haydovchi avtomobilni yo‘l o‘rtasiga yo‘naltiradi va iz chuqurligini kuzatadi. Agar iz chuqurlashib avtomobil pastki nuqtalarining yo‘lga tegish xavfi bo‘lsa, izni g‘ildiraklar orasiga olish yoki aylanib o‘tish xavfsizdir. Buning uchun izning eng past joyini mo‘ljal qilib, rul chambaragini shu joyga yetganda keskin burish bilan erishiladi. Agar izdan chiqarish qiyin bo‘lsa, boshqaruvchi g‘ildiraklar oldidan biroz qazib yo‘lakcha hosil qilinadi. Izdan harakatlanish past uzatmalarda amalga oshiriladi.
-
-Botqoqlik joylarda g‘ildirak izidan yurish ancha xavfli, chunki iz ostidagi qatlam uncha qattiq bo‘lmasligi sababli g‘ildirak botib ketishi mumkin. Bunday joylarda rul chambaragini keskin burmasdan imkoni boricha tezroq harakatlanish kerak. Agar g‘ildirak joyida aylansa, avtomobilni darhol to‘xtatib, g‘ildirak ostiga shox - shabba, quruq tuproq, yog‘och, taxta kabi narsalarni tashlab, ilashish koeffitsientini oshirish maqsadga muvofiqdir. Avtomobil pastki nuqtalari yo‘lga tegib qolgudek bo‘lsa, damkrat bilan ko‘tarib, g‘ildirak ostiga narsa tashlash kerak.
-
-Tuman sharoitida harakatlanish.
-
-Kunning yorug'lik yetishmaydigan paytida, ob - havo sharoiti, ya'ni yomg'ir va tuman haydovchiga xavfsiz harakatlanish uchun boshqa paytlardagiga qaraganda ko'proq qiyinchiliklar tug'diradi. Bunday sharoitda haydovchi yo'lning yoritilgan qismlarida yaqinni yorituvchi chiroqlarni, yo'lning yoritilganligidan qat'iy nazar gabarit chiroqlarini yoqishi kerak.
-
-Kunning yorug'lik yetishmaydigan paytida tuman xavfsiz harakatlanishga juda katta ta'sir etadi. Tumanda haydovchi yo'l sharoitini yaxshi ko'rishga intilib juda tez charchaydi. Oq rangli faralarning nuri tumanda yutilib ketib yo'lni deyarli yorita olmaydi, yaqinni yorituvchi fara uzoqni yorituvchi faraga qaraganda yo'lni bir oz yaxshiroq yoritadi.Shuning uchun tumanda harakatlanganda, eng yaxshisi tumanga qarshi faralardan foydalanish kerak. Sariq rangdagi va asosiy Faradan pastda joylashgan tumanga qarshi yorituvchi chiroqlar yo'lni yaqinni yorituvchi faralardan ham ko'proq yoritib beradi.
-
-Qalin tuman tushganida, ba'zi haydovchilar yo'lni yaxshiroq kuzatish uchun eshik oynasidan boshini chiqarib oladi. Bunday sharoitlarda eng xavfsiz tezlik piyodaning o'rtacha tezligiga, ya'ni soatiga 5 kilometrga teng bo'ladi.
-
-Suvning, ya'ni namlikning bug'lanishi oqibatida vujudga kelgan tuman ham juda xavfli bo'ladi. Bunday tumanning balandligi odatda 1 metr bo'lib, haydovchi yo'l qoplamasining holatini ko'ra olmaydi.
-
-Tumanga qarshi orqa fonarlarni faqat masofa yetarlicha ko'rinmaydigan sharoitda qo'llash mumkin. Orqadagi to'xtash chiroqlari, ya'ni stop - signal tumanga qarshi orqa chiroqlarni ulash taqiqlanadi. Quyidagi hollarda tumanga qarshi chiroqlarni qo'llash mumkin:
-
-- yetarlicha ko'rinmaydigan sharoitda alohida, shuningdek, uzoqni yorituvchi yoki yaqinni yorituvchi chiroqlar bilan;
-
-- qorong'i vaqtda yo'lning yoritilmagan qismlarida uzoqni yoki yaqinni yorituvchi chiroqlar bilan birga;
-
-- kunning yorug'vaqtida yaqinni yorituvchi chiroqlar o'rnida.
-
-Tog' yo'llarda harakatlanish.
-
-Haydovchi uchun eng murakkab bo'lgan yo'l sharoitlaridan biri, bu tog'li yo'llardir.
-
-Tog'li yo'llar boshqa yo'llarga qaraganda tepalikka ko'tarilish va tushishlar, keskin burilishlar, ko'rinish masofasining juda cheklanganligi, yo'lning bir tomonini jarlik tashkil etishi, tosh va qorlar ko'chish ehtimolining yuqoriligi, yog'ingarchiliklar oqibatida yo'l qoplamasining sirpanchiq tuproq bilan qoplanib qolishi mumkinligi kabi belgilari bilan ajralib turadi. Tuman tushishi ehtimoli ham tog'li yo'llarda yuqori bo'ladi.
-
-Yo'lning okean sathidan ko'tarilgani sari havo bosimining kamayishi oqibatida dvigatelning quvvati kamayadi, agar dvigatel karterida moy yetarli darajada bo'lmasa, ishqalanishning ortib ketishi oqibatida uning qismlari qisilib aylanmay qolishi, tormoz tizimining doimo ishlashi natijasida uning samaradorligi keskin pasayib ketishi mumkin.
-
-Bunday sharoitda haydovchidan birinchi galda yo'l harakati qoidalariga to'liq amal qilish va avtomobilni boshqarishda yuqori mahorat talab etiladi. U yo'lning vaziyatini to'g'ri baholay olishi, keskin burilishlarda, ko'tarilish va tushishlarda tezlikni to'g'ri tanlay olishi va kerakli uzatmada harakatlanishni bilishi kerak.
-
-Past qiyalikka tushayotgan g'ildiraklarning yo'l bilan ilashish koeffisienti kamayadi, bu esa o'z navbatida avtomobil turg'unligining kamayishiga olib keladi. Tormoz berayotganda ilashmani ajratmaslik kerak. Kichik uzatmada pastga harakatlanish va yonilg'i uzatishni kamaytirish tez - tez tormoz berishga bo'lgan ehtiyojni kamaytiradi, bu esa o'z navbatida tormoz barabanini o'ta darajada qizib ketishdan saqlaydi.
-
-O'zaro ajralish joylarida haydovchi jarlik tarafda va ko'tarilishda harakatlanayotgan avtomobillarga yo'l berishi kerak.
-
-Yo'l harakati qoidalariga asosan, tiklik va nishabliklarda haydovchiga ilashmani ajratgan yoki uzatmalar qutisini neytral holatida harakatlanish taqiqlanadi.
-
-Qiyaliklarda to'xtab turganda, avtomobil o'z - o'zidan yurib ketmasligi uchun g'ildiraklar ostiga bironta narsa, masalan, tosh, maxsus moslamalar qo'yishi, agar texnik nosozlik vujudga kelsa, maxsus ajratilgan joylarga o'tib avtomobilni to'xtatishi kerak.
-
-Bulardan tashqari, tog'li yo'llarda harakatlanganda, haydovchi quyidagilarga amal qilishi shart:
-
-- avtomobil to'xtaganida joyidan qo'zg'alib ketmasligi uchun tirgak (pona) o'rnatish;
-
-- avtomobilning texnik holatini va to'liq jihozlanganligini tekshirish;
-
-- uzoq cho'zilgan tushishlarda kichik uzatmada harakatlanish;
-
-- nishablik kichik bo'lgan yo'llarda uzatmalar qutisi neytral holatda bo'lsa, dvigatelni o'chirmasdan harakatlanish;
-
-- tajribasi yetarli bo'lmaganda, ayniqsa, odam tashilayotganda, tog'li yo'llarda avtomobilni tajribasi yuqori bo'lgan haydovchiga topshirish va hokazo.
-
-Axborotni uzatish — bu jismoniy jarayon boʻlib, uning yordamida belgilar (axborot berishi mumkin boʻlgan maʼlumotlar) makonda koʻchiriladi yoki subyektlarning belgilarga jismoniy kirishi amalga oshiriladi.
-
-Axborotni uzatish — bu oldindan tashkil etilgan texnik hodisa boʻlib, uning natijasi bir joyda (axborot manbai deb ataladigan) yoki boshqa joyda (axborot qabul qiluvchi) mavjud boʻlgan axborotlarlarni takrorlashdir. Ushbu hodisa belgilangan natijani olish uchun taxmin qilinadigan vaqt oraligʻini nazarda tutadi; bu yerda „axborot“ texnik jihatdan, mavhum yoki jismoniy obyektlarning simvollari, raqamlari, parametrlarining mazmunli toʻplami sifatida tushuniladi, ularning yetarli darajadagi „hajmisiz“ boshqarish, omon qolish, koʻngil ochish, moliyaviy operatsiyalarni amalga oshirish, har qanday boshqa harakatlar, shu jumladan jinoiy va boshqa vazifalarni hal qilishi mumkin emas.
-
-Axborot uzatishni amalga oshirish uchun, bir tomondan, „manba“ va „qabul qiluvchi“ oʻrtasida makon va vaqt ichida harakat qilish qobiliyatiga ega boʻlgan „xotira qurilmasi“ yoki „tashuvchi“ boʻlishi kerak. Boshqa tomondan, maʼlumotni „tashuvchi“ga koʻchirish va undan koʻchirib olish qoidalari va usullari „manba“ va „qabul qiluvchi“ ga oldindan maʼlum boʻlishi kerak. Uchinchi tomondan, „tashuvchi“ belgilangan manzilga yetib borgunga qadar („qabul qiluvchi“ undan maʼlumotni koʻchirib olishni tugatgunga qadar) mavjud boʻlib turishi kerak.
-
-Texnologiya rivojlanishining hozirgi bosqichida „tashuvchilar“ sifatida jismoniy tabiatning ham moddiy-obyekti, ham toʻlqinli — maydonli obyektlari qoʻllaniladi. Muayyan sharoitlarda uzatiladigan „axborot obyektlari“ ning oʻzi (virtual tashuvchilar) ham tashuvchi boʻlishi mumkin.
-
-Kundalik amaliyotda maʼlumotni uzatish tavsiflangan sxema boʻyicha ham, „qoʻlda“ ham, turli xil mashinalar yordamida, koʻplab texnik ilovalar bilan amalga oshiriladi.
-
-Axborot uzatish tizimlarini qurishda nafaqat jismoniy obyektlar toʻgʻrisidagi maʼlumotlar, balki uzatish uchun tayyorlangan tashuvchilar haqidagi maʼlumotlar ham „oʻtkazilishi“ mumkin. Shunday qilib, ierarxik „uzatish muhiti“ har qanday chuqurlikda (toʻlqin tashuvchilarning tarqalish muhiti bilan adashtirmaslik kerak) tashkil etiladi.
-
-Turlari:
-
-feldyeger — pochta ;
-
-akustik (akustika, karnay);
-
-elektr aloqa: optik, simli, radio, radiorele, optik tolali, sunʼiy yoʻldosh;
-
-va boshqa turlari.
-
-Ko'rinish oralig'i geometrik ta'minlanmagan sharoitda harakatlanish.
-
-Haydovchi chegaralangan oraliqlar orqali harakatlanayotganda, dinamik gabaritli uzunlikni, kengligini va yo'l yo'lagining holatini doimo yodda tutishi kerak. Oraliqda harakatlanayotgan haydovchi ogohlantiruvchi ishora belgisini, ya'ni chiroqni yoqib o'chirgandan so'ng kamida 5 sekund o'tgandagina o'zi egallab turgan harakatlanish yo'nalishini o'zgartirishi, o'ngga yoki chapga hamda orqaga burilish manyovrini boshlashi kerak. Manyovr vaqtida orqadan, oldindan va yon tomondan yaqinlashib kelayotgan imtiyozga ega bo'lgan avtomobillarga yo'l berishi kerak.
-
-Tartibga solinmagan chorrahalarda yo'l berishi kerak bo'lgan transport vositasi haydovchilari harakat xavfsizligini ta'minlash maqsadida, ehtiyot choralarini qo'llab, kutilmagan vaziyatlarda to'xtatish imkonini beradigan tezlikda, hushyorlik bilan harakatlanishi kerak.
-
-Tartibga solingan chorrahalarda xavf kamroq bo'lgani bilan ulardan o'tishda ham hushyor bo'lish kerak. Chorrahada harakatlanishda shunday tezlik tanlash kerakki, mabodo to'xtashga to'g'ri kelib qolsa, xavfsiz masofada to'xtashga imkoniyat bo'lishi lozim.
-
-Avtomobillarning eng ko'p manyovri, ya'ni o'ngga, chapga va orqaga qayrilish chorrahalarda amalga oshiriladi. Chorrahaga yaqinlashib kelganda transport oqimining harakatlanish tartibi o'zgaradi, chunki boshqa haydovchilarni o'z vaqtida kerakli qatorga o'tib olmaganligi sababli haydovchilarga boshqa haydovchilarning xatti - harakatlari noaniq bo'ladi.
-
-Ayrilish manyovrini bajarmoqchi bo'lgan haydovchi chorrahaga yaqinlashib kelganda tezlikni kamaytiradi. Avtomobilning tezligi orqadan kelayotgan avtomobilning tezligidan katta farq qilmaydi. Tezlik ko'proq burilish radiusining o'lchamlariga bog'liq bo'ladi.
-
-Haydovchilarda kechki va tongi g‘ira - shiralik paytlarida ko‘rish aldashi paydo bo‘ladi. Oq va sariq rangdan boshqa avtomobillar rangi yo‘l qoplamasi rangiga quyilib ketadi. Avtomobil chirog‘i yorug‘idagi narsalar va yo‘l notekisligi noto‘g‘ri qabul qilinadi. Bu haydovchining ko‘rishini keskin pasaytiradi va charchatadi. Eng katta xavf haydovchi ko‘zi qamashganda paydo bo‘ladi: ko‘rinish keskin pasayadi, ayrim hollarda butunlay yo‘qoladi, ko‘zi moslashguncha avtomobil harakati nazoratsiz qoladi. Haydovchi ko‘rish qobiliyatini tiklaguncha 100 metrdan ko‘proq masofani bosib o‘tadi. Bunday sharoitda haydovchi nafaqat ko‘rish, balki avtomobil harakat yo‘nalishini ham to‘g‘ri tutolmaydi.
-
-Haydovchi avtomobilini tunda boshqarishga mas’uliyat bilan tayyorlanishi kerak. Tunda texnikaviy nosozliklarni tuzatish ancha murakkab bo‘ladi, qorong‘ilikda moy, sovitish suyuqliklari sizib chiqadigan joylarni topish mushkul. Shuning uchun avtomobil texnik holatini tekshirganda, mayda ishlar e’tibordan chetda qolmasligi kerak. Kalit va moslamalar tartibsiz joylashgan bo‘lsa, ularni ishlatish uchun topib olishga haydovchi ancha vaqt sarf qilishi mumkin. Yoritish moslamalarining tozaligi va to‘liqligiga, oyna tozalagich va oyna yuvgich ishiga alohida e’tibor berish kerak.
-
-Qorong‘i paytlarda harakatlanish tezligi kunduzgiga qaraganda kam bo‘lishi kerak. Tezlikni shunday tanlash kerakki, avtomobilning to‘xtash yo‘li ko‘rinish masofasidan kam bo‘lsin.
-
-Axborotni uzatish — bu jismoniy jarayon boʻlib, uning yordamida belgilar (axborot berishi mumkin boʻlgan maʼlumotlar) makonda koʻchiriladi yoki subyektlarning belgilarga jismoniy kirishi amalga oshiriladi.
-
-Axborotni uzatish — bu oldindan tashkil etilgan texnik hodisa boʻlib, uning natijasi bir joyda (axborot manbai deb ataladigan) yoki boshqa joyda (axborot qabul qiluvchi) mavjud boʻlgan axborotlarlarni takrorlashdir. Ushbu hodisa belgilangan natijani olish uchun taxmin qilinadigan vaqt oraligʻini nazarda tutadi; bu yerda „axborot“ texnik jihatdan, mavhum yoki jismoniy obyektlarning simvollari, raqamlari, parametrlarining mazmunli toʻplami sifatida tushuniladi, ularning yetarli darajadagi „hajmisiz“ boshqarish, omon qolish, koʻngil ochish, moliyaviy operatsiyalarni amalga oshirish, har qanday boshqa harakatlar, shu jumladan jinoiy va boshqa vazifalarni hal qilishi mumkin emas.
-
-Axborot uzatishni amalga oshirish uchun, bir tomondan, „manba“ va „qabul qiluvchi“ oʻrtasida makon va vaqt ichida harakat qilish qobiliyatiga ega boʻlgan „xotira qurilmasi“ yoki „tashuvchi“ boʻlishi kerak. Boshqa tomondan, maʼlumotni „tashuvchi“ga koʻchirish va undan koʻchirib olish qoidalari va usullari „manba“ va „qabul qiluvchi“ ga oldindan maʼlum boʻlishi kerak. Uchinchi tomondan, „tashuvchi“ belgilangan manzilga yetib borgunga qadar („qabul qiluvchi“ undan maʼlumotni koʻchirib olishni tugatgunga qadar) mavjud boʻlib turishi kerak.
-
-Texnologiya rivojlanishining hozirgi bosqichida „tashuvchilar“ sifatida jismoniy tabiatning ham moddiy-ob’ekti, ham toʻlqinli — maydonli obyektlari qoʻllaniladi. Muayyan sharoitlarda uzatiladigan „axborot obyektlari“ ning oʻzi (virtual tashuvchilar) ham tashuvchi boʻlishi mumkin.
-
-Kundalik amaliyotda maʼlumotni uzatish tavsiflangan sxema boʻyicha ham, „qoʻlda“ ham, turli xil mashinalar yordamida, koʻplab texnik ilovalar bilan amalga oshiriladi.
-
-Axborot uzatish tizimlarini qurishda nafaqat jismoniy obyektlar toʻgʻrisidagi maʼlumotlar, balki uzatish uchun tayyorlangan tashuvchilar haqidagi maʼlumotlar ham „oʻtkazilishi“ mumkin. Shunday qilib, ierarxik „uzatish muhiti“ har qanday chuqurlikda (toʻlqin tashuvchilarning tarqalish muhiti bilan adashtirmaslik kerak) tashkil etiladi.
-
-Turlari:
-
-    feldyeger — pochta ;
-    akustik (akustika, karnay);
-    elektr aloqa: optik, simli, radio, radiorele, optik tolali, sunʼiy yoʻldosh;
-
-va boshqa turlari.
-
-Transport oqimiga qo‘shilmoqchi bo‘lgan avtomobil haydovchisi chorrahaga yaqinlashganda tezlikni kamaytirib, oqimdagi ikkita avtomobil orasidagi masofani xavfsiz qo‘yilishi uchun yetarli bo‘lsa, tezlikni sezilarli darajada kamaytirmasdan manyovrni tugallaydi. Aks holda, u avtomobilni ma’lum muddatga to‘xtatishga majbur bo‘ladi.
-
-Ziddiyatli nuqtalardan eng xavflisi bu kesishuv nuqtalaridir. Haydovchi chorrahadan o‘tish uchun unga yaqinlashganda yon tomonidan kelayotgan avtomobillarni kuzatishi, agar yon tomondan chorrahaga kirayotgan avtomobillar imtiyozga ega bo‘lsa, to‘xtab ularni o‘tkazib yuborishi kerak. Bu manyovrda eng asosiy omil yonlama ko‘rinish bilan baholashdir. Chorrahadagi ziddiyatli nuqtalarning soni, chorrahaning murakkabligi undagi harakatlanish bo‘laklarining soniga, chorrahaning turiga, harakatning boshqarilishi yoki boshqarilmasligi va chorrahada ruxsat etilgan manyovrlarga bog‘liq bo‘ladi.
-
-Chorrahalarda xavfsizlikni ta’minlashning eng birinchi sharti transport vositasi haydovchilari yo‘l harakati qoidalariga, yo‘l belgilari va chiziqlariga e’tiborini to‘liq qaratishi zarur.
-
-Chorrahaga yaqinlashayotganda haydovchi orqa tomonni ko‘rsatuvchi ko‘zguga qarashi, ogohlantiruvchi ishoralarga e’tibor berishi va xavfsizlik ta’minlanganligiga ishonchi hosil bo‘lgach, mo‘ljallangan manyovrni bajarishi lozim.
-
-Chorrahadan o‘tishda kerakli harakatlanish yo‘lagiga o‘tish, xavfsiz tezlikni tanlash, o‘ngga va chapga qarash, harakat uchun xavf bor bo‘lsa, avtomobilni to‘xtatish kerak.
-
-Ommaviy axborot vositalari (qisqartmasi: OAV) keng ommaga axborot yetkazuvchi vositalardir. Oʻzbekiston Respublikasi qonunchiligida davriy tarqatishning doimiy nomga ega boʻlgan hamda bosma tarzda (gazeta, jurnal, axborotnoma, bulleten va boshqalar) va/yoki elektron tarzda (tele-, radio-, video-, kinoxronikal dasturlar, umumfoydalanishdagi telekommunikatsiya tarmoqlaridagi veb-saytlar) olti oyda kamida bir marta nashr etiladigan yoki efirga beriladigan shakli hamda ommaviy axborotni davriy tarqatishning boshqa shakllari OAV, deb koʻrsatilgan
-
-Ommaviy axborot vositalari – jamiyatni demokratlashtirish va fuqarolar erkinligini ta’minlashning muhim shartidir. Demokratik islohotlarni hayotga tatbiq etish, yangicha dunyoqarashni shakllantirishda ommaviy axborot vositalarining o’rni va ahamiyati katta. O’zbekistonda ham siyosiy hokimiyat va fuqarolar o’rtasidagi ijtimoiy munosabatlarni tartibga solib, bog’lab turuvchi, ular orasidagi shaffoflikni ta’minlab beruvchi birdan bir vosita ham ommaviy axborot vositalaridir. Shu nuqtai  nazardan olib qaralganda, unga to’rtinchi hokimiyat darajasida e’tibor berilgani bejiz emas, albatta. Hozirgi kunda OAV nafaqat jamiyatni axborotdan xabardor qilish vositasi  sifatida, balki jamiyat manfaatlari nuqtai nazaridan davlat  faoliyatini nazorat qilish vositasida bir qator vazifalarni  amalga oshirmoqda. O’zbekiston Respublikasida Konstitutsiyasi va amaldagi barcha qonunlarda axborot olish, tarqatish borasidagi  demokratik huquqlar aniq-ravshan bayon etib berilgan. Xususan,  O’zbekiston Respublikasi Konstitutsiyasining 29-moddasida “Har  kim o’zi istagan axborotni izlash, olish va uni tarqatish huquqiga  ega” deyilgan. Shuningdek, O’zbekiston Respublikasi “Axborot olish  kafolatlari va erkinligi to’g’risida”gi Qonunning 3-moddasida ham “Har bir fuqaroning axborot olish huquqi kafolatlanadi.  Har kimning axborot izlash, olish, tadqiq etish, uzatish va  tarqatish huquqi davlat tomonidan himoya qilinadi” deyiladi. Hozirda mamlakatimizda jurnalist kadrlarni tayyorlash va qayta tayyorlash ishlariga katta e’tibor qaratilmoqda. O’zbekiston aholisining ko’p millatli  ekanligi inobatga olinib, 10 dan ortiq tillarda gazetalar chop etilmoqda, bir  necha tilda teleko’rsatuv va radioeshittirishlar efirga uzatilayapti. Buning sababi jamiyat har qancha rivojlanmasin jamoatchilik bilan aloqa qilishning  eng ta’sirchan vositasi – matbuot, radio, televideniye va Internet bo’lib qolaveradi. Shu bilan birgalikda demokratiya ustuvor bo’lgan davlatda OAV jamoatchilik nazoratining asosiy subyektlaridan biriga aylanadi. Mamlakatimizda ham qabul qilingan “Jamoatchilik nazorati to’g’risida”gi Qonunida OAV jamoatchilik nazoratining subyekti sifatida e’tirof etilgan. Zamonaviy nazariy manbalarda qayd etilishi bo’yicha ommaviy axborot  vositalari tipologiyasiga ko’ra 5 ta asosiy turga ega. Bular: matbuot (gazeta, jurnal, axborotnomalar va boshqalar), radio, televideniye, axborot agentliklari, shuningdek, Internet saytlari.  Bugun ko’pchilikning diqqat-e’tiborini o’ziga jalb etib kelayotgan,  to’g’rirog’i, ommaviy axborotning o’ziga xos vositasi sifatida namoyon bo’layotgan Internet veb-saytlari qolgan turlarga qaraganda tezkorligi va imkoniyatlari kengligi bilan ajralib turipdi. Ijtimoiy fikrni shakllantirish va rivojlantirish, davlat hamda fuqarolik institutlarining o’zaro ijtimoiy muloqotida ham OAV muhim vosita sifatida yetakchi  o’rin egallaydi. Shu nuqtai nazardan qaraganda fuqarolar ham OAVda sog’lom dunyoqarash bilan uning foydalanuvchilariga aylanishlari lozim. Sababi OAV jamiyat hayotining turli-tuman yo’nalishlarida qabul qilinayotgan  huquqiy-me’yoriy hujjatlar, istiqbolli dasturlar, loyihalarni amalga oshirishda, fuqarolarni davlat hokimiyati va boshqaruvi  organlarining faoliyati to’g’risida xolis, tezkor va to’la-to’kis  xabardor  qiladi,  fuqarolarning davlat va jamiyat qurilishi jarayonlarida faol ishtirokini ta’minlashga  xizmat qilib, bu organlar ustidan jamoatchilik nazoratini amalga  oshirish xizmat qiladigan vositadir. 
-
-Respublikamiz Prezidenti Islom Karimovning 2010-yil 12-noyabrdagi Oliy Majlis palatalari qo‘shma majlisida «Mamlakatimizda demokratik islohotlarni yanada chuqurlashtirish va fuqarolik jamiyatini rivojlantirish konsepsiyasi» mavzusidagi ma’ruzasi, xususan, «Axborot sohasini isloh qilish, axborot va so‘z erkinligini ta’minlash» bo‘yicha belgilab bergan strategik vazifalari ommaviy axborot vositalari uchun yana muhim davrni boshlab berdi.
-
-Davlatimiz rahbari o‘z nutqlarida «Demokratik jarayonlarni chuqurlashtirish, aholining siyosiy faolligini oshirish, fuqarolarning mamlakatimiz siyosiy va ijtimoiy hayotidagi amaliy ishtiroki haqida so‘z yuritar ekanmiz, albatta, axborot erkinligini ta’minlamasdan, ommaviy axborot vositalarini odamlar o‘z fikr va g‘oyalarini, sodir bo‘layotgan voqealarga o‘z munosabati va pozitsiyasini erkin ifoda etadigan minbarga aylantirmasdan turib, bu maqsadlarga erishib bo‘lmasligini o‘zimizga yaxshi tasavvur etamiz» — deb, ommaviy axborot vositalarining jamiyatdagi tub mohiyatini bayon etib berdilar.
-
-Ommaviy axborot vositalari har doim jamiyat taraqqiyotining ko‘zgusi, kishilarning ongi, dunyoqarashi, siyosiy saviyasining shakllanishida asosiy vositalardan biri bo‘lib kelgan. O‘tgan davrda barcha sohalar qatori OAV uchun ham serqirra rivojlanish davri bo‘ldi. Istiqlolga erishganimizdan so‘ng, birinchi navbatda, sohaning huquqiy bazasiga e’tibor qaratildi va rivojlangan davlatlar tajribalarini o‘rganish boshlandi. Ommaviy axborot vositalarining xalqaro huquqiy asoslari bu «Inson huquqlari xalqaro umumjahon deklaratsiyasi, Fuqaroviy va siyosiy huquqlar to‘g‘risidagi xalqaro pakt», O‘zbekiston Respublikasining xalqaro tashkilotlar va boshqa davlatlar bilan axborot siyosatiga doir tuzgan bitim va shartnomalari hisoblanadi. Mazkur huquqiy hujjatlar axborotni izlash, olish, tarqatish jarayonlari va ommaviy axborot vositalari faoliyatini bevosita yoki bilvosita tartibga soluvchi normalardir.
-
-Mustaqillik yillarida ommaviy axborot vositalari faoliyatini tartibga soluvchi quyidagi qonunlar qabul qilindi:
-— «Ommaviy axborot vositalari to‘g‘risida»gi Qonun (2007-yil 15-yanvar’);
-— «Axborot olish kafolatlari va erkinligi to‘g‘risida»gi Qonun (1997-yil 24-aprel’);
-— «Jurnalistlik faoliyatini himoya qilish to‘g‘risida»gi Qonun (1997-yil 24-aprel’);
-— «Axborot erkinligi prinsiplari va kafolatlari to‘g‘risida»gi Qonun (2002-yil 12-dekabr);
-— «Noshirlik faoliyati to‘g‘risida»gi Qonun (1996-yil 30-avgust);
-— «Mualliflik huquqi va turdosh huquqlar to‘g‘risida»gi Qonun (2006-yil 20-iyul’);
-— «Reklama to‘g‘risida»gi Qonun (1998-yil 25-dekabr);
-— «Axborotlashtirish to‘g‘risida»gi Qonun (1993-yil 7-may);
-— «Telekommunikatsiyalar to‘g‘risida»gi Qonun (1999-yil 20-avgust).
-
-O‘zbekiston Respublikasida ommaviy axborot vositalari huquqiy bazasini yaratilishida Respublikamiz Konstitutsiyasiga asosiy manba sifatida tayanildi. Konstitutsiyamizning 67-moddasida «Ommaviy axborot vositalari erkindir va qonunga muvofiq ishlaydi. Ular axborotning to‘g‘riligi uchun belgilangan tartibda javobgardirlar. Senzuraga yo‘l qo‘yilmaydi» deb belgilab qo‘yilgani ommaviy axborot vositalarining mutlaq qonuniy erkinligining kafolati hisoblanadi.
-
-Ushbu qoidaga muvofiq O‘zbekiston Respublikasi «Ommaviy axborot vositalari to‘g‘risida»gi Qonunining 7-moddasida «O‘zbekiston Respublikasida ommaviy axborot vositalarini senzura qilishga yo‘l qo‘yilmaydi. E’lon qilinayotgan xabar va materiallar oldindan kelishib olinishini, shuningdek, ularning matni o‘zgartirilishini yoki butunlay nashrdan olib qolinishini (efirga berilmasligini) talab qilishga hech kimning haqqi yo‘q» deb ko‘rsatib qo‘yildi.
-
-Yaratilgan keng sharoitlar tufayli mustaqillik yillarida ommaviy axborot vositalarining bugungi kundagi umumiy soni 1366tani (2013-yil 01.07. holatiga) tashkil etadi. E’tiborlisi shundan iboratki, 1991-yillarda davlatga qarashli bitta televideniye va radiodan boshqa bunday ommaviy axborot vositasining o‘zi mavjud emas edi. Bugun respublikada nodavlat OAV tez rivojlanmoqda. Telekanal, radiokanallardan tashqari veb-saytlar ham OAV sifatida ro‘yxatdan o‘tkazilmoqda. Bir so‘z bilan aiytganda sohada eng tez rivojlanayotgan tarmoqlar ham aynan elektron OAV hisobiga to‘g‘ri keladi. Hozirda mavjud nodavlat OAV jami OAV’ning 60 foizini tashkil etadi.
-
-Ommaviy axborot vositalari O‘zbekistonda yashayotgan millatlarning 7ta tilida va siyosiy-ijtimoiy, iqtisodiy, ma’naviy-ma’rifiy, sport kabi 20dan ortiq ixtisosliklarda faoliyat olib boradi. Bunday salmoqli o‘zgarishlar sohada qonunchilik mexanizmini yanada takomillashtirish, ularning erkin faoliyat yuritishlari uchun zarur shart-sharoitlar yaratish lozimligini taqozo etmoqda. 2010-yil 12-noyabrdagi Oliy Majlis palatalarining navbatdagi qo‘shma yig‘ilishida Prezidentimiz «Mamlakatimizda demokratik islohotlarni yanada chuqurlashtirish va fuqarolik jamiyatini rivojlantirish konsepsiyasi»da yana axborot sohasiga alohida to‘xtalib o‘tganlari diqqatga sazovordir.
-
-Mazkur Konsepsiyada axborot sohasiga daxldor «Ommaviy axborot vositalari to‘g‘risida»gi va «Axborot erkinligi prinsiplari va kafolatlari to‘g‘risida»gi Qonunlarga tegishli o‘zgartish va qo‘shimchalar kiritish bilan birga «Telekommunikatsiyalar to‘g‘risida»gi qonunni takomillashtirish hamda «Ommaviy axborot vositalari faoliyatining iqtisodiy asoslari to‘g‘risida»gi, «Ommaviy axborot vositalarini davlat tomonidan qo‘llab-quvvatlash kafolatlari to‘g‘risida»gi, «Davlat hokimiyati boshqaruv organlari faoliyatining ochiqligi to‘g‘risida»gi va «Teleradioeshittirishlar to‘g‘risida»gi Qonunlarni qabul qilish taklifi kiritildi.
-
-Agentlik huzurida tashkil etilgan 3-ekspert guruhi tomonidan O‘zbekiston Respublikasining «Ommaviy axborot vositalarini davlat tomonidan qo‘llab-quvvatlash kafolatlari to‘g‘risida»gi va «Ommaviy axborot vositalari va axborot olish sohasidagi ayrim qonun hujjatlariga o‘zgartish va qo‘shimchalar kiritish to‘g‘risida»gi Qonunlar loyihalari tayyorlandi. Ushbu loyihalar bir qator mintaqaviy va xalqaro konferensiyalarda, seminar va yig‘ilishlarda keng muhokamalarda o‘tkazildi. Tegishli vazirlik va idoralardan kelishuvlardan o‘tkazilgandan so‘ng 2011-yil noyabr oyida loyihalar Vazirlar Mahkamasiga kiritildi.
-
-O‘zbekiston Respublikasining «Ommaviy axborot vositalarini davlat tomonidan qo‘llab-quvvatlash kafolatlari to‘g‘risida»gi Qonun loyihasi hozirda ekspert guruhining muhokamalaridan o‘tkazilmoqda. Prezident Farmoyishiga muvofiq loyiha 2012-yil to‘rtinchi choragida Hukumatga kiritiladi.
-
-Mamlakatimizda demokratik jarayonlarning chuqurlashuvi davlat hokimiyati organlari faoliyatining ochiqligini ta’minlashda OAV ishtirokini zamon talabiga moslashtirishni taqozo qilishi bilan birga mavjud axborot manbalaridan yanada samarali foydalanish, matbuot erkinligi va mustaqilligini mustahkamlash, fuqarolarning axborot sohasidagi huquq va erkinliklarini to‘laroq qondirishga yo‘naltirilgan bir qator tadbirlarni amalga oshirish lozimligini taqozo etmoqda.
-
-Mustaqillik yillarida ommaviy axborot sohasini tartibga soluvchi va istiqbolini belgilab beruvchi bir qancha zarur qonun hujjatlari qabul qilinib, ular hayotimizda keng tatbiq etib kelinmoqda. Yurtimizda amalga oshirilayotgan islohotlar, yuz berayotgan jarayonlar shunchalik tezlik va keng qamrovni tashkil etdiki, bugunga kelib, bu qonunlarni yana ko‘p yillarga xizmat qilishi uchun ayrimlarini qayta ishlash, ba’zilariga esa o‘zgartirish va qo‘shimchalar kiritish, yana kerak bo‘lsa yangilarini qabul qilish zarur bo‘lib qoldi.
-
-Konsepsiyada mamlakatimizda barpo etilayotgan fuqarolik jamiyatining huquqiy negizini mustahkamlash, ayniqsa, sohamizga oid qonunlarni takomillashtirish borasida aniq vazifalarni belgilab berildi. Bu haqiqatni dunyodagi taniqli siyosatchilar, jamoat arboblari va OAV sohasidagi yirik ekspertlarning e’tirof etayotganliklari, ayniqsa, diqqatga sazovordir.
-
-Davlatimiz rahbari tomonidan axborot sohasini isloh etish bo‘yicha vazifa etib belgilangan bu chora-tadbirlarning asl mohiyati fuqarolik jamiyatini barpo etishda ommaviy axborot vositalarining mustaqil institut sifatida shakllanishini, siyosiy hokimiyat va fuqarolar o‘rtasidagi munosabatlarni tartibga solishda ochiqlikni hamda fuqarorlarning axborot sohasidagi konstitutsiyaviy huquqlarini to‘liq ta’minlashdan iboratdir.
+Ushbu omillarni hisobga olgan holda, haydovchi o‘z niyatini imkon qadar oldindan, aniq va bir necha usulda, ya’ni ko‘rsatkich, tezlikni tekis kamaytirish va imkon bo‘lganda ko‘z aloqasi orqali bildirishga, shuningdek boshqa ishtirokchilarning noverbal signallarini diqqat bilan kuzatib borishga o‘zini o‘rgatishi lozim. Bunday muloqot madaniyati yo‘l harakati xavfsizligini ta’minlashning muhim omillaridan biridir.
