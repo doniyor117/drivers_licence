@@ -1,0 +1,1379 @@
+<!doctype html>
+<title>B toifa — imtihon qo'llanmasi</title>
+<meta name="description" content="B toifa nazariy imtihoniga tayyorgarlik uchun siqilgan, tekshirilgan qo'llanma">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root{
+    --ground:#F6F8FA; --surface:#FFFFFF; --surface-2:#EDF1F5;
+    --ink:#161A20; --ink-muted:#5B6472;
+    --accent:#1F5FA8; --accent-soft:#E4EEF9;
+    --danger:#C1342E; --danger-soft:#FBEAE9;
+    --caution:#B5790A; --caution-soft:#FBF1DD;
+    --ok:#1E7A4C; --ok-soft:#E6F4EC;
+    --border:#DBE1E8;
+    --shadow: 0 1px 2px rgba(20,30,45,.06), 0 6px 20px rgba(20,30,45,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#12151A; --surface:#1A1F26; --surface-2:#20262F;
+      --ink:#E6EAF0; --ink-muted:#93A0B4;
+      --accent:#6BA3E0; --accent-soft:#1E2C3B;
+      --danger:#E0665D; --danger-soft:#3A2422;
+      --caution:#E3A23E; --caution-soft:#332A16;
+      --ok:#5FC08B; --ok-soft:#193226;
+      --border:#2B323C;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#12151A; --surface:#1A1F26; --surface-2:#20262F;
+    --ink:#E6EAF0; --ink-muted:#93A0B4;
+    --accent:#6BA3E0; --accent-soft:#1E2C3B;
+    --danger:#E0665D; --danger-soft:#3A2422;
+    --caution:#E3A23E; --caution-soft:#332A16;
+    --ok:#5FC08B; --ok-soft:#193226;
+    --border:#2B323C;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:'IBM Plex Serif', Georgia, 'Noto Serif', serif;
+    font-size:16px; line-height:1.55;
+  }
+  h1,h2,h3,h4,summary,.brand,.eyebrow,nav a,.chip,button{
+    font-family:'IBM Plex Sans Condensed','Arial Narrow',sans-serif;
+  }
+  h1,h2,h3,h4{ font-weight:700; text-wrap:balance; color:var(--ink); margin:0 0 .4em; }
+  a{ color:var(--accent); }
+  .num, .mono, td.num, .fact b.num{
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+    font-variant-numeric:tabular-nums;
+    font-weight:600;
+  }
+  ::selection{ background:var(--accent-soft); }
+
+  /* ---------- layout ---------- */
+  .app{ display:grid; grid-template-columns: 272px 1fr; min-height:100vh; }
+  .sidebar{
+    position:sticky; top:0; align-self:start; height:100vh;
+    border-right:1px solid var(--border); background:var(--surface);
+    display:flex; flex-direction:column; padding:20px 16px;
+    overflow-y:auto;
+  }
+  .brand{ font-weight:700; font-size:1.05rem; letter-spacing:.2px; margin-bottom:2px; }
+  .brand .accent{ color:var(--accent); }
+  .subbrand{ font-family:'IBM Plex Serif',serif; font-size:.8rem; color:var(--ink-muted); margin-bottom:16px; }
+
+  .filter-wrap{ position:relative; margin-bottom:14px; }
+  #filter{
+    width:100%; padding:9px 12px 9px 32px; border-radius:8px;
+    border:1px solid var(--border); background:var(--surface-2); color:var(--ink);
+    font-family:'IBM Plex Serif',serif; font-size:.92rem;
+  }
+  #filter:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .filter-wrap svg{ position:absolute; left:9px; top:50%; transform:translateY(-50%); opacity:.55; width:15px; height:15px; }
+  #filter-status{ font-size:.74rem; color:var(--ink-muted); margin:6px 2px 14px; min-height:1em; }
+
+  nav.toc{ display:flex; flex-direction:column; gap:1px; margin-bottom:16px;}
+  nav.toc a{
+    display:flex; justify-content:space-between; gap:8px;
+    padding:7px 9px; border-radius:6px; text-decoration:none;
+    color:var(--ink); font-size:.86rem; font-weight:600;
+  }
+  nav.toc a:hover{ background:var(--surface-2); }
+  nav.toc a .count{ color:var(--ink-muted); font-family:'IBM Plex Mono',monospace; font-size:.74rem; font-weight:500;}
+  nav.toc a.dim{ opacity:.45; }
+
+  .sidebar-foot{ margin-top:auto; padding-top:14px; border-top:1px solid var(--border); font-size:.74rem; color:var(--ink-muted); line-height:1.5; }
+  .sidebar-foot a{ color:var(--ink-muted); }
+
+  main{ min-width:0; padding: 34px clamp(16px,4vw,56px) 90px; }
+  .hero{ max-width:70ch; margin-bottom:34px; }
+  .eyebrow{
+    display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
+    padding:4px 9px; border-radius:5px; margin-bottom:12px;
+  }
+  .hero h1{ font-size:clamp(1.6rem,3.4vw,2.15rem); margin-bottom:10px; }
+  .hero p{ color:var(--ink-muted); font-size:.98rem; max-width:62ch; }
+  .hero .stats{ display:flex; gap:22px; margin-top:18px; flex-wrap:wrap; }
+  .hero .stat b{ display:block; font-family:'IBM Plex Mono',monospace; font-size:1.3rem; color:var(--ink); font-variant-numeric:tabular-nums;}
+  .hero .stat span{ font-size:.74rem; color:var(--ink-muted); }
+
+  section[data-subject]{
+    max-width: 92ch;
+    margin-bottom: 20px;
+    scroll-margin-top: 18px;
+  }
+  section[data-subject] > summary,
+  .subject-summary{
+    list-style:none; cursor:pointer; user-select:none;
+    display:flex; align-items:center; gap:12px;
+    background:var(--surface); border:1px solid var(--border); border-radius:10px;
+    padding:14px 18px; box-shadow:var(--shadow);
+  }
+  section[data-subject] > summary::-webkit-details-marker{ display:none; }
+  .subject-summary .marker{
+    width:9px; height:9px; border-radius:50%; background:var(--accent); flex:none;
+  }
+  .subject-summary .stitle{ font-size:1.05rem; font-weight:700; flex:1; }
+  .subject-summary .ssub{ font-size:.78rem; color:var(--ink-muted); font-family:'IBM Plex Serif',serif; font-weight:400; }
+  .subject-summary .chev{ transition:transform .15s ease; color: var(--ink-muted); flex:none;}
+  details[open] > summary .chev{ transform:rotate(90deg); }
+
+  .subject-body{ padding:22px 4px 6px 4px; }
+  .subject-body h3{ font-size:1.02rem; margin-top:30px; padding-top:6px; border-top:1px solid var(--border); }
+  .subject-body h3:first-child{ margin-top:8px; border-top:none; padding-top:0; }
+  .subject-body h4{ font-size:.88rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-muted); margin-top:18px;}
+  .lede{ color:var(--ink-muted); font-size:.9rem; margin:-6px 0 16px; }
+
+  ul.facts, ol.facts{ margin:0 0 14px; padding-left:1.3em; }
+  ul.facts{ list-style:none; padding-left:0; }
+  ul.facts > li.fact{
+    position:relative; padding:6px 0 6px 20px; border-bottom:1px dashed var(--border);
+    font-size:.94rem;
+  }
+  ul.facts > li.fact::before{
+    content:"›"; position:absolute; left:2px; top:6px; color:var(--accent); font-weight:700;
+  }
+  ul.facts > li.fact:last-child{ border-bottom:none; }
+  ol.facts{ counter-reset:step; }
+  ol.facts > li.fact{
+    padding:5px 0 5px 4px; font-size:.94rem; border-bottom:1px dashed var(--border);
+  }
+  ol.facts > li.fact:last-child{ border-bottom:none; }
+  ol.facts.steps{ list-style:none; padding-left:0; counter-reset:step; }
+  ol.facts.steps > li.fact{ position:relative; padding-left:34px; }
+  ol.facts.steps > li.fact::before{
+    counter-increment:step; content:counter(step);
+    position:absolute; left:0; top:5px; width:22px; height:22px; border-radius:50%;
+    background:var(--accent-soft); color:var(--accent); font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem; font-weight:700; display:flex; align-items:center; justify-content:center;
+  }
+  .fact b{ font-weight:600; }
+  .fact.hidden, tr.hidden, .hidden{ display:none !important; }
+
+  .callout{
+    display:flex; gap:10px; align-items:flex-start; border-radius:9px;
+    padding:11px 14px; margin:12px 0; font-size:.88rem; border:1px solid transparent;
+  }
+  .callout .cl-label{
+    font-family:'IBM Plex Sans Condensed',sans-serif; font-weight:700; font-size:.68rem;
+    letter-spacing:.07em; text-transform:uppercase; padding:2px 7px; border-radius:4px;
+    flex:none; white-space:nowrap; margin-top:1px;
+  }
+  .callout-note{ background:var(--accent-soft); border-color:color-mix(in srgb, var(--accent) 30%, transparent);}
+  .callout-note .cl-label{ background:var(--accent); color:var(--surface); }
+  .callout-warn{ background:var(--danger-soft); border-color:color-mix(in srgb, var(--danger) 30%, transparent);}
+  .callout-warn .cl-label{ background:var(--danger); color:#fff; }
+  .callout-flag{ background:var(--caution-soft); border-color:color-mix(in srgb, var(--caution) 30%, transparent);}
+  .callout-flag .cl-label{ background:var(--caution); color:#1a1206; }
+  .callout-ok{ background:var(--ok-soft); border-color:color-mix(in srgb, var(--ok) 30%, transparent);}
+  .callout-ok .cl-label{ background:var(--ok); color:#fff; }
+
+  .table-wrap{ overflow-x:auto; margin:10px 0 18px; border:1px solid var(--border); border-radius:10px; }
+  table{ width:100%; border-collapse:collapse; font-size:.88rem; background:var(--surface); }
+  table caption{ text-align:left; font-size:.78rem; color:var(--ink-muted); padding:8px 12px; caption-side:top; }
+  th{
+    text-align:left; font-family:'IBM Plex Sans Condensed',sans-serif; font-weight:700;
+    font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-muted);
+    background:var(--surface-2); padding:8px 12px; position:sticky; top:0;
+    border-bottom:1px solid var(--border);
+  }
+  td{ padding:7px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody tr:hover{ background:var(--surface-2); }
+  td.id{ font-family:'IBM Plex Mono',monospace; font-weight:600; white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums;}
+  td.n{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+  .kicker-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin:12px 0 18px;}
+  .kicker{ background:var(--surface-2); border:1px solid var(--border); border-radius:9px; padding:10px 12px; }
+  .kicker .kv{ font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:1.05rem; color:var(--accent); font-variant-numeric:tabular-nums;}
+  .kicker .kl{ font-size:.74rem; color:var(--ink-muted); margin-top:2px; }
+
+  footer.pagefoot{ max-width:92ch; color:var(--ink-muted); font-size:.82rem; border-top:1px solid var(--border); padding-top:20px; margin-top:40px;}
+  footer.pagefoot a{ color: var(--ink-muted); }
+
+  .no-match{ color:var(--ink-muted); font-style:italic; padding:20px; text-align:center; display:none; }
+
+  @media (max-width: 860px){
+    .app{ grid-template-columns:1fr; }
+    .sidebar{
+      position:sticky; top:0; height:auto; max-height:none;
+      border-right:none; border-bottom:1px solid var(--border);
+      z-index:5;
+    }
+    nav.toc{ flex-direction:row; flex-wrap:wrap; }
+    nav.toc a{ padding:6px 8px; }
+    nav.toc a .count{ display:none; }
+    .sidebar-foot{ display:none; }
+    main{ padding:24px 16px 70px; }
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+</style>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="accent">B</span> toifa — nazariy qo'llanma</div>
+    <div class="subbrand">Siqilgan, tekshirilgan konspekt</div>
+
+    <div class="filter-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="filter" type="text" placeholder="Qidirish… (masalan: 70 km/h)" autocomplete="off">
+    </div>
+    <div id="filter-status"></div>
+
+    <nav class="toc" id="toc">
+      <a href="#yhq"><span>Yo'l harakati qoidalari</span><span class="count" data-count-for="yhq"></span></a>
+      <a href="#texnik"><span>Texnik holat</span><span class="count" data-count-for="texnik"></span></a>
+      <a href="#texnika"><span>Haydash texnikasi</span><span class="count" data-count-for="texnika"></span></a>
+      <a href="#javobgarlik"><span>Javobgarlik</span><span class="count" data-count-for="javobgarlik"></span></a>
+      <a href="#madaniyat"><span>Haydovchi madaniyati</span><span class="count" data-count-for="madaniyat"></span></a>
+      <a href="#psixologiya"><span>Psixologiya</span><span class="count" data-count-for="psixologiya"></span></a>
+      <a href="#tibbiy"><span>Birinchi tibbiy yordam</span><span class="count" data-count-for="tibbiy"></span></a>
+      <a href="#qonun"><span>Qonunchilik</span><span class="count" data-count-for="qonun"></span></a>
+      <a href="#raqamlar"><span>Barcha raqamlar</span><span class="count" data-count-for="raqamlar"></span></a>
+    </nav>
+
+    <div class="sidebar-foot">
+      Manba: <code>theory_resources/</code> (8 ta fayl, ~13 400 qator).
+      Bu qo'llanma ularning siqilgan, faktlarga asoslangan versiyasi — asl fayllar o'zgarishsiz qoladi.
+      Noaniq/xato topilgan joylar <span style="color:var(--caution); font-weight:600;">MANBADA XATO</span> yorlig'i bilan belgilangan.
+    </div>
+  </aside>
+
+  <main>
+    <div class="hero">
+      <span class="eyebrow">B toifa · nazariy imtihon</span>
+      <h1>13 400 qatorlik qonun matnini ~2000 ta tekshirilgan faktga siqib qo'ydik</h1>
+      <p>
+        Imtihon: <b>20 ta savol</b>, <b>25 daqiqa</b>, o'tish uchun <b>18 to'g'ri javob</b> kerak (2 ta xato ruxsat etiladi).
+        Uch yo'nalish: yo'l harakati qoidalari, birinchi tibbiy yordam, transport vositasining texnik holati.
+        Chapdagi qidiruv maydoniga raqam yoki so'z yozib, kerakli faktni darhol toping.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>8</b><span>manba fayl</span></div>
+        <div class="stat"><b>~2000</b><span>siqilgan fakt</span></div>
+        <div class="stat"><b>6</b><span>shaxsan tekshirilgan raqam</span></div>
+        <div class="stat"><b>~15%</b><span>asl hajmdan</span></div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 1. YHQ -->
+    <!-- ============================================================ -->
+    <section id="yhq" data-subject="yhq">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">1 · Yo'l harakati qoidalari</span>
+        <span class="ssub">belgilar, chiziqlar, svetofor, manyovrlar, nosozliklar</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <p class="lede">Eng katta va eng ko'p savol beriladigan bo'lim. Tuzilishi manba faylning <span class="num">1–179-band</span> tizimiga asoslangan — bu savollarning so'ralish tartibiga mos keladi. Uchta raqamlash tizimi bir-biriga o'xshaydi, lekin ular boshqa-boshqa: <b>belgi</b> (masalan 1.1), <b>chiziq</b> (masalan 1.1) va <b>nosozlik</b> (masalan 1.1.) — har doim qaysi turi ekanligiga e'tibor bering.</p>
+
+        <h3>Asosiy tushunchalar</h3>
+        <ul class="facts">
+          <li class="fact"><b>To'xtash</b> — harakatni <span class="num">10 daqiqadan kam</span>ga to'xtatish.</li>
+          <li class="fact"><b>To'xtab turish</b> — <span class="num">10 daqiqadan ortiq</span> ataylab to'xtash (yo'lovchi/yuk tushirish-ortish har doim "to'xtash" hisoblanadi, muddatidan qat'iy nazar).</li>
+          <li class="fact"><b>Majburiy to'xtash</b> — texnik nosozlik, haydovchi/yo'lovchi holati, yo'ldagi to'siq yoki ob-havo sababli to'xtash — oxirgi chora sifatida qaraladi, qoidabuzarlik emas.</li>
+          <li class="fact"><b>Asosiy yo'l</b> — qattiq qoplamali yo'l (tuproq yo'lga nisbatan) yoki belgi 2.1/2.3.1–2.3.3/5.1 bilan belgilangan yo'l; kesishuv joyidagi qisqa asfalt bo'lagi ustunlik bermaydi.</li>
+          <li class="fact"><b>Imtiyoz</b> — boshqalardan oldin harakatlanish huquqi. <b>Yo'l berish</b> — imtiyozli ishtirokchini majburlamaslik uchun yo'nalish/tezlikni o'zgartirish majburiyati.</li>
+          <li class="fact"><b>Chorraha</b> chegarasi — qarama-qarshi burchaklarning eng uzoq burilish nuqtalarini tutashtiruvchi shartli chiziqlar; hovli/yo'lka chiqishlari chorraha hisoblanmaydi.</li>
+          <li class="fact"><b>Yetarlicha ko'rinmaslik</b> — ko'rish masofasi <span class="num">300 m</span>dan kam (yomg'ir, qor, tuman, alaqorong'ulik).</li>
+          <li class="fact"><b>Avtomagistral</b> — belgi 5.1 bilan belgilangan, qarama-qarshi yo'nalishlar jismonan ajratilgan, bir sathli kesishmalarsiz yo'l.</li>
+          <li class="fact"><b>Xavfsizlik orolchasi</b> — har doim <b>o'ngdan</b> aylanib o'tiladi.</li>
+        </ul>
+
+        <h3>Haydovchi hujjatlari va umumiy majburiyatlar</h3>
+        <ul class="facts">
+          <li class="fact">Haydovchida bo'lishi shart: guvohnoma, ro'yxatga olish guvohnomasi, egalik/foydalanish huquqini tasdiqlovchi hujjat (OSAGO'da yaqin qarindosh sifatida ko'rsatilmasa), OSAGO polisi (elektron bo'lishi mumkin).</li>
+          <li class="fact"><b>Toifalar:</b> A — mototsikl/moped; <b>B</b> — ≤<span class="num">3500 kg</span> yoki ≤<span class="num">8</span> o'rindiq, tirkama ≤<span class="num">750 kg</span>; C — >3500 kg, tirkama ≤750 kg; D — >8 o'rindiqli yo'lovchi transporti; BE/CE/DE — mos ravishda B/C/D + og'ir tirkama (>750 kg).</li>
+          <li class="fact">Xavfsizlik kamari: haydovchi + old o'rindiqdagilar harakatdan oldin taqishi shart. Istisno: orqada o'tirgan 12 yoshgacha bola, homilador/tibbiy ko'rsatmali shaxslar (ma'lumotnoma bilan), amaldagi shifokorlar, o'quv mashg'ulotidagi instruktor.</li>
+          <li class="fact">Mototsikl/moped: haydovchi va yo'lovchi <b>bog'langan dubulg'a</b> kiyishi shart.</li>
+          <li class="fact"><b>Taqiqlanadi:</b> mast/charchagan/kasal holda yoki guvohnomasiz/sug'urtasiz shaxs orqali haydash; tormoz/rul/qo'shilish/yorug'lik nosoz holda (qorong'ida/yomon ko'rinishda) yoki tozalagich yomg'ir-qorda ishlamasa haydash; ruxsatsiz radio/sirena o'rnatish; tashkiliy kolonnani to'sish; harakatda telefonni qo'lda ushlab gaplashish yoki panel videosini tomosha qilish.</li>
+          <li class="fact">Avariyadan keyin: darhol to'xtash, avariya signali + ogohlantirish belgisi, hodisa izlarini o'zgartirmaslik, birinchi yordam ko'rsatish/tez yordam chaqirish, guvohlarni yozib olish, militsiyani kutish.</li>
+          <li class="fact">Yengil avariyalarda (faqat 2 ta transport, jarohat yo'q/yengil, bir tomon aybini to'liq tan oladi, hujjatlar joyida, mastlik yo'q) — militsiyani chaqirmasdan OSAGO orqali "Yevroprotokol" tartibida rasmiylashtirish mumkin.</li>
+        </ul>
+
+        <h3>Piyoda va yo'lovchi qoidalari</h3>
+        <ul class="facts">
+          <li class="fact">Piyoda trotuar/piyoda yo'lkasidan yuradi; ular bo'lmasa — yo'l yoqasidan, transportga <b>peshma-pesh (qarab)</b> yuradi (nogironlar aravachasi, mototsikl/moped/velosiped yetaklovchilar bundan mustasno — ular oqim bilan yuradi).</li>
+          <li class="fact">Tashkiliy piyoda guruhi — qatorda ≤4 kishi, faqat harakat yo'nalishi bo'yicha o'ngda, oldinda/orqada qizil bayroqli (tunda oq-qizil chiroqli) kuzatuvchi bilan.</li>
+          <li class="fact">Yo'lni o'tish joyidan, bo'lmasa chorraha chizig'i bo'ylab, ular ham bo'lmasa — yaxshi ko'rinadigan joydan to'g'ri burchak ostida kesib o'tish kerak.</li>
+          <li class="fact">Kutilmagan chiqish taqiqlanadi: to'xtab turgan transport ortidan yoki to'siq ortidan birdan chiqish, yo'lni kesib o'tayotganda telefon/video/o'qish bilan chalg'ish taqiqlanadi.</li>
+          <li class="fact">To'xtagan avtobus/trolleybusni <b>orqasidan</b>, tramvayni esa <b>oldidan</b> aylanib o'tish kerak.</li>
+          <li class="fact">Yo'lovchi faqat to'liq to'xtagandan keyin, trotuar tomondan chiqadi/tushadi; harakatdagi ochiq kuzovda tik turish, eshikni harakatda ochish taqiqlanadi.</li>
+        </ul>
+
+        <h3>Tezkor va maxsus xizmat transporti</h3>
+        <ul class="facts">
+          <li class="fact">Ko'k-qizil chaqnovchi chiroqli maxsus transport (militsiya, tez yordam, o't o'chirish) xavfsizlik ta'minlangan holda ko'p qoidalardan chetlanishi mumkin — signal yonganda boshqa haydovchilar yo'l berishi va ularni <b>quvib o'tmasligi</b> shart.</li>
+          <li class="fact">Sariq/to'q sariq chaqnovchi chiroq (yo'l ishlari, evakuatsiya, gabaritdan katta yuk) — <b>ustunlik bermaydi</b>, faqat ehtiyot bo'lishga chaqiradi.</li>
+        </ul>
+
+        <h3>Yo'l belgilari — to'liq katalog</h3>
+        <p class="lede">Imtihonda belgining tashqi ko'rinishi rasmda ko'rsatiladi — shu sababli faqat <b>ID, nomi va ma'nosi</b> keltirilgan, tavsif emas. Ogohlantiruvchi belgilar odatda aholi punktida <span class="num">50–100 m</span>, undan tashqarida <span class="num">150–300 m</span> oldin o'rnatiladi (belgi 7.1.1 boshqacha masofani ko'rsatmasa).</p>
+
+        <h4>1 — Ogohlantiruvchi belgilar</h4>
+        <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Nomi</th><th>Ma'nosi</th></tr></thead>
+        <tbody>
+        <tr><td class="id">1.1</td><td>Shlagbaumli temir yo'l kesishmasi</td><td>qo'riqlanadigan temir yo'l kesishmasi oldinda</td></tr>
+        <tr><td class="id">1.2</td><td>Shlagbaumsiz temir yo'l kesishmasi</td><td>qo'riqlanmaydigan kesishma oldinda</td></tr>
+        <tr><td class="id">1.3.1</td><td>Bir izli temir yo'l</td><td>qo'riqlanmaydigan bir izli kesishma (≥20 m masofada joylashtiriladi)</td></tr>
+        <tr><td class="id">1.3.2</td><td>Ko'p izli temir yo'l</td><td>qo'riqlanmaydigan ko'p izli kesishma</td></tr>
+        <tr><td class="id">1.4.1–1.4.6</td><td>Temir yo'lga yaqinlashuv</td><td>hisoblagich belgilar (shahar tashqarisida)</td></tr>
+        <tr><td class="id">1.5</td><td>Tramvay yo'li bilan kesishuv</td><td>chorraha tashqarisida — tramvayga yo'l bering</td></tr>
+        <tr><td class="id">1.6</td><td>Teng ahamiyatli yo'llar kesishuvi</td><td>o'ngdan keluvchiga yo'l bering</td></tr>
+        <tr><td class="id">1.7</td><td>Aylanma harakat bilan kesishuv</td><td>aylanmadagi transport ustunlikka ega</td></tr>
+        <tr><td class="id">1.8</td><td>Svetofor tartibga soladi</td><td>oldinda svetoforli uchastka</td></tr>
+        <tr><td class="id">1.9</td><td>Ko'tarma ko'prik</td><td>ko'tariladigan ko'prik / parom o'tish joyi</td></tr>
+        <tr><td class="id">1.10</td><td>Sohilga chiqish</td><td>suv bo'yiga chiqish joyi</td></tr>
+        <tr><td class="id">1.11.1 / 1.11.2</td><td>Xavfli burilish (o'ng/chap)</td><td>yagona keskin burilish</td></tr>
+        <tr><td class="id">1.12.1 / 1.12.2</td><td>Xavfli burilishlar</td><td>ketma-ket keskin burilishlar</td></tr>
+        <tr><td class="id">1.13</td><td>Tik nishablik</td><td>tik pastga tushish — uzatmani band saqlang</td></tr>
+        <tr><td class="id">1.14</td><td>Tik balandlik</td><td>tik yuqoriga ko'tarilish</td></tr>
+        <tr><td class="id">1.15</td><td>Sirpanchiq yo'l</td><td>jild sirpanchiq bo'lishi mumkin</td></tr>
+        <tr><td class="id">1.16</td><td>Notekis yo'l</td><td>g'adir-budir sirt</td></tr>
+        <tr><td class="id">1.17</td><td>Tosh otilishi xavfi</td><td>shag'al/tosh sachrashi ehtimoli</td></tr>
+        <tr><td class="id">1.18.1–1.18.3</td><td>Yo'lning torayishi</td><td>ikki tomondan / o'ngdan / chapdan torayadi</td></tr>
+        <tr><td class="id">1.19</td><td>Ikki tomonlama harakat</td><td>bir tomonlama uchastka tugaydi</td></tr>
+        <tr><td class="id">1.20</td><td>Piyodalar o'tish joyi</td><td>oldinda zebra</td></tr>
+        <tr><td class="id">1.21</td><td>Bolalar</td><td>maktab/bog'cha zonasi</td></tr>
+        <tr><td class="id">1.22</td><td>Velosiped yo'lkasi kesishuvi</td><td>oldinda velosiped yo'li kesib o'tadi</td></tr>
+        <tr><td class="id">1.23</td><td>Ta'mirlash ishlari</td><td>yo'l ishlari zonasi</td></tr>
+        <tr><td class="id">1.24</td><td>Mol haydab o'tish</td><td>chorva o'tish joyi</td></tr>
+        <tr><td class="id">1.25.1–1.25.3</td><td>Yovvoyi hayvon / qush / kemiruvchi</td><td>hayvonlar chiqishi mumkin</td></tr>
+        <tr><td class="id">1.26</td><td>Toshlar tushishi</td><td>ko'chki/tosh yumalashi xavfi</td></tr>
+        <tr><td class="id">1.27</td><td>Yonlama shamol</td><td>kuchli yon shamol</td></tr>
+        <tr><td class="id">1.28</td><td>Pastlab uchuvchi samolyotlar</td><td>aeroport yaqinidagi shovqin zonasi</td></tr>
+        <tr><td class="id">1.29</td><td>Tonnel</td><td>tonnelda U-burilish, orqaga qaytish, to'xtash taqiqlanadi; chiroq har doim yoqilishi shart</td></tr>
+        <tr><td class="id">1.30</td><td>Boshqa xavf-xatarlar</td><td>umumiy ehtiyotkorlik, aniq manyovr talab qilinmaydi</td></tr>
+        <tr><td class="id">1.31</td><td>Sun'iy yo'l notekisligi</td><td>oldinda "yotqizilgan politsiyachi"</td></tr>
+        <tr><td class="id">1.31.1–1.31.3</td><td>Burilish yo'nalishi (o'ng/chap/ikkalasi)</td><td>burilishning o'zida o'rnatiladi</td></tr>
+        <tr><td class="id">1.32</td><td>Tirbandlik</td><td>oldinda tirbandlik ehtimoli</td></tr>
+        <tr><td class="id">1.33</td><td>Qatnov qismi kesishmasi</td><td>chorraha bo'sh bo'lmaguncha kirish taqiqlanadi ("box-junction")</td></tr>
+        <tr><td class="id">1.34</td><td>Boshqariladigan to'siq</td><td>diqqat, oldinda shlagbaum/to'siq</td></tr>
+        <tr><td class="id">1.35</td><td>Yo'l yoqasidan piyoda yurish mumkin</td><td>bu qismda piyoda yo'l yoqasida yurishi mumkin</td></tr>
+        </tbody></table></div>
+
+        <h4>2 — Imtiyoz belgilari</h4>
+        <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Nomi</th><th>Ma'nosi</th></tr></thead>
+        <tbody>
+        <tr><td class="id">2.1</td><td>Asosiy yo'l</td><td>siz asosiy yo'ldasiz — nazoratsiz kesishmada ustunlik sizda</td></tr>
+        <tr><td class="id">2.2</td><td>Asosiy yo'lning oxiri</td><td>asosiy yo'l maqomi shu yerda tugaydi</td></tr>
+        <tr><td class="id">2.3.1</td><td>Ikkinchi darajali yo'l kesishuvi</td><td>ustunlik sizda qoladi, ehtiyot bo'ling</td></tr>
+        <tr><td class="id">2.3.2 / 2.3.3</td><td>Ikkinchi darajali yo'l qo'shilishi</td><td>yon tomondan kichik yo'l qo'shiladi</td></tr>
+        <tr><td class="id">2.4</td><td>Yo'l bering</td><td>kesishuvchi/asosiy yo'l transportiga yo'l bering</td></tr>
+        <tr><td class="id">2.5</td><td>To'xtamasdan harakatlanish taqiqlanadi (STOP)</td><td>to'xtash chizig'ida <b>majburiy to'liq to'xtash</b></td></tr>
+        <tr><td class="id">2.6</td><td>Ro'para harakatning ustunligi</td><td>tor joyda qarama-qarshi transportga yo'l bering</td></tr>
+        <tr><td class="id">2.7</td><td>Sizning ustunligingiz</td><td>tor joyda ustunlik sizda</td></tr>
+        </tbody></table></div>
+
+        <h4>3 — Taqiqlovchi belgilar</h4>
+        <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Nomi</th><th>Ma'nosi</th></tr></thead>
+        <tbody>
+        <tr><td class="id">3.1</td><td>Kirish taqiqlangan</td><td>bir tomonlama yo'lga teskari kirish man etiladi (chiqish mumkin)</td></tr>
+        <tr><td class="id">3.2</td><td>Harakatlanish taqiqlangan</td><td>barcha transport ikki yo'nalishda ham man etiladi</td></tr>
+        <tr><td class="id">3.3</td><td>Mexanik transport man etiladi</td><td>arava/velosiped/moped bundan mustasno</td></tr>
+        <tr><td class="id">3.4</td><td>Yuk avtomobillari man etiladi</td><td>&gt;3,5 t (yoki ko'rsatilgan)</td></tr>
+        <tr><td class="id">3.5</td><td>Motosikllar man etiladi</td><td></td></tr>
+        <tr><td class="id">3.5.1</td><td>Skuter va mopedlar man etiladi</td><td>velosipedga taalluqli emas</td></tr>
+        <tr><td class="id">3.6</td><td>Traktorlar man etiladi</td><td></td></tr>
+        <tr><td class="id">3.7</td><td>Tirkama bilan harakat man etiladi</td><td>shatak olish ham taqiqlanadi</td></tr>
+        <tr><td class="id">3.8</td><td>Ot-arava man etiladi</td><td></td></tr>
+        <tr><td class="id">3.9</td><td>Velosipedda harakat man etiladi</td><td></td></tr>
+        <tr><td class="id">3.10</td><td>Piyodalar man etiladi</td><td>faqat o'rnatilgan tomonga taalluqli</td></tr>
+        <tr><td class="id">3.11</td><td>Vazn cheklangan</td><td>ko'rsatilgan umumiy vazndan og'ir transport man etiladi</td></tr>
+        <tr><td class="id">3.12</td><td>O'qqa tushadigan og'irlik cheklangan</td><td></td></tr>
+        <tr><td class="id">3.13</td><td>Cheklangan balandlik</td><td>belgisiz standart maksimal — 4 m</td></tr>
+        <tr><td class="id">3.14</td><td>Cheklangan kenglik</td><td></td></tr>
+        <tr><td class="id">3.15</td><td>Cheklangan uzunlik</td><td></td></tr>
+        <tr><td class="id">3.16</td><td>Eng kam oraliq</td><td>ortda qolish masofasi belgilangan</td></tr>
+        <tr><td class="id">3.17.1–3.17.3</td><td>Bojxona / xavf-xatar / nazorat joyi</td><td>majburiy to'xtash</td></tr>
+        <tr><td class="id">3.18.1 / 3.18.2</td><td>O'ngga / chapga burilish taqiqlangan</td><td>yo'nalishli transport bundan mustasno</td></tr>
+        <tr><td class="id">3.19</td><td>Qayrilish taqiqlangan (U-burilish)</td><td>chapga burilish ruxsat etiladi</td></tr>
+        <tr><td class="id">3.20</td><td>Quvib o'tish taqiqlangan</td><td>&lt;40 km/h transport, mototsikl, ot-arava mustasno</td></tr>
+        <tr><td class="id">3.21</td><td>Quvib o'tish taqig'ining oxiri</td><td></td></tr>
+        <tr><td class="id">3.22 / 3.23</td><td>Yuk avtomobiliga quvib o'tish taqig'i / oxiri</td><td>&gt;3,5 t uchun (avtobus/yengil avtomobilga taalluqli emas)</td></tr>
+        <tr><td class="id">3.24 / 3.25</td><td>Tezlik cheklangan / cheklovning oxiri</td><td>ko'rsatilgan km/h</td></tr>
+        <tr><td class="id">3.26</td><td>Signal berish taqiqlangan</td><td>avariyaning oldini olishdan tashqari</td></tr>
+        <tr><td class="id">3.27</td><td>To'xtash taqiqlangan</td><td>nogiron/maxsus/yo'nalishli transport mustasno</td></tr>
+        <tr><td class="id">3.28</td><td>To'xtab turish taqiqlangan</td><td>to'xtash mumkin, faqat turish man etiladi</td></tr>
+        <tr><td class="id">3.29 / 3.30</td><td>Toq / juft kunlarda to'xtab turish taqiqlangan</td><td>almashinuv soati — <span class="num">19:00–21:00</span> oralig'ida (yarim tunda emas)</td></tr>
+        <tr><td class="id">3.31</td><td>Barcha cheklovlarning oxiri</td><td>3.16/3.20/3.22/3.24/3.26–3.30 ni bekor qiladi</td></tr>
+        <tr><td class="id">3.32 / 3.33</td><td>Xavfli / portlovchi-alangalanuvchi yuk man etiladi</td><td></td></tr>
+        <tr><td class="id">3.34</td><td>Individual harakatlanish vositalari man etiladi</td><td>elektrosamokat, segvey va h.k.; velosipedga taalluqli emas</td></tr>
+        <tr><td class="id">3.35</td><td>Ekologik zona</td><td>"o'rta"/"zararli" chiqindili transport man etiladi</td></tr>
+        </tbody></table></div>
+
+        <h4>4 — Buyuruvchi belgilar</h4>
+        <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Nomi</th><th>Ma'nosi</th></tr></thead>
+        <tbody>
+        <tr><td class="id">4.1.1–4.1.6</td><td>Harakat yo'nalishi (to'g'ri/o'ng/chap va kombinatsiyalari)</td><td>faqat ko'rsatilgan yo'nalish(lar)ga</td></tr>
+        <tr><td class="id">4.2.1–4.2.3</td><td>To'siqni aylanib o'tish (o'ngdan/chapdan/ikkalasidan)</td><td></td></tr>
+        <tr><td class="id">4.3</td><td>Aylanma harakat</td><td>aylanmadagi transport ustunlikka ega</td></tr>
+        <tr><td class="id">4.4</td><td>Yengil avtomobillar harakati</td><td>faqat avtomobil/avtobus/mototsikl/≤3,5 t yuk</td></tr>
+        <tr><td class="id">4.5</td><td>Velosiped yo'lkasi</td><td>trotuar bo'lmasa piyoda ham yurishi mumkin</td></tr>
+        <tr><td class="id">4.6</td><td>Piyodalar yo'lkasi</td><td>transportga taqiqlangan</td></tr>
+        <tr><td class="id">4.6.1 / 4.6.2</td><td>Birgalikdagi piyoda-velosiped yo'lagi / oxiri</td><td>ajratilmagan umumiy yo'lak</td></tr>
+        <tr><td class="id">4.6.3 / 4.6.4</td><td>Alohida ajratilgan yo'lak / oxiri</td><td>chiziq bilan ajratilgan</td></tr>
+        <tr><td class="id">4.7 / 4.8</td><td>Eng kam tezlik / cheklovning oxiri</td><td></td></tr>
+        <tr><td class="id">4.9.1–4.9.3</td><td>Xavfli yuk transportining majburiy yo'nalishi</td><td></td></tr>
+        </tbody></table></div>
+
+        <h4>5 — Axborot-ishora belgilari</h4>
+        <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Nomi</th><th>Ma'nosi</th></tr></thead>
+        <tbody>
+        <tr><td class="id">5.1 / 5.2</td><td>Avtomagistral / oxiri</td><td></td></tr>
+        <tr><td class="id">5.3 / 5.4</td><td>Avtomobillar uchun yo'l / oxiri</td><td>tez yurish yo'li — arava/velosiped/traktor man etiladi</td></tr>
+        <tr><td class="id">5.5 / 5.6</td><td>Bir tomonlama yo'l / oxiri</td><td>U-burilish taqiqlanadi</td></tr>
+        <tr><td class="id">5.7.1 / 5.7.2</td><td>Bir tomonlama yo'lga chiqish</td><td></td></tr>
+        <tr><td class="id">5.8.1–5.8.8</td><td>Tasmalar bo'yicha harakat yo'nalishi</td><td>reversiv/qo'shimcha tasmalar</td></tr>
+        <tr><td class="id">5.9</td><td>Yo'nalishli transport tasmasi</td><td>uzuq chiziq orqali faqat o'ngga burilish/tushirish uchun kesib o'tish mumkin</td></tr>
+        <tr><td class="id">5.10.1–5.10.4</td><td>Qarama-qarshi yo'nalishli transport tasmasi</td><td></td></tr>
+        <tr><td class="id">5.11.1 / 5.11.2</td><td>Qayrilib olish joyi / oralig'i</td><td></td></tr>
+        <tr><td class="id">5.12 / 5.13</td><td>Avtobus-trolleybus / tramvay to'xtash joyi</td><td>15 m ichida boshqa to'xtash man etiladi</td></tr>
+        <tr><td class="id">5.14</td><td>Taksi to'xtab turish joyi</td><td>boshqalarga taqiqlanadi</td></tr>
+        <tr><td class="id">5.15–5.15.4</td><td>To'xtab turish joyi (pullik/yer usti/osti/EV)</td><td></td></tr>
+        <tr><td class="id">5.16.1 / 5.16.2</td><td>Piyodalar o'tish joyi (chekka belgilari)</td><td></td></tr>
+        <tr><td class="id">5.17.1–5.17.4</td><td>Yer osti / usti piyoda o'tish joyi</td><td>majburiy foydalanish</td></tr>
+        <tr><td class="id">5.18</td><td>Tavsiya etilgan tezlik</td><td>majburiy emas</td></tr>
+        <tr><td class="id">5.19.1–5.19.3</td><td>Oxiri berk yo'l/ko'cha</td><td>kirish man etilmagan</td></tr>
+        <tr><td class="id">5.20.1–5.20.5</td><td>Yo'nalish ko'rsatkichlari / xizmat maydoni</td><td></td></tr>
+        <tr><td class="id">5.21.1 / 5.21.2</td><td>Yo'nalish(lar) ko'rsatkichi</td><td></td></tr>
+        <tr><td class="id">5.22 / 5.23</td><td>Aholi punkti boshi / oxiri (oq fon)</td><td>ichida 70 km/h va signal berish taqig'i amal qiladi</td></tr>
+        <tr><td class="id">5.24 / 5.25</td><td>Aholi punkti boshi / oxiri (ko'k fon)</td><td>faqat ma'muriy chegara — shahar tashqarisi qoidalari amal qiladi</td></tr>
+        <tr><td class="id">5.26–5.29.2</td><td>Manzil / masofa / km belgisi / yo'l raqami</td><td></td></tr>
+        <tr><td class="id">5.30.1–5.30.3</td><td>Yuk transporti uchun tavsiya etilgan yo'nalish</td><td>majburiy emas</td></tr>
+        <tr><td class="id">5.31–5.34.2</td><td>Aylanib o'tish yo'nalishi / vaqtinchalik qayta tizilish</td><td></td></tr>
+        <tr><td class="id">5.35–5.37</td><td>Reversiv harakat yo'li / oxiri / kirish</td><td>faqat reversiv svetofor boshqaradi</td></tr>
+        <tr><td class="id">5.38 / 5.39</td><td>Turar joy dahasi / oxiri</td><td>piyoda hatto yo'lda ham ustunlikka ega</td></tr>
+        <tr><td class="id">5.40</td><td>Falokatli holatlar uchun kirish yo'li</td><td>tog'da tormoz ishlamay qolsa</td></tr>
+        <tr><td class="id">5.41 / 5.43</td><td>Foto-video / radar nazorati</td><td></td></tr>
+        <tr><td class="id">5.42</td><td>Qizil chiroqda o'ngga burilish</td><td>piyoda/ko'ndalang transportga yo'l berib</td></tr>
+        <tr><td class="id">5.44 / 5.45</td><td>Velosiped (va IHV) tasmasi / oxiri</td><td>avtomobilga to'xtash/harakat man etiladi</td></tr>
+        <tr><td class="id">5.46</td><td>Maktab</td><td>300 m ichida <span class="num">30 km/h</span></td></tr>
+        <tr><td class="id">5.47–5.47.2</td><td>Turizm obyekti / markazi</td><td></td></tr>
+        <tr><td class="id">5.48</td><td>Baland piyodalar o'tish joyi</td><td></td></tr>
+        </tbody></table></div>
+
+        <h4>6 — Servis belgilari</h4>
+        <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Nomi</th></tr></thead>
+        <tbody>
+        <tr><td class="id">6.1 / 6.2</td><td>Tibbiy yordam nuqtasi / shifoxona</td></tr>
+        <tr><td class="id">6.3.1–6.3.3</td><td>Yonilg'i shaxobchasi / ko'p turdagi yonilg'i / elektromobil quvvatlash</td></tr>
+        <tr><td class="id">6.4 / 6.5</td><td>Texnik xizmat / avtomobil yuvish</td></tr>
+        <tr><td class="id">6.6–6.11</td><td>Telefon / oshxona / ichimlik suvi / mehmonxona / kemping / dam olish joyi</td></tr>
+        <tr><td class="id">6.12 / 6.13</td><td>YPX maskani / avtotashuvchilar nazorat punkti</td></tr>
+        <tr><td class="id">6.14–6.17</td><td>Hojatxona / chiqindi punkti / cho'milish havzasi / IIB bo'limi</td></tr>
+        <tr><td class="id">6.18</td><td>Radio aloqasi — belgilangan chastota shu hududda uzatiladi</td></tr>
+        <tr><td class="id">6.19–6.21</td><td>Jome' masjid / cherkov / ibodatxona</td></tr>
+        <tr><td class="id">6.22–6.28</td><td>Vokzal / aeroport / bozor / turizm markazi / qo'riqxona / manzara / yodgorlik</td></tr>
+        </tbody></table></div>
+        <div class="callout callout-flag"><span class="cl-label">Manbada xato</span>Belgi <b>6.18</b> matni manbada teskari ma'noda yozilgan edi ("belgi ma'lumot uzatilishini <i>kafolatlaydi</i>"). To'g'ri ma'no: belgilangan radio chastotasi mavjud bo'lmagan hududlarda, belgi ma'lumot uzatilishini <b>kafolatlamaydi</b> — matn shu bo'yicha tuzatildi.</div>
+
+        <h4>7 — Qo'shimcha axborot belgilari (asosiy belgi bilan birga qo'llanadi)</h4>
+        <ul class="facts">
+          <li class="fact"><b>7.1.1–7.1.4</b> obyektgacha masofa · <b>7.2.x</b> ta'sir oralig'i · <b>7.3.x</b> ta'sir yo'nalishi · <b>7.4.x</b> transport turi (yuk, yo'nalishli, traktor, mototsikl, velosiped, EV) · <b>7.5.x</b> amal qilish kuni/vaqti</li>
+          <li class="fact"><b>7.6.1–7.6.9</b> to'xtab turish usuli (burchak ostida va h.k.) · <b>7.7</b> dvigatel o'chirilgan holda to'xtash · <b>7.9</b> to'xtash muddati cheklangan</li>
+          <li class="fact"><b>7.15</b> ko'zi ojiz piyodalar o'tadi · <b>7.16</b> faqat nam qoplamada amal qiladi · <b>7.17/7.18</b> nogironlar uchun/mustasno</li>
+          <li class="fact"><b>7.19</b> foto-video nazorati · <b>7.20</b> xavfli yuk sinfi (9 GOST sinfi: portlovchi, gaz, alangalanuvchi suyuqlik/qattiq, oksidlovchi, zaharli, radioaktiv, korroziv, boshqa) · <b>7.21</b> evakuator ishlamoqda</li>
+        </ul>
+        <div class="callout callout-note"><span class="cl-label">Vaqtinchalik belgilar</span>Sariq fonli vaqtinchalik belgi doimiy belgi bilan ziddiyatga kirsa, haydovchi <b>vaqtinchalik</b> belgiga bo'ysunadi.</div>
+
+        <h3>Yo'l chiziqlari</h3>
+        <h4>Yotiq chiziqlar</h4>
+        <ul class="facts">
+          <li class="fact"><b>1.1</b> sidirg'a chiziq — kesib o'tish taqiqlanadi (yo'nalishlarni ajratadi/chekkani belgilaydi)</li>
+          <li class="fact"><b>1.2</b> enli sidirg'a — avtomagistral yelka chizig'i, zarurat bo'lsa kesib o'tsa bo'ladi</li>
+          <li class="fact"><b>1.3</b> ikki parallel sidirg'a — 4+ tasmali yo'lda yo'nalishlarni ajratadi, kesib o'tish taqiqlanadi</li>
+          <li class="fact"><b>1.4</b> sariq sidirg'a — to'xtash taqiqlangan zona (yo'nalishli transport mustasno)</li>
+          <li class="fact"><b>1.5</b> uzuq chiziq — yo'nalishlarni/tasmalarni ajratadi, kesib o'tish mumkin</li>
+          <li class="fact"><b>1.9</b> reversiv tasma chegarasi; reversiv svetofor o'chgan bo'lsa — bu tasmaga kirish taqiqlanadi</li>
+          <li class="fact"><b>1.10</b> sariq uzuq — to'xtab turish taqiqlangan (to'xtash mumkin)</li>
+          <li class="fact"><b>1.12</b> to'xtash chizig'i · <b>1.13</b> "bo'ri tishi" uchburchak — to'xtashga majburlamaydi, lekin yo'l berish talab etiladi</li>
+          <li class="fact"><b>1.14.1–1.14.4</b> zebra turlari: oddiy (&lt;6 m), keng oq-sariq (yuqori intensivlik), yo'nalish strelkali keng (≥6 m), oq-qizil (maktab/bog'cha oldida)</li>
+          <li class="fact"><b>1.16.1–1.16.3</b> qiya chiziqli ajratuvchi zonalar — ustidan yurish/to'xtash taqiqlanadi</li>
+          <li class="fact"><b>1.18</b> tasma strelkalari — chapdagi strelka U-burilishga ham ruxsat beradi</li>
+          <li class="fact"><b>1.24</b> nogironlar uchun to'xtab turish joyi belgisi</li>
+        </ul>
+        <h4>Tik chiziqlar (qora-oq)</h4>
+        <ul class="facts">
+          <li class="fact">Ko'prik tayanchlari, tonnel/ko'prik pastki qirrasi (&lt;5 m balandlikda), orolcha ustunlari, yo'l chetidagi to'siqlar va jarlik yoqasidagi panjaralarni belgilaydi.</li>
+        </ul>
+
+        <h3>Svetofor va tartibga soluvchi signallari</h3>
+        <div class="callout callout-note"><span class="cl-label">Eslatma</span>Bu — imtihonda eng ko'p xato qilinadigan mavzu (chorrahadan o'tish tartibi bilan birga). To'liq o'rganib chiqing.</div>
+        <h4>Dumaloq svetofor signallari</h4>
+        <ul class="facts">
+          <li class="fact"><b>Yashil</b> — harakat erkin. <b>Miltillovchi yashil</b> — harakat erkin, lekin tez orada o'zgaradi.</li>
+          <li class="fact"><b>Sariq</b> — to'xtash (bandning 42 istisnosidan tashqari); yo'nalishlar almashinuvi.</li>
+          <li class="fact"><b>Miltillovchi sariq</b> — ehtiyotkorlik bilan harakatlaning, oldinda nazoratsiz kesishma/o'tish joyi.</li>
+          <li class="fact"><b>Qizil</b> (doimiy yoki miltillovchi) — to'xtash. <b>Qizil+sariq</b> — to'xtashda turing, yashil tez orada yonadi.</li>
+        </ul>
+        <h4>Strelkali (yo'naltirgich) signallar</h4>
+        <ul class="facts">
+          <li class="fact">Dumaloq signal bilan bir xil ma'noda, lekin faqat ko'rsatilgan yo'nalishga taalluqli; chap strelka U-burilishga ham ruxsat beradi (alohida taqiqlanmasa).</li>
+          <li class="fact">Asosiy yashil bilan birga yashil strelka yonsa — o'sha yo'nalishda erkin harakat. Qizil/sariq bilan birga yonsa — o'sha yo'nalish boshqalarga nisbatan ustunlikka ega, lekin o'chiq bo'lsa — o'sha yo'nalish taqiqlangan.</li>
+        </ul>
+        <h4>Boshqa signal turlari</h4>
+        <ul class="facts">
+          <li class="fact">Piyoda/velosiped shaklidagi signal — faqat o'sha ishtirokchilarga taalluqli; ko'zi ojizlar uchun ovozli signal qo'shilishi mumkin.</li>
+          <li class="fact"><b>Reversiv svetofor:</b> X shaklidagi qizil = tasma yopiq; pastga yashil strelka = tasma ochiq; o'chiq bo'lsa — kirish taqiqlanadi.</li>
+          <li class="fact"><b>Tramvay "T" signali</b> — 4 ta oq chiroq "T" shaklida: yuqori+pastki birga yonsa = harakat (yonayotgan chiroq tomoniga); pastki o'chiq, uchtasi yonsa = to'xtash.</li>
+          <li class="fact"><b>Temir yo'l dumaloq signali</b> — miltillovchi oq = o'tish mumkin (poyezd yo'q); miltillovchi qizil (+ ovozli) = to'xtash, o'tish taqiqlanadi.</li>
+        </ul>
+        <h4>Tartibga soluvchining qo'l ishoralari</h4>
+        <ul class="facts">
+          <li class="fact"><b>Qo'llar yon tomonga yozilgan</b> (yoki pastga tushirilgan): yon tomonlardan — tramvay to'g'riga, boshqa transport to'g'riga/o'ngga, piyoda o'tishi mumkin; old/orqa tomondan — hamma to'xtaydi.</li>
+          <li class="fact"><b>O'ng qo'l oldinga cho'zilgan</b>: chap tomondan — tramvay chapga, boshqalar istalgan tomonga; old tomondan — hamma (tramvay ham) faqat o'ngga; orqa va o'ng tomondan — to'xtash.</li>
+          <li class="fact">Yodda tuting: <i>"tramvay yengdan-yengga harakatlanadi"</i> — tramvay faqat tartibga soluvchining yenglari ko'rsatgan yo'nalishda yuradi.</li>
+          <li class="fact"><b>Qo'l yuqoriga ko'tarilgan</b> — hamma yo'nalishda to'xtash (sariqqa teng), qattiq tormozlamasdan to'xtay olmaydigan haydovchidan tashqari.</li>
+        </ul>
+        <h4>Ustunlik tartibi</h4>
+        <ul class="facts">
+          <li class="fact"><b>Tartibga soluvchi signali</b> &gt; svetofor/belgi/chiziq &gt; <b>svetofor</b> &gt; imtiyoz belgilari.</li>
+          <li class="fact">Yo'nalishingizdagi svetofor o'chgan bo'lsa, kesishuvchi yo'nalishdagi svetofor ham o'chganini tekshirib, keyin nazoratsiz kesishma sifatida imtiyoz belgilarini qo'llang.</li>
+        </ul>
+
+        <h3>Ogohlantiruvchi va avariya signallari</h3>
+        <ul class="facts">
+          <li class="fact">Signal berish faqat: shahar tashqarisida quvib o'tishni ogohlantirish va avariyaning oldini olish uchun ruxsat etiladi — boshqa hollarda taqiqlanadi.</li>
+          <li class="fact">Signal manyovrdan oldin berilib, undan keyin darhol o'chiriladi; signal berish o'zi ustunlik bermaydi.</li>
+          <li class="fact"><b>Avariya signali yoqiladi:</b> avariyada; taqiqlangan joyda majburiy to'xtashda; boshqa haydovchini ko'zini qamashtirganda; shatakka olinayotganda; "Bolalar guruhini tashish" belgili transportda bola chiqib-tushayotganda.</li>
+          <li class="fact"><b>Avariya to'xtash belgisi (uchburchak)</b> darhol qo'yiladi: aholi punktida ≥<span class="num">15 m</span>, undan tashqarida ≥<span class="num">30 m</span> masofada, transport tomonidan, kelayotganlarni oldindan ogohlantiradigan tarzda.</li>
+          <li class="fact">Qo'l ishoralari (indikator ishlamasa): chapga — chap qo'l yonga yoki o'ng qo'l tirsakdan bukilib yuqoriga; o'ngga — teskarisi; to'xtash — istalgan qo'l yuqoriga.</li>
+        </ul>
+
+        <h3>Manyovr va harakatni boshlash</h3>
+        <ul class="facts">
+          <li class="fact">Hovlidan/yondosh hududdan chiqishda — piyoda, velosipedchi va yo'ldagi barcha transportga yo'l bering.</li>
+          <li class="fact">Tasma almashtirishda — tasmadagi to'g'ri yuruvchiga yo'l bering; bir vaqtda qo'shiladiganlar orasida o'ngdagi ustun.</li>
+          <li class="fact">Burilishdan oldin (aylanmaga kirishdan tashqari) — tegishli chekka holatni egallang: o'ngga — eng o'ng, chapga/U-burilish — eng chap.</li>
+          <li class="fact">Chorraha tashqarisida chapga burilish/U-burilish — qarama-qarshi transport va tramvayga yo'l bering.</li>
+          <li class="fact">Yo'l tashqarisida (hovli, avtoturargoh, YEZ) — yo'llar kesishganda o'ngdan keluvchiga yo'l bering.</li>
+          <li class="fact"><b>U-burilish taqiqlanadi:</b> piyoda o'tish joyida, tonnelda, ko'prik ustida/ostida, temir yo'l kesishmasida, ko'rinish 100 m dan kam bo'lgan joyda.</li>
+          <li class="fact">Orqaga yurish chorrahalarda va U-burilish taqiqlangan joylarda taqiqlanadi.</li>
+        </ul>
+
+        <h3>Qatnov qismida joylashuv va tezlik</h3>
+        <div class="table-wrap"><table>
+        <caption>Tezlik chegaralari — <b>uzpdd.uz</b> orqali tekshirilgan, manbadagi raqamlar to'g'ri va amaldagi.</caption>
+        <thead><tr><th>Sharoit</th><th>Tezlik</th></tr></thead>
+        <tbody>
+        <tr><td>Aholi punktlarida — umumiy</td><td class="n">70 km/h</td></tr>
+        <tr><td>Toshkent, Nukus, viloyat/tuman markazlari (maxsus komissiya qarori bilan)</td><td class="n">60 km/h</td></tr>
+        <tr><td>Maktab/bog'cha yonida (300 m ichida)</td><td class="n">30 km/h</td></tr>
+        <tr><td>Turar joy dahalarida / yondosh hududda</td><td class="n">20 km/h</td></tr>
+        <tr><td>Shahar tashqarisida — yengil avto, yuk ≤3,5 t</td><td class="n">100 km/h</td></tr>
+        <tr><td>Shahar tashqarisida — shaharlararo avtobus/mikroavtobus</td><td class="n">90 km/h</td></tr>
+        <tr><td>Shahar tashqarisida — boshqa avtobus, mototsikl, yuk &gt;3,5 t</td><td class="n">80 km/h</td></tr>
+        <tr><td>Shahar tashqarisida — tirkamali yuk avtomobili</td><td class="n">70 km/h</td></tr>
+        <tr><td>Kuzovda odam tashiyotgan yuk avtomobili / bolalar guruhi</td><td class="n">60 km/h</td></tr>
+        <tr><td>Boshqa transportni shatakka olayotganda</td><td class="n">50 km/h</td></tr>
+        </tbody></table></div>
+        <ul class="facts">
+          <li class="fact">3-tasmali ikki tomonlama yo'lda o'rta tasma — faqat quvib o'tish/to'siqni aylanish/chapga burilish/U-burilish uchun, hech qachon chap (qarama-qarshi) tasma sifatida ishlatilmaydi.</li>
+          <li class="fact">Shahar tashqarisida iloji boricha o'ng tasmada yuring; 3+ tasmali bir yo'nalishli yo'lning chap tasmasi tirbandlik/quvib o'tish/chap burilish uchun (yuk mashinasiga faqat chap burilish uchun ruxsat).</li>
+          <li class="fact">Kuzatish oralig'i — oldingi transport keskin tormozlaganda to'qnashuvning oldini olish uchun yetarli bo'lishi, yon masofa ham xavfsiz saqlanishi kerak.</li>
+        </ul>
+
+        <h3>Quvib o'tish</h3>
+        <ul class="facts">
+          <li class="fact">Quvib o'tishdan oldin: chap signal, yetarli bo'sh masofa, orqada boshqa quvib o'tuvchi yo'qligiga, oldingi transport o'zi burilmayotganiga ishonch hosil qiling.</li>
+          <li class="fact">Chapga burilayotgan transportni — o'ngdan o'tib ketish kerak.</li>
+          <li class="fact"><b>Quvib o'tish taqiqlanadi:</b> tartibga solingan chorrahada; nazoratsiz kesishmada asosiy bo'lmagan yo'lda; ko'prik/tonnel ustida-ostida; piyoda o'tish joyida; temir yo'l kesishmasi va undan 100 m masofada; quvib o'tayotgan/aylanib o'tayotgan transportni; tepalik cho'qqisida yoki ko'rinish cheklangan joyda.</li>
+        </ul>
+
+        <h3>To'xtash va to'xtab turish</h3>
+        <ul class="facts">
+          <li class="fact">O'ng yo'l yoqasida/chekka tasmada to'xtang; bitta tasmali bir tomonlama yo'lda chap tomonga ham to'xtash mumkin.</li>
+          <li class="fact"><b>To'xtash taqiqlanadi:</b> tramvay yo'lida; temir yo'l kesishmasida; tonnelda; kam tasmali ko'prik ustida-ostida; chiziq/chekkagacha 3 m dan kam qolganda; piyoda/velosiped o'tish joyidan 10 m ichida; ko'rinish 100 m dan kam joyda; chorrahadan 30 m ichida; bekatdan 15 m ichida.</li>
+          <li class="fact"><b>To'xtab turish qo'shimcha taqiqlanadi:</b> shahar tashqarisida asosiy yo'lda; temir yo'l kesishmasidan 50 m ichida (nogironlar mustasno joylar bundan mustasno).</li>
+          <li class="fact">Mashinani tashlab ketishdan oldin: qo'l tormozini bosing, dvigatelni o'chiring, oynalarni yoping, eshik-bagajni qulflang.</li>
+        </ul>
+
+        <h3>Chorrahalarda harakat tartibi</h3>
+        <ul class="facts">
+          <li class="fact"><b>Tartibga solingan chorraha</b> — svetofor/tartibga soluvchi boshqaradi. <b>Nazoratsiz chorraha</b> — svetofor miltillovchi sariq, o'chiq yoki tartibga soluvchi yo'q — imtiyoz belgilari va nazoratsiz kesishma qoidalari amal qiladi.</li>
+          <li class="fact">Ruxsat etuvchi signalda chapga/U-burilayotgan avtomobil (va tramvay) — to'g'riga/o'ngga ketayotgan qarama-qarshi transportga yo'l beradi.</li>
+          <li class="fact">Svetofor/tartibga soluvchi orqali tramvay va avtomobilga bir vaqtda ruxsat berilsa — <b>tramvay har doim ustun</b>.</li>
+          <li class="fact"><b>Teng bo'lmagan yo'llar (nazoratsiz):</b> ikkinchi darajali yo'ldagi haydovchi asosiy yo'ldagi barcha transportga yo'l beradi, keyingi yo'nalishidan qat'iy nazar.</li>
+          <li class="fact"><b>Teng huquqli yo'llar (nazoratsiz):</b> <b>o'ngdan keluvchiga</b> yo'l bering ("o'ng qo'l qoidasi") — tramvaylar orasida ham shu qoida, lekin tramvay relssiz transportdan ustun (aylanmadan tashqari).</li>
+          <li class="fact">Yo'l holati (qattiq/tuproq) aniqlanmasa (qorong'i, loy, qor) va imtiyoz belgisi yo'q bo'lsa — o'z yo'lingizni ikkinchi darajali deb hisoblang.</li>
+        </ul>
+
+        <h3>Piyoda o'tish joylari va bekatlar</h3>
+        <ul class="facts">
+          <li class="fact">Nazoratsiz o'tish joyiga yaqinlashganda — kesib o'tayotgan piyodaga sekinlashtiring yoki to'xtang.</li>
+          <li class="fact">Agar oldingi mashina o'tish joyi oldida to'xtagan/sekinlashgan bo'lsa — yonidagi tasmadagi haydovchi uning oldida piyoda yashiringan bo'lishi mumkinligini hisobga olib, faqat ishonch hosil qilgach harakatlansin.</li>
+          <li class="fact"><b>Oq hassa</b> bilan signal beruvchi piyodaga — o'tish joyida bo'lsin-bo'lmasin, har doim yo'l bering.</li>
+          <li class="fact">"Bolalar guruhini tashish" belgili to'xtagan transportga yaqinlashganda — sekinlashtiring, kerak bo'lsa to'xtang, bolalar o'tib bo'lguncha kuting.</li>
+        </ul>
+
+        <h3>Temir yo'l kesishmalari</h3>
+        <ul class="facts">
+          <li class="fact"><b>Kesishmaga kirish taqiqlanadi:</b> shlagbaum yopiq/yopilayotgan yoki ko'tarilayotgan bo'lsa; signal taqiqlovchi bo'lsa (shlagbaum holatidan qat'iy nazar); qorovul to'xtash ishorasi bersa; poyezd ko'rinish doirasida bo'lsa; ortda tirbandlik kesishmada to'xtashga majbur qilsa.</li>
+          <li class="fact">Har doim taqiqlanadi: navbatdagi mashinani chap tasma orqali chetlab o'tish; shlagbaumni ruxsatsiz ochish; g'ildiraksiz qishloq xo'jaligi texnikasini tortib o'tish; ruxsatisiz <span class="num">8 km/h</span>dan sekin o'tish.</li>
+          <li class="fact">To'xtash joyi: to'xtash chizig'i/belgi 2.5/signal, bo'lmasa shlagbaumdan ≥5 m, u ham bo'lmasa birinchi relsdan ≥10 m oldin.</li>
+          <li class="fact">Relsda majburiy to'xtab qolsangiz: yo'lovchilarni darhol tushiring, ikki tomonga (1000 m) odam yuboring, umumiy xavf signali — <b>1 uzun + 3 qisqa</b> signal.</li>
+        </ul>
+
+        <h3>Avtomagistral va turar joy dahasi</h3>
+        <ul class="facts">
+          <li class="fact">Avtomagistralda taqiqlanadi: piyoda, hayvon, arava, velosiped, traktor, ≤40 km/h transport; yuk mashinasi chap tasmada; belgilanmagan joyda to'xtash; orqaga yurish; o'quv haydash.</li>
+          <li class="fact">Turar joy dahasida piyoda yo'lda ham ustunlikka ega, lekin transportni sababsiz to'smasligi kerak; o'quv haydash va dvigatel ishlagan holda turish taqiqlanadi.</li>
+          <li class="fact">Tik nishablikda (belgi 1.13) uzatmani bo'shatib (neytralda) yurish taqiqlanadi; tormoz ishlamay qolsa — belgi 5.40 bilan ko'rsatilgan favqulodda yo'lakka burilib to'xtang.</li>
+          <li class="fact">Tor tik qiyalikda to'siq bo'lsa — <b>pastga tushayotgan</b> mashina <b>yuqoriga chiquvchi</b>ga yo'l beradi (hatto to'siq yuqoriga chiquvchi tomonida bo'lsa ham).</li>
+        </ul>
+
+        <h3>Yoritish</h3>
+        <ul class="facts">
+          <li class="fact">Qorong'ida/yomon ko'rinishda/tonnelda — barcha motorli transportda yaqin yoki uzoq nur yoqilishi shart.</li>
+          <li class="fact">Uzoq nurni yaqin nurga almashtiring: yo'l yoritilgan bo'lsa; qarshi transport ≥150 m qolganda; ko'r qilish ehtimoli bo'lsa.</li>
+          <li class="fact">Ko'zi qamashgan haydovchi: keskin tormoz bermasin, o'z tasmasida qolsin, avariya signalini yoqib sekinlashib to'xtasin; ko'r bo'lgan holda burilish taqiqlanadi.</li>
+          <li class="fact"><b>Kunduzi yaqin nur majburiy:</b> tashkiliy kolonna, avtobus, bolalar guruhi transporti, xavfli/gabaritli yuk, shatakka oluvchi, kuchli yomg'ir-qor, mototsikl/moped (har doim).</li>
+          <li class="fact">Old/yon oynalar yorug'lik o'tkazuvchanligi — kamida <span class="num">70%</span> bo'lishi shart (lyuk va qonuniy tonirovka mustasno).</li>
+        </ul>
+
+        <h3>Shatakka olish va o'quv haydash</h3>
+        <ul class="facts">
+          <li class="fact">Egiluvchan bog'lash — <span class="num">4–6 m</span>; qattiq bog'lash — ≤<span class="num">4 m</span> (kengligi kattaroq transportning yarim kengligidan kam bo'lmasin).</li>
+          <li class="fact"><b>Shatakka olish taqiqlanadi:</b> ruli nosoz transport (qisman ko'targan holatdan tashqari); 2 tadan ortiq transportni; umumiy uzunlik &gt;20 m; muzlik yo'lda egiluvchan bog'lash bilan; ikki g'ildirakli mototsiklni (tortuvchi yoki tortiluvchi sifatida).</li>
+          <li class="fact">Minimal yosh: A toifasi — <span class="num">16</span>; B, C — <span class="num">18</span>; BE, CE — <span class="num">19</span>; D, DE, tramvay, trolleybus — <span class="num">21</span>.</li>
+        </ul>
+
+        <h3>Odam va yuk tashish</h3>
+        <ul class="facts">
+          <li class="fact">Moslashtirilgan kuzovda odam tashish — C toifa (≥3 yil tajriba), 8 kishidan ko'p bo'lsa D toifa ham kerak; kuzov devori ≥1,3 m, o'rindiq balandligi 0,3–0,5 m.</li>
+          <li class="fact"><b>Yo'lovchi tashish taqiqlanadi:</b> bolalarni yuk kuzovida; kabina tashqarisida (moslashtirilmagan); traktor/o'zi yuruvchi mashina kuzovida; 12 yoshgacha bolani mototsiklning orqa o'rindig'ida yoki bolalar o'rindig'isiz oldingi o'rindiqda.</li>
+          <li class="fact">Yuk haydovchining ko'rish maydonini to'smasligi, boshqaruvni izdan chiqarmasligi, chiroq/raqamni yopmasligi kerak; sochilma yuk N/O3/O4 toifadagi transportda brezent bilan qoplanishi shart.</li>
+          <li class="fact"><b>Gabaritdan katta yuk</b> (kenglik &gt;2,55 m, balandlik &gt;4 m, uzunlik &gt;12 m) — DYHXX bilan kelishish talab etiladi; oldinga/orqaga &gt;1 m yoki yon tomonga &gt;0,4 m chiqib turgan yuk — "Katta o'lchamli yuk" belgisi va tunda chiroq/qaytaruvchi bilan ta'minlanishi shart.</li>
+        </ul>
+
+        <h3>Transport vositasining texnik holati (nosozliklar)</h3>
+        <p class="lede">Transport toifalari (Vazirlar Mahkamasining 2012/191-son qarori): <b>M1</b> ≤8 o'rindiq · <b>M2</b> &gt;8 o'rindiq va ≤5 t · <b>M3</b> &gt;8 o'rindiq va &gt;5 t · <b>N1</b> ≤3,5 t yuk · <b>N2</b> 3,5–12 t · <b>N3</b> &gt;12 t · <b>O1–O4</b> tirkamalar (0,75 t dan 10 t dan yuqorigacha).</p>
+        <ul class="facts">
+          <li class="fact"><b>1. Tormoz tizimi</b> — gidravlik tizimda suyuqlik oqmasligi; pnevmatik tizimda bosim tushishi (uzilganda 30 daq., ulanganda 15 daq. ichida ≤0,05 MPa dan ortiq bo'lmasligi). <b>Qo'l tormozi</b> to'liq yuklangan holatda kamida quyidagi qiyalikda ushlab turishi shart: <span class="num">16%</span> (og'ir transport), <span class="num">25%</span> (yengil avto va avtobus), <span class="num">31%</span> (yuk avto va poyezdlar).</li>
+          <li class="fact"><b>2. Boshqaruv qurilmasi (rul)</b> — ruxsat etilgan eng ko'p erkin yurish (lyuft): <b>M1 = 10°</b>, <b>M2/M3/N1 = 20°</b>, <b>N2/N3 = 25°</b>.</li>
+          <li class="fact"><b>3. Tashqi yoritgichlar</b> — noto'g'ri son/tur/joylashuv/rang; old signalda sariqdan boshqa rang, orqa gabaritda qizildan boshqa rang taqiqlanadi.</li>
+          <li class="fact"><b>4. Oyna tozalagich/yuvgich</b> — mo'ljallangan tarzda ishlamasa, nosoz.</li>
+          <li class="fact"><b>5. G'ildirak va shinalar</b> — minimal protektor chuqurligi: <b>N2/N3/O3/O4 = 1,0 mm</b>; <b>M1/N1/O1/O2 = 1,6 mm</b>; <b>M2/M3 = 2,0 mm</b>; mototsikl/moped = 0,8 mm. Bir o'qda diagonal/radial, kamerali/kamerasiz, shipovkali/shipovkasiz shinalarni aralashtirish taqiqlanadi.</li>
+          <li class="fact"><b>6. Dvigatel</b> — me'yoridan ortiq zararli chiqindi/tutun, yonilg'i tizimi oqishi, kartér ventilatsiyasi buzilishi — nosozlik hisoblanadi.</li>
+          <li class="fact"><b>7. Boshqa qismlar</b> — signal ishlamasligi; <span class="num">70%</span>dan kam yorug'lik o'tkazuvchan old/yon oyna; spidometr ishlamasligi (shaxsiy avto, mototsikl, moped mustasno); <b>majburiy jihozlar yo'qligi</b> — M1/N1/N2/N3: dori qutisi, o't o'chirgich, ogohlantirish belgisi/miltilovchi qizil chiroq, aks ettiruvchi jilet; M2/M3 qo'shimcha: oyna chaqqichi, 2 ta o't o'chirgich.</li>
+        </ul>
+        <div class="callout callout-flag"><span class="cl-label">Manbada xato</span>Rul erkin yurishi (lyuft) qiymatlari manbada gradus belgisisiz "100/200/250" ko'rinishida yozilgan edi — bu <b>10°/20°/25°</b> ning transkripsiya xatosi (Kirill "М" harfi bilan aralashib ketgan). Shaxsan web orqali tekshirildi va tasdiqlandi.</div>
+
+        <h3>Velosiped, moped, arava va hayvon haydash</h3>
+        <ul class="facts">
+          <li class="fact">Minimal yosh: velosiped/arava/ot minish — <span class="num">14</span>; moped — <span class="num">16</span>.</li>
+          <li class="fact">Yo'lning eng o'ng tasmasi bo'ylab bir qatorda yuriladi; velosiped yo'li bo'lsa, undan foydalanish majburiy.</li>
+          <li class="fact"><b>Taqiqlanadi:</b> ikki qo'lni ruldan olib yurish; 7 yoshdan katta yo'lovchi tashish; dubulg'asiz (moped) yurish; velosipedda zebradan yurib o'tish (piyoda bo'lib yetaklab o'tish kerak); tramvay yo'li bor yoki 1 tasmadan ortiq yo'lda chapga burilish/U-burilish.</li>
+          <li class="fact">Nazoratsiz kesishmada velosipedchi yo'l transportiga, piyoda yo'lkasi kesishganda esa piyodaga yo'l beradi.</li>
+        </ul>
+
+        <h3>Ro'yxatga olish va identifikatsion belgilar</h3>
+        <ul class="facts">
+          <li class="fact">Yangi/"Tranzit" belgili transport <span class="num">10 kun</span> ichida DYHXXda ro'yxatdan o'tishi va OSAGO rasmiylashtirilishi shart.</li>
+          <li class="fact">Identifikatsion belgilar: "Avtopoyezd" (3 sariq chiroq/uchburchak), "Turumlangan shina" (qizil uchburchakda qora "T"), "Bolalar guruhini tashish" (sariq kvadrat), "Kar haydovchi" (sariq doira, 3 qora nuqta), "O'quv transporti" (qizil uchburchakda oq "O'"), "Novice haydovchi" (sariq kvadratda "!", 2 yildan kam tajriba).</li>
+          <li class="fact"><b>Transportdan foydalanish taqiqlanadi:</b> nosozlik ro'yxatidagi (Ilova 3) muammo bo'lsa; ruxsatsiz o'zgartirish qilingan bo'lsa; texnik ko'rikdan o'tmagan bo'lsa; soxta/o'zgartirilgan raqam-belgi bo'lsa.</li>
+        </ul>
+
+        <div class="callout callout-note"><span class="cl-label">Eslatma</span>Jarima summalari bu bo'limda keltirilmadi — ular eskirgan ("eng kam ish haqi") birlikda va reformadan oldingi holatda edi. Amaldagi jarima miqdorlari <a href="#javobgarlik">"Javobgarlik"</a> bo'limida, 2026-yil manbasidan tekshirilgan holda keltirilgan.</div>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 2. TEXNIK HOLAT -->
+    <!-- ============================================================ -->
+    <section id="texnik" data-subject="texnik">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">2 · Transport vositasining texnik holati</span>
+        <span class="ssub">shina, tormoz, elektr tizimi, nosozlik diagnostikasi</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <h3>Shina belgilanishi (masalan: 195/65 R15)</h3>
+        <ul class="facts">
+          <li class="fact"><b>195</b> — kenglik (mm) · <b>65</b> — profil balandligi % (→ 126,75 mm yon devor balandligi) · <b>R</b> — radial qurilma (diagonal shinada bu harf yo'q) · <b>15</b> — disk diametri (dyuym).</li>
+          <li class="fact">Yuk indeksi (0–130 shkala, masalan "91" = 615 kg maksimal yuk) va tezlik reytingi harfi (masalan "T" = 190 km/h gacha).</li>
+          <li class="fact">Ob-havo belgilari: <b>M+S</b> (loy+qor), <b>AS</b> (barcha mavsum), qor parchasi belgisi (qishki shina).</li>
+          <li class="fact"><b>TWI</b> (Tread Wear Indication) — protektor egovida quyilgan eskirish ko'rsatkichi; yengil avtomobil uchun qonuniy minimal chuqurlik — <span class="num">1,6 mm</span>.</li>
+        </ul>
+
+        <h3>Avtomat uzatmalar qutisi (AT) selektori</h3>
+        <div class="callout callout-flag"><span class="cl-label">Manbada xato</span>Selektor ketma-ketligi manbada "R, R, N, D" deb yozilgan edi — birinchi harf noto'g'ri, aslida <b>P</b> (Park) bo'lishi kerak. To'g'irlandi.</div>
+        <ul class="facts">
+          <li class="fact"><b>P</b> (Park) — faqat to'liq to'xtagach va qo'l tormozi qo'yilgan holda; dvigatelni yoqish uchun ham shu holat kerak.</li>
+          <li class="fact"><b>R</b> (Reverse) — faqat to'liq to'xtagach, tormoz pedali bosilgan holda.</li>
+          <li class="fact"><b>N</b> (Neutral) — g'ildiraklarga kuch uzatilmaydi; harakatda N ga o'tish taqiqlanadi (uzatmalar qutisi shikastlanishi mumkin).</li>
+          <li class="fact"><b>D</b> (Drive) — odatiy avtomatik uzatma rejimi. <b>D3/S</b> va <b>D2/L</b> — tog'/tik yo'l uchun kuchliroq dvigatel tormozi bilan quyi uzatma rejimlari.</li>
+        </ul>
+
+        <h3>Tormoz tizimi turlari</h3>
+        <ol class="facts">
+          <li class="fact"><b>Ishchi tormoz tizimi</b> — doimiy foydalaniladigan, pedal bilan boshqariladigan asosiy tormoz.</li>
+          <li class="fact"><b>Ehtiyot tormoz tizimi</b> — ishchi tizim ishdan chiqsa ishlatiladi.</li>
+          <li class="fact"><b>Yordamchi tormoz tizimi</b> (dvigatel tormozi) — uzoq pastga tushishda barqaror tormozlash uchun, keskin to'xtata olmaydi.</li>
+          <li class="fact"><b>To'xtatib turish (qo'l) tormozi</b> — to'xtagan transportni, jumladan qiyalikda, joyida ushlab turadi.</li>
+        </ol>
+
+        <h3>Elektr tizimi</h3>
+        <ul class="facts">
+          <li class="fact">Akkumulyator kuchlanishi — <span class="num">12 V</span> (6 ta ketma-ket kataklardan).</li>
+          <li class="fact">Generator kuchlanish regulyatori — <span class="num">13,6–14,2 V</span> oralig'ida ushlab turadi.</li>
+          <li class="fact">Ximoya moslama (predoxranitel) rangi → amper: qizil = <span class="num">10 A</span>, sariq = <span class="num">20 A</span>, yashil = <span class="num">30 A</span>. Yuqori amperli bilan "vaqtincha" almashtirish taqiqlanadi.</li>
+          <li class="fact">Akkumulyatorga xizmat ko'rsatishda — <b>avval manfiy (–) klemmani</b> uzing, ulashda esa <b>oxirida</b> ulang.</li>
+        </ul>
+
+        <h3>Sovutish tizimi</h3>
+        <ul class="facts">
+          <li class="fact">Termostat <span class="num">~90°C</span>da ochila boshlaydi, katta doiraga (radiatorga) o'tadi.</li>
+          <li class="fact">Sovutish ventilyatori <span class="num">~105°C</span>da yuqori tezlikka o'tadi, <span class="num">~102°C</span>da pastga tushadi.</li>
+        </ul>
+
+        <h3>Gaz yoqilg'i tizimlari</h3>
+        <ul class="facts">
+          <li class="fact">Suyultirilgan gaz (LPG, propan-butan) ballonlari — <span class="num">16 atmosfera</span> bosimda saqlanadi.</li>
+          <li class="fact">Siqilgan tabiiy gaz (CNG, metan) ballonlari — <span class="num">200 atmosfera</span> bosimda saqlanadi.</li>
+          <li class="fact">LPG reduktori chiqish bosimini kirish (kollektor) bosimidan <span class="num">2 bar</span> yuqori qilib rostlaydi.</li>
+        </ul>
+
+        <h3>Qo'l tormozi va nosozlik diagnostikasi</h3>
+        <ul class="facts">
+          <li class="fact">To'g'ri sozlangan qo'l tormozi richagi yurishi — <span class="num">4–5</span> ta chiqillash (xrapovik) ga teng bo'lishi kerak.</li>
+        </ul>
+        <div class="table-wrap"><table>
+        <caption>Egzoz tutuni rangi → sabab (klassik imtihon savoli)</caption>
+        <thead><tr><th>Rang</th><th>Sabab</th></tr></thead>
+        <tbody>
+        <tr><td><b>Ko'k</b></td><td>motor moyi yonmoqda — porshen/silindr guruhi yoki klapan saqich-o'ramalari (salnik) yeyilgan</td></tr>
+        <tr><td><b>Qora</b></td><td>boy (ortiqcha) yonilg'i aralashmasi — quvvat pasayishi, qizib ketish xavfi</td></tr>
+        <tr><td><b>Oq</b></td><td>sovutish suyuqligi yonish kamerasiga tushmoqda — odatda bosh prokladka teshilgan</td></tr>
+        </tbody></table></div>
+
+        <h3>Texnik xizmat ko'rsatish</h3>
+        <ul class="facts">
+          <li class="fact">4 turi: <b>KTXK</b> (kunlik), <b>TXK-1</b>, <b>TXK-2</b>, <b>MTXK</b> (mavsumiy).</li>
+          <li class="fact">Moy darajasini tekshirish: tekis joyda, dvigatel o'chirilgach ≥5 daqiqa kutib, tozalangan shup bilan MIN-MAX oralig'ida (taxminan 1 litr farq).</li>
+        </ul>
+        <div class="callout callout-note"><span class="cl-label">Eslatma</span>To'liq texnik xizmat davriyligi jadvali (necha km da nima almashtirilishi) manbada faqat sarlavha/belgilar ko'rinishida qolgan, aniq raqamlar yo'qolgan edi. Bu — ishlab chiqaruvchiga bog'liq bo'lgan tavsiya, qonun bilan qat'iy belgilangan yagona standart emas, shu sababli to'liq jadval o'rniga fabricated raqamlar berilmadi.</div>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. HAYDASH TEXNIKASI -->
+    <!-- ============================================================ -->
+    <section id="texnika" data-subject="texnika">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">3 · Haydash texnikasi</span>
+        <span class="ssub">burilish, parkovka ketma-ketliklari, YTH, favqulodda holatlar</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <h3>O'ngga burilish — 8 qadam</h3>
+        <ol class="facts steps">
+          <li class="fact">O'ng burilish signalini yoqing.</li>
+          <li class="fact">Ko'zguga qarab, orqa va yondagi transportlarni baholang.</li>
+          <li class="fact">O'ng tasmadagi transportlarni o'tkazib yuboring.</li>
+          <li class="fact">O'ng tasmaga o'ting.</li>
+          <li class="fact">Tezlikni kamaytiring, mos uzatmaga o'ting.</li>
+          <li class="fact">Yo'lni kesib o'tayotgan piyodaga yo'l bering.</li>
+          <li class="fact">Boshqa transportga xalaqit bermasligingizga ishonch hosil qiling, yo'lning eng o'ng qismini egallang.</li>
+          <li class="fact">Manyovrni yakunlang.</li>
+        </ol>
+
+        <h3>Chapga burilish / U-burilish — 8 qadam</h3>
+        <ol class="facts steps">
+          <li class="fact">Burilish signalini yoqing.</li>
+          <li class="fact">Ko'zguga qarang.</li>
+          <li class="fact">Chap tasmadagi transportlarni o'tkazib yuboring.</li>
+          <li class="fact">Eng chap tasmaga o'ting.</li>
+          <li class="fact">Tezlikni asta kamaytiring, mos uzatmaga o'ting.</li>
+          <li class="fact">Yo'lni kesib o'tayotgan piyodaga yo'l bering.</li>
+          <li class="fact">Qarama-qarshi keluvchi transportga yo'l bering.</li>
+          <li class="fact">Manyovrni yakunlang.</li>
+        </ol>
+
+        <h3>Parkovka turlari</h3>
+        <ul class="facts">
+          <li class="fact"><b>Orqaga parallel parkovka</b> (5 qadam): joy topish → mashina oldidagi avtomobilga parallel, ~0,5 m masofada to'xtash → rulni to'liq burib orqaga yurish, orqa mashinaning ikkala farasi ko'zguda ko'ringuncha → rulni to'g'irlab, old bufer orqa mashina bufyoridan o'tguncha orqaga yurish → rulni teskari burib tekislash → tekislab bir oz oldinga siljish.</li>
+          <li class="fact"><b>Orqaga perpendikulyar parkovka</b> (6 qadam): joy topish → ko'zguni joy chizig'iga tekislash → orqa tomon bo'shligini tekshirish → chapga burilib joy burchagi o'ng ko'zguda ko'ringuncha oldinga yurish → o'ngga burilib boshqa mashinalarga parallel bo'lguncha orqaga yurish → tekislab yanada orqaga yurish.</li>
+          <li class="fact"><b>Oldinga parallel parkovka</b> (4 qadam, joy uzunlik 2× mashina bo'lishi kerak): joy topish → o'ngdagi mashinadan ~1 m masofada to'xtash, signal berish → o'ngga burilib oldingi mashina bilan tekislanguncha kirish → rulni to'liq o'ng, keyin to'liq chap burib bordyurga tekislash.</li>
+          <li class="fact"><b>Orqaga burchak ostida parkovka</b> (4 qadam) va <b>oldinga burchak ostida parkovka</b> (4 qadam) — signalni yoqib, joy chizig'iga mos ravishda rulni burib kirish, so'ng tekislash.</li>
+        </ul>
+
+        <h3>YTH (yo'l-transport hodisasi)</h3>
+        <ul class="facts">
+          <li class="fact">Ta'rif: transport harakatda bo'lgan vaqtda yuz beruvchi, o'lim, jarohat yoki mulkka zarar yetkazuvchi hodisa. 3 shart: transport ishtirok etgan, u harakatda bo'lgan, natija salbiy bo'lgan.</li>
+          <li class="fact"><b>9 mexanizm turi:</b> to'qnashuv, ag'darilish, to'xtab turgan transportga urilish, qo'zg'almas to'siqqa urilish, piyodani urib yuborish, velosipedchini urib yuborish, ot-aravani urib yuborish, hayvonni urib yuborish, boshqa turlar (tramvay yo'ldan chiqishi, yuk tushib ketishi va h.k.).</li>
+          <li class="fact">YTH mexanizmi bo'yicha statistika: to'qnashuv <span class="num">21,6%</span>, ag'darilish <span class="num">14,3%</span>, to'siqqa urilish <span class="num">4,6%</span>, piyodani urib yuborish <span class="num">46,7%</span>.</li>
+          <li class="fact">Piyoda ishtirokidagi YTHda aybdorlik taqsimoti: piyoda — <span class="num">62–67%</span>, haydovchi — <span class="num">22–25%</span>, boshqalar — <span class="num">7–13%</span>.</li>
+        </ul>
+
+        <h3>Xavfsiz masofa va ko'rinish</h3>
+        <ul class="facts">
+          <li class="fact">Quvib o'tishda xavfsiz yon masofa — <span class="num">1,0–1,5 m</span>.</li>
+          <li class="fact">Quvib o'tishni xavfsiz yakunlash uchun kerakli minimal ko'rinish masofasi (qarama-qarshi transportgacha): aholi punktida <span class="num">40 m</span>, tashqarisida <span class="num">60 m</span>; haqiqiy masofa hisoblangandan <b>2–3 marta</b> katta bo'lsa xavfsiz.</li>
+        </ul>
+
+        <h3>Favqulodda vaziyatlar</h3>
+        <ul class="facts">
+          <li class="fact"><b>Tormoz ishdan chiqsa:</b> ehtiyot tormoz tizimidan foydalaning; avariya signalini yoqing yoki ogohlantirish belgisini qo'ying; qattiq bog'lash bilan servisga shatakka oling (egiluvchan bog'lash <b>qat'iyan taqiqlanadi</b>).</li>
+          <li class="fact"><b>Shina yorilib ketsa:</b> yo'nalishni saqlang, juda yumshoq va asta tormozlang (keskin tormoz ag'darilish xavfini oshiradi); to'xtagach avariya signalini yoqib g'ildirakni almashtiring.</li>
+          <li class="fact"><b>Yuz surilib ketsa (skid):</b> tormoz bermang — gazni qo'yib yuboring va rulni <b>surilish tomoniga</b> yumshoq burang (masalan orqa qism o'ngga surilsa — rulni yumshoq o'ngga); keskin harakat qilmang.</li>
+          <li class="fact">Tik qiyalikda: hech qachon uzatmani bo'shatmang yoki mufta pedalini uzoq bosib ushlamang — inersiya kuchayadi, faqat tormoz bilan ushlab bo'lmaydi; to'xtaganda g'ildirak ostiga tosh/blok qo'ying.</li>
+        </ul>
+
+        <h3>Tungi haydash</h3>
+        <ul class="facts">
+          <li class="fact">Uzoq nurni o'chirmagan qarama-qarshi haydovchiga chiroq bilan signal bering; o'zingiz ko'r bo'lsangiz — avariya signalini yoqib, tasmani o'zgartirmasdan sekinlashib to'xtang.</li>
+          <li class="fact">Faqat kolonna boshidagi transport uzoq nur yoqadi, qolganlari yaqin nur ishlatadi; tunda kuzatish oralig'ini kattalashtiring, quvib o'tishdan saqlaning.</li>
+        </ul>
+
+        <h3>Temir yo'l va tuman qoidalari (yhq.md bilan mos)</h3>
+        <ul class="facts">
+          <li class="fact">Zich tumanda xavfsiz tezlik — piyoda yurish tezligiga yaqin, taxminan <span class="num">5 km/h</span>.</li>
+          <li class="fact">Dispetcher ruxsatisiz temir yo'l kesishmasidan o'tish uchun minimal tezlik — <span class="num">8 km/h</span> (undan sekin — o'tish taqiqlanadi).</li>
+        </ul>
+
+        <div class="callout callout-ok"><span class="cl-label">Tekshirildi</span>Ogohlantiruvchi uchburchak masofasi (15 m / 30 m) va shina protektor chuqurligi (1,6 mm) haqidagi manba ichidagi ziddiyatlar shaxsan web orqali tekshirilib hal qilindi — yuqoridagi "YHQ" bo'limidagi qiymatlar amaldagi to'g'ri qiymatlardir.</div>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. JAVOBGARLIK -->
+    <!-- ============================================================ -->
+    <section id="javobgarlik" data-subject="javobgarlik">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">4 · Javobgarlik</span>
+        <span class="ssub">jarimalar, MJtK/JK moddalari, OSAGO, jarima ballari</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <p class="lede">Moddalar (MJtK/JK) raqamlari — oldingi sessiyada ejarima.uz orqali mustaqil tekshirilgan va 2025-yil 20-fevraldagi "12 ballik tizim" islohoti bilan tasdiqlangan (CLAUDE.md tarixi). Jarima summalari esa <b>2026-yil</b> holatiga shaxsan tekshirilib yangilandi — asosiy hisoblash birligi <b>BHM (bazaviy hisoblash miqdori) = 412 000 so'm</b>.</p>
+
+        <h3>Eng ko'p uchraydigan qoidabuzarliklar — jarima jadvali</h3>
+        <div class="table-wrap"><table>
+        <thead><tr><th>Qoidabuzarlik</th><th>Modda</th><th>Jarima (2026)</th></tr></thead>
+        <tbody>
+        <tr><td>Xavfsizlik kamari/dubulg'a taqmaslik</td><td class="id">125-modda (1-q.)</td><td class="n">0,5 BHM</td></tr>
+        <tr><td>OSAGO sug'urtasi yo'qligi</td><td class="id">139-modda (2-q.)</td><td class="n">1 BHM</td></tr>
+        <tr><td>Qizil chiroqda/to'xtash chizig'ida o'tish</td><td class="id">133-modda</td><td class="n">2 BHM</td></tr>
+        <tr><td>Taqiqlangan joyda to'xtab turish</td><td class="id">1286-modda</td><td class="n">2 BHM</td></tr>
+        <tr><td>Harakatda telefon ushlab gaplashish</td><td class="id">1281-modda</td><td class="n">3 BHM</td></tr>
+        <tr><td>Qarama-qarshi tasmaga chiqish / xavfli manyovr</td><td class="id">1283-modda</td><td class="n">10 BHM</td></tr>
+        <tr><td>Tonirovka (ruxsat etilgan me'yordan ortiq)</td><td class="id">126-modda</td><td class="n">25 BHM</td></tr>
+        <tr><td>Tezlikni ≤20 km/h dan oshirish</td><td class="id">128-3-modda</td><td class="n">1 BHM</td></tr>
+        <tr><td>Tezlikni 20–40 km/h dan oshirish</td><td class="id">128-3-modda</td><td class="n">5 BHM</td></tr>
+        <tr><td>Tezlikni &gt;40 km/h dan oshirish</td><td class="id">128-3-modda</td><td class="n">9 BHM</td></tr>
+        <tr><td>Takroriy tezlik oshirish (2/3-marta)</td><td class="id">128-3-modda</td><td class="n">15 / 25 BHM + guvohnomadan mahrum qilish</td></tr>
+        <tr><td>Mast holda haydash</td><td class="id">131-modda</td><td class="n">25 BHM + 1,5–3 yil guvohnomadan mahrum qilish (chegirmasiz)</td></tr>
+        </tbody></table></div>
+        <ul class="facts">
+          <li class="fact">Boshqa jadvalda uchraydigan moddalar (tonirovka takroriy — 126-modda, tashqi jihoz nosozligi — 127-modda, temir yo'l kesishmasi qoidabuzarligi — 130-modda, mol-mulk/transportga zarar — 134-modda, hujjatsiz haydash — 135-modda, avariya joyini tark etish — 137-modda) — aniq 2026 summasi bu safar shaxsan tekshirilmadi, faqat modda raqami tasdiqlangan.</li>
+          <li class="fact"><b>Jarima chegirmasi:</b> to'lov <span class="num">15 kun</span> ichida amalga oshirilsa — <span class="num">50%</span> chegirma; <span class="num">16–30 kun</span> ichida — <span class="num">30%</span> chegirma (mast holda haydashda chegirma qo'llanilmaydi).</li>
+        </ul>
+        <div class="callout callout-flag"><span class="cl-label">Manbada ziddiyat</span>Jarohat + moddiy zarar yetkazuvchi qoidabuzarlik manbaning bir joyida <b>137-modda</b>, boshqa (eski) blokida <b>133-modda</b> deb ko'rsatilgan — bir xil matn, ikki xil modda raqami. 137-modda alohida va izchil ravishda "avariya joyini tark etish" uchun ham ishlatiladi, shu sababli bu haqiqiy raqamlash ziddiyati — qo'lda tekshirish talab etiladi.</div>
+        <div class="callout callout-flag"><span class="cl-label">Manbada bo'sh joy</span>"Jarima ballari" (12 ballik tizim) bo'limi sarlavhasi bor, lekin ballar ro'yxati (qaysi qoidabuzarlik nechta ball) manbada yo'q edi. Tizimning o'zi haqiqiy va quyida shaxsan tekshirilgan holda tavsiflandi — ammo to'liq ball-jadvali topilmadi.</div>
+
+        <h3>12 ballik jarima tizimi (2025-yil 20-fevraldan kuchda)</h3>
+        <ul class="facts">
+          <li class="fact">Har bir qoidabuzarlik uchun <span class="num">0,3–2</span> ball beriladi (bitta qoidabuzarlik uchun maksimal 2 ball).</li>
+          <li class="fact"><span class="num">12</span> oy ichida <span class="num">12 ball</span> to'plansa — guvohnoma <span class="num">6 oygacha</span> olib qo'yiladi.</li>
+          <li class="fact"><span class="num">8 ball</span>ga yetganda haydovchiga SMS orqali ogohlantirish yuboriladi.</li>
+          <li class="fact">Oxirgi qoidabuzarlikdan keyin <span class="num">6 oy</span> qoidabuzarliksiz o'tsa — <span class="num">2 ball</span> ayiriladi; qolgan ball 2 dan kam bo'lsa, barcha ballar bekor qilinadi.</li>
+        </ul>
+
+        <h3>Jinoiy javobgarlik (JK)</h3>
+        <ul class="facts">
+          <li class="fact"><b>JK-116-modda</b> — kasbiy vazifani beparvolik bilan bajarmaslik natijasida jarohat: 3 yilgacha huquqdan mahrum qilish / 2 yil axloq tuzatish ishlari; o'lim/og'ir oqibatda 3–8 yil ozodlikdan mahrum qilish.</li>
+          <li class="fact"><b>JK-117-modda</b> — xavf ostida qolgan shaxsga yordam bermaslik: 2 yilgacha axloq tuzatish ishlari; o'limga sabab bo'lsa 3 yilgacha, ko'p o'limda 3–5 yil ozodlikdan mahrum qilish.</li>
+          <li class="fact"><b>JK-261-modda</b> — mast shaxsni ruxsat berib haydashga qo'yish: 50×BHM gacha jarima yoki 3 yilgacha, og'ir jarohat/o'limda ozodlikdan mahrum qilish.</li>
+          <li class="fact"><b>JK-266-modda</b> — haydovchi tomonidan xavfsizlik qoidalarini buzib og'ir jarohat yetkazish: 50×BHM gacha jarima / 360 soatgacha jamoat ishlari / 3 yilgacha tuzatish ishlari; o'limda 7 yilgacha, ko'p o'lim/halokatda 10 yilgacha ozodlikdan mahrum qilish.</li>
+          <li class="fact"><b>JK-267-modda</b> — transport vositasini o'g'irlash: 5–10 yil (bazaviy), tashkiliy guruh/zo'ravonlik bilan 10–20 yilgacha ozodlikdan mahrum qilish.</li>
+          <li class="fact"><b>JK-268-modda</b> — yo'lovchi/piyoda/velosipedchi tomonidan xavfsizlik qoidalarini buzish natijasida jarohat: 25×BHM gacha jarima yoki 3 yilgacha tuzatish ishlari; o'limda 3–8 yil ozodlikdan mahrum qilish.</li>
+        </ul>
+
+        <h3>Ma'muriy jazo turlari</h3>
+        <ul class="facts">
+          <li class="fact"><b>Guvohnomadan mahrum qilish</b> — 15 kundan 3 yilgacha, tuman/shahar sudi tomonidan; nogironlarga qo'llanilmaydi (yiliga 3-marta tezlik oshirish, qizil chiroqni buzish, mast haydash, sinovdan bosh tortishdan tashqari).</li>
+          <li class="fact"><b>Pullik majburiy jamoat ishlari</b> — 8–240 soat; pensioner, voyaga yetmagan, homilador, 3 yoshgacha bolali ona, 1–2-guruh nogironlarga qo'llanilmaydi.</li>
+          <li class="fact"><b>Ma'muriy qamoq</b> — 3–15 kun (favqulodda holatda 30 kun); homilador, 3/14 yoshgacha bolali yolg'iz ona, voyaga yetmagan, 1–2-guruh nogironlarga qo'llanilmaydi.</li>
+          <li class="fact">Fotokameraga tushgan qoidabuzarlik uchun javobgarlik transport egasiga yuklanadi; takroriylik bo'yicha kuchaytirilgan jazo qo'llanilmaydi.</li>
+          <li class="fact">YPX xodimi transportni faqat 7 ta asosda to'xtatishi mumkin (ko'zga ko'ringan/qurilma qayd etgan buzilish, qidiruvdagi transport, guvoh sifatida, rasmiy cheklov, qonuniy talab, maxsus operatsiya, hujjat tekshiruvi) — boshqa sabab bilan to'xtatish taqiqlanadi.</li>
+        </ul>
+
+        <h3>OSAGO (majburiy fuqarolik javobgarligi sug'urtasi)</h3>
+        <ul class="facts">
+          <li class="fact">Qonun — 2008-yil 21-fevralda qabul qilingan, 2008-yil 21-aprelidan kuchga kirgan.</li>
+          <li class="fact">Jarohat/o'lim uchun to'lov — sug'urta summasining <span class="num">65%</span>idan oshmaydi; mulkiy zarar uchun — <span class="num">35%</span>idan oshmaydi.</li>
+          <li class="fact"><span class="num">50%</span> chegirma: urush faxriylari, Chernobil qatnashchilari, pensionerlar va 1-guruh nogironlar uchun (bittagina o'ziga tegishli transportga).</li>
+        </ul>
+
+        <h3>4 turdagi haydovchi javobgarligi</h3>
+        <ol class="facts">
+          <li class="fact"><b>Intizomiy</b> — ish beruvchi tomonidan (ogohlantirish, ishdan bo'shatish).</li>
+          <li class="fact"><b>Ma'muriy</b> — eng keng tarqalgani; jarima, guvohnomadan mahrum qilish.</li>
+          <li class="fact"><b>Fuqarolik</b> — zararni qoplash majburiyati, odatda OSAGO orqali.</li>
+          <li class="fact"><b>Jinoiy</b> — og'ir oqibatlarda; ozodlikdan mahrum qilish/tuzatish ishlari.</li>
+        </ol>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. MADANIYAT -->
+    <!-- ============================================================ -->
+    <section id="madaniyat" data-subject="madaniyat">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">5 · Haydovchi madaniyati va huquqiy asoslar</span>
+        <span class="ssub">toifalar, javobgarlik turlari, tarix</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <h3>Haydovchilik guvohnomasi toifalari</h3>
+        <div class="table-wrap"><table>
+        <thead><tr><th>Toifa</th><th>Ta'rif</th></tr></thead>
+        <tbody>
+        <tr><td class="id">A</td><td>mototsikllar, umumiy vazni 400 kg gacha</td></tr>
+        <tr><td class="id">B</td><td>umumiy vazni ≤3500 kg, ≤8 o'rindiq (haydovchidan tashqari); tirkama ≤750 kg</td></tr>
+        <tr><td class="id">C</td><td>3,5 tonnadan og'ir yuk avtomobillari (kichik tirkama ≤750 kg bilan)</td></tr>
+        <tr><td class="id">D</td><td>8 o'rindiqdan ko'p yo'lovchi transporti (avtobus)</td></tr>
+        <tr><td class="id">BE / CE / DE</td><td>mos ravishda B/C/D + og'ir tirkama (&gt;750 kg)</td></tr>
+        </tbody></table></div>
+
+        <h3>4 turdagi huquqiy javobgarlik</h3>
+        <ul class="facts">
+          <li class="fact"><b>Intizomiy</b> — ish joyidagi tartib-intizom buzilishi uchun.</li>
+          <li class="fact"><b>Ma'muriy</b> — og'ir bo'lmagan qoidabuzarliklar uchun (MJtK asosida).</li>
+          <li class="fact"><b>Fuqarolik</b> — avariyadan yetkazilgan zararni qoplash (odatda OSAGO orqali).</li>
+          <li class="fact"><b>Jinoiy</b> — og'ir jarohat/o'limga sabab bo'lgan qoidabuzarliklar uchun (JK asosida).</li>
+        </ul>
+
+        <h3>Boshqa asosiy faktlar</h3>
+        <ul class="facts">
+          <li class="fact">"Qoidalarni bilmaslik javobgarlikdan ozod etmaydi" — asosiy huquqiy tamoyil.</li>
+          <li class="fact">"B toifa" o'quv dasturida "Haydovchining madaniyati va etikasi" mavzusiga <span class="num">24 soat</span> ajratilgan.</li>
+          <li class="fact">Birinchi o'zi yuruvchi bug' transportini Nikolya-Jozef Kyunyo <span class="num">1769-yil</span>da yasagan; Karl Benz birinchi benzin dvigatelli avtomobilni <span class="num">1885-yil</span>da yaratgan.</li>
+          <li class="fact">Jarimani militsiyaga naqd, joyida to'lash o'rniga faqat rasmiy kanal (bank/onlayn) orqali to'lash huquqi mavjud — bu qoida manbada buzilgan tarzda yozilgan edi, mazmuni tiklandi.</li>
+        </ul>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. PSIXOLOGIYA -->
+    <!-- ============================================================ -->
+    <section id="psixologiya" data-subject="psixologiya">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">6 · Haydovchi psixologiyasi</span>
+        <span class="ssub">idrok, diqqat, charchoq, muloqot psixologiyasi</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <h3>Ko'rish va idrok</h3>
+        <div class="kicker-grid">
+          <div class="kicker"><div class="kv">~90%</div><div class="kl">ma'lumot ko'z orqali qabul qilinadi</div></div>
+          <div class="kicker"><div class="kv">&gt;20%</div><div class="kl">ko'rish maydoni torayishi — haydashga ruxsat yo'q</div></div>
+          <div class="kicker"><div class="kv">≈5</div><div class="kl">bir vaqtda diqqat qilinadigan obyekt soni</div></div>
+          <div class="kicker"><div class="kv">3</div><div class="kl">zich trafikda bir vaqtda kuzatiladigan belgi soni</div></div>
+        </div>
+        <ul class="facts">
+          <li class="fact">Ko'rish o'tkirligi konus burchaklari: <span class="num">3–4°</span> — a'lo, <span class="num">7–8°</span> — yaxshi, <span class="num">13–14°</span> — qoniqarli.</li>
+          <li class="fact"><span class="num">80 km/h</span>dan yuqori tezlikda oldindagi <span class="num">60–120 m</span> masofa haydovchining samarali ko'rish maydonidan tashqarida qoladi.</li>
+          <li class="fact">Haydovchi soniyasiga taxminan <span class="num">10 ta obyektni</span> idrok etadi, daqiqasiga <span class="num">30–120 ta harakat</span> bajaradi.</li>
+        </ul>
+
+        <h3>Tezlik va reaksiya fizikasi</h3>
+        <ul class="facts">
+          <li class="fact"><b>Tezlikni ikki baravar oshirish — tormozlash masofasini to'rt baravar oshiradi</b> (v² qonuniyati).</li>
+          <li class="fact">Tezlik <span class="num">50 km/h</span>dan oshmasa, haydash xatolari odatda xavfli oqibatlarga olib kelmaydi (tuzatish uchun yetarli zaxira bor).</li>
+          <li class="fact">Shahar avtobusi/taksi haydovchisi smena davomida taxminan <span class="num">5500</span> ta boshqaruv harakatini bajaradi, ularning <span class="num">~20%</span>i ma'lumotni qayta ishlashga vaqt yetishmasligi sababli xato bilan bajariladi.</li>
+        </ul>
+
+        <h3>Charchoq va ish-dam olish me'yorlari</h3>
+        <ul class="facts">
+          <li class="fact"><span class="num">≥12 soat</span> uzluksiz haydash — "o'ta charchash" boshlanish chegarasi (ishtaha yo'qolishi, xotira pasayishi, bosh og'rig'i, asabiylashish).</li>
+          <li class="fact">Qonuniy ish-dam olish me'yori: <span class="num">40 soat/hafta</span>, <span class="num">7 soat/kun</span>; ishlab chiqarish ehtiyoji bilan <span class="num">10 soat/kun</span>gacha, kasaba uyushmasi ruxsati bilan <span class="num">12 soat</span>gacha.</li>
+          <li class="fact">Bir xil to'g'ri yo'lda uzoq haydashda uyquchanlik <span class="num">100–150 km</span>dan keyin boshlanadi. Haydash qobiliyati <span class="num">7 soat</span>dan keyin keskin pasayadi.</li>
+        </ul>
+
+        <h3>Alkogol ta'siri</h3>
+        <ul class="facts">
+          <li class="fact">Yo'l-transport hodisalarida halok bo'lgan haydovchilarning <span class="num">45–47%</span>ida qonda <span class="num">0,1%</span> alkogol darajasi aniqlangan (ko'p yillik kuzatuv ma'lumotlari).</li>
+          <li class="fact">Atigi <span class="num">25 gramm</span> alkogol iste'mol qilish qoidabuzarlikka moyillikni sezilarli darajada oshiradi.</li>
+        </ul>
+
+        <h3>Yo'lda muloqot psixologiyasi</h3>
+        <ul class="facts">
+          <li class="fact">Noverbal muloqot: burilish signali vaqti, piyoda bilan ko'z aloqasi, qo'l ishoralari, chiroq yaltiratish, signal (gudok) berish.</li>
+          <li class="fact">Signal ikki xil vazifa bajaradi: qisqa xavfsizlik ogohlantirishi (to'g'ri) yoki uzoq/takroriy jahldor signal (tajovuz sifatida qabul qilinadi) — faqat haqiqiy zaruratda ishlating.</li>
+          <li class="fact"><b>Hamkorlik uslubi</b> — o'z vaqtida yo'l berish, boshqalarning xatosiga toqat, aniq va oldindan signal berish. <b>Tajovuzkor uslub</b> — jahldor signal, qasddan chiroq yaltiratib qo'rqitish, yo'l bermaslik, oraliqni qasddan qisqartirish.</li>
+          <li class="fact">Yo'l tajovuzini keltirib chiqaruvchi omillar: tirbandlik, vaqt bosimi, kuchli hissiy holat, charchoq, boshqa haydovchi xatosini shaxsiy haqorat sifatida qabul qilish.</li>
+          <li class="fact">Samarali muloqotga to'sqinlik qiluvchi omillar: cheklangan ko'rinish (tun/tuman/yomg'ir — noverbal signal yo'qoladi), shovqin (signal eshitilmay qoladi), "anonimlik effekti" (kabina izolyatsiyasi odobni pasaytiradi), yuqori tezlik (signalni to'g'ri talqin qilish uchun vaqt qisqaradi).</li>
+        </ul>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. TIBBIY YORDAM -->
+    <!-- ============================================================ -->
+    <section id="tibbiy" data-subject="tibbiy">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">7 · Birinchi tibbiy yordam</span>
+        <span class="ssub">qon to'xtatish, singan suyak, kuyish, cho'kish — protokollar tartib bilan</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <h3>Voqea joyidagi harakatlar tartibi</h3>
+        <ol class="facts steps">
+          <li class="fact">Voqea joyi xavfsizligini ta'minlang — o'zingizning xavfsizligingiz birinchi o'rinda.</li>
+          <li class="fact">Dvigatelni darhol o'chiring; yonilg'i oqayotgan bo'lsa akkumulyator klemmalarini uzing, ochiq olov yaqinlashtirmang.</li>
+          <li class="fact">Tez yordamni chaqiring va aniq ayting: manzil/mo'ljal, jabrlanuvchilar soni va jinsi, hodisa xarakteri va holati, o'z telefon raqamingiz va ismingiz.</li>
+        </ol>
+        <div class="callout callout-flag"><span class="cl-label">Manbada xato</span>Manbada qutqaruv xizmatiga qo'ng'iroq qilish uchun <b>"050"</b> raqami ko'rsatilgan edi — bu noto'g'ri. To'g'ri raqamlar (shaxsan web orqali tekshirildi): <b>101</b> — yong'in xizmati, <b>102</b> — militsiya, <b>103</b> — tez yordam. Kelajakda yagona <b>112</b> raqamiga o'tish rejalashtirilgan, ammo hozircha 101/102/103 asosiy raqamlar bo'lib qolmoqda.</div>
+
+        <h3>Birinchi yordam zarur bo'lgan holatlar</h3>
+        <ul class="facts">
+          <li class="fact">Hayotga xavf soluvchi qon ketishi; nafas to'xtashi; puls sezilmasligi; suyak sinishi.</li>
+          <li class="fact">Yirik qon tomiridan qon ketishida o'lim <span class="num">1–2 daqiqada</span>, ko'pi bilan <span class="num">7–10 daqiqada</span> yuz beradi — bu jgut qo'llashning zarurligini asoslaydi.</li>
+        </ul>
+
+        <h3>Qon to'xtatishning 4 usuli</h3>
+        <ol class="facts steps">
+          <li class="fact">Barmoq/musht bilan bosim nuqtasini bosish.</li>
+          <li class="fact">Bosim bog'lami (dovulcha) qo'yish.</li>
+          <li class="fact">A'zoni bo'g'imda bukib bog'lash.</li>
+          <li class="fact">Jgut (turnike) qo'llash.</li>
+        </ol>
+        <div class="callout callout-note"><span class="cl-label">Eslatma</span>Jgut tayyorlanayotganda qon ketayotgan a'zoni ko'tarib turing. Bosim nuqtasi qo'l-oyoqda yaradan <b>yuqorida</b>, bo'yinda esa yaradan <b>pastda</b> bosiladi.</div>
+        <div class="callout callout-warn"><span class="cl-label">Taqiqlanadi</span>Arteriyadan otilib chiquvchi qon ketishida jabrlanuvchining kiyimini yechishga vaqt sarflamang — avval qon ketishini to'xtating.</div>
+
+        <h3>Jgut (turnike) qo'llash qoidasi</h3>
+        <ul class="facts">
+          <li class="fact">Faqat bitta suyakli qismga qo'llanadi (bo'yin, yelka, son) — <b>hech qachon</b> bilak yoki boldirga (u yerda ikkita suyak bor, arteriya orasida joylashgan, jgut samarasiz).</li>
+          <li class="fact">Yaradan <span class="num">10–15 sm</span> yuqoriga, qattiq va bir-birini qoplaydigan tarzda o'raladi; birinchi o'ramdan keyin puls tekshiriladi.</li>
+          <li class="fact">Aniq qo'yilgan vaqt (soat:daqiqa) qog'ozga yozilib jgutga qistiriladi.</li>
+          <li class="fact">Kasalxonaga <span class="num">1 soat</span> ichida yetkazib bo'lmasa — jgutni bo'shatib, 1–2 daqiqa qonni aylantirib, qayta qo'ying. <b>Sovuq havoda har 30 daqiqada</b> bo'shatib qayta qo'yiladi.</li>
+          <li class="fact">Venoz qon ketishi jgut bilan emas, bosim bog'lami bilan to'xtatiladi.</li>
+        </ul>
+
+        <h3>Suyak sinishi</h3>
+        <ul class="facts">
+          <li class="fact">Qoida: sinish joyiga <b>tutash ikkita bo'g'im</b> qimirlamaydigan qilib mahkamlanadi.</li>
+          <li class="fact">Sinish uchlarini surmang; kiyimni yulmasdan kesib oling; shina chetlarini paxta/mato bilan yumshating.</li>
+        </ul>
+
+        <h3>Bosh jarohati — xavf belgilari</h3>
+        <ul class="facts">
+          <li class="fact">Kuchli bosh og'rig'i/aylanishi, ko'ngil aynishi/qusish, hushdan ketish yoki chalkash ong, quloq/burundan qon yoki tiniq suyuqlik, ko'z qorachig'lari notekis, nutq buzilishi, qo'l-oyoq zaifligi.</li>
+        </ul>
+        <div class="callout callout-warn"><span class="cl-label">Taqiqlanadi</span>Jabrlanuvchini keraksiz siljitish, boshni keskin burish/egish, mototsiklchi dubulg'asini shoshilib yechish (nafas olishga xalaqit bermasa).</div>
+
+        <h3>Umurtqa/tos sinishi</h3>
+        <ul class="facts">
+          <li class="fact">Belgilar: kuchli bel/tos og'rig'i, tabiiy bo'lmagan holat, qo'l-oyoqda sezgi yo'qolishi, harakatsizlik yoki falaj, siydik-najas ushlab turolmaslik.</li>
+        </ul>
+        <div class="callout callout-warn"><span class="cl-label">Taqiqlanadi</span>Jabrlanuvchini o'z bilganingizcha siljitish yoki o'tqazish.</div>
+        <ul class="facts">
+          <li class="fact">Topilgan holatda qoldiring; bosh-bo'yin-tana bir chiziqda ushlab turiladi; qattiq taxtaga o'tkazish zarur bo'lsa — kamida <b>3–4 kishi</b>, bitta buyruq bilan, butun tanani (bosh-yelka-tos-oyoq) birga "log-roll" usulida ag'daring.</li>
+        </ul>
+
+        <h3>Kuyishning 4 darajasi</h3>
+        <ol class="facts steps">
+          <li class="fact">Faqat teri yuzasi — qizarish, ba'zan pufakcha, issiqlik va og'riq.</li>
+          <li class="fact">Chuqur og'riq, tiniq suyuqlikli pufakchalar; asoratsiz 2–3 haftada tuzaladi.</li>
+          <li class="fact">Yuqori teri qavati o'ladi; pufakchalar to'satdan paydo bo'ladi, teri xira-quruq-marmarsimon, kuchli og'riq, sezgi yo'qoladi.</li>
+          <li class="fact">Teri va teri osti to'qimasi to'liq o'ladi; sezgi butunlay yo'q, qorayib qavariq qobiq hosil bo'ladi.</li>
+        </ol>
+        <ul class="facts">
+          <li class="fact">Alangani yong'inga qarshi yonmaydigan mato bilan o'rab o'chiring; darhol sovuq suv bilan soving; pufakchalar atrofini spirt/odekolon bilan artib, bo'sh steril bog'lam qo'ying.</li>
+        </ul>
+        <div class="callout callout-warn"><span class="cl-label">Taqiqlanadi</span>Kuygan joyga yopishib qolgan kiyimni yulish, pufakchalarni yorish yoki kuygan joyga to'g'ridan-to'g'ri tegish.</div>
+        <ul class="facts">
+          <li class="fact"><b>Kimyoviy kuyish:</b> avval suv bilan yuving. Ishqor kuyishi → <span class="num">1–2%</span> limon/bor/sirka kislotasi eritmasi. Kislota kuyishi → sovun bilan yuvib, <span class="num">2%</span> soda eritmasi bilan davolang.</li>
+          <li class="fact"><b>Elektr kuyishi:</b> avval jabrlanuvchini tok manbaidan ajrating — hali simga tegib turgan odamga qo'lqopsiz tegmang, quruq yog'och/rezinadan foydalaning.</li>
+        </ul>
+
+        <h3>Sovuq urishi (frostbite)</h3>
+        <div class="callout callout-warn"><span class="cl-label">Taqiqlanadi</span>Sovuq urgan joyni qor bilan ishqalamang (to'qima shikastlanishini kuchaytiradi); pufakcha hosil bo'lgan bo'lsa umuman ishqalamang; teriga vazelin/malham surtmang.</div>
+        <ul class="facts">
+          <li class="fact">To'g'ri yo'l: issiq xonaga o'tkazish, issiq shirin choy/kofe, yumshoq jun mato bilan asta isitish, qizarish qaytgach spirt/aroq bilan artib bog'lash; <span class="num">20–30 daqiqalik</span> issiq vanna foydali.</li>
+        </ul>
+
+        <h3>Cho'kish</h3>
+        <ul class="facts">
+          <li class="fact">Nafas yo'li suv/loy bilan to'sizishi <span class="num">2–3 daqiqada</span> o'limga olib kelishi mumkin.</li>
+          <li class="fact">Suvdan tezroq chiqaring; og'izdagi loy-tiqinni tozalang; ko'krakni siquvchi kiyimdan bo'shating; tizza ustiga yuz bilan pastga qo'yib, bosh ko'krakdan past holda suvni chiqaring.</li>
+          <li class="fact">Nafas olmasa — sun'iy nafas + ko'krak qafasini bosish (compressiya) o'z-o'zidan nafas tiklanguncha davom ettiriladi; shoshilinch kasalxonaga yetkazing.</li>
+        </ul>
+
+        <h3>Issiq/quyosh urishi</h3>
+        <ul class="facts">
+          <li class="fact">Belgilar: qizargan issiq teri, kuchli terlash, umumiy holsizlik, bosh aylanishi, ko'ngil aynishi, yurak urishi tezlashishi, nafas qisilishi; bolalarda — isitma, hushdan ketish yoki tutqanoq.</li>
+          <li class="fact">Soyaga/salqin joyga o'tkazing, boshni past, oyoqni baland qilib yotqizing; boshga, yelka/bilak/qo'ltiq/son/tizza ostiga sovuq nam mato qo'ying; sovuq choy/mineral suv bering; og'ir holatda tez yordam chaqiring.</li>
+        </ul>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 8. QONUNCHILIK -->
+    <!-- ============================================================ -->
+    <section id="qonun" data-subject="qonun">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">8 · Yo'l xavfsizligiga oid qonunchilik</span>
+        <span class="ssub">asosiy 3 qonun</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <ul class="facts">
+          <li class="fact"><b>"Yo'l harakati xavfsizligi to'g'risida"gi qonun</b> — dastlab 1999-yil 19-avgustda (818-I-son), yangi tahriri 2013-yil 10-aprelda (348-son) qabul qilingan. 31 moddadan iborat.</li>
+          <li class="fact"><b>"Transport to'g'risida"gi qonun</b> — 706-son, 2021-yil 9-avgust. Tijorat transport faoliyatini tartibga soladi; shaxsiy, notijorat maqsaddagi foydalanishga taalluqli emas.</li>
+          <li class="fact"><b>"Sug'urta faoliyati to'g'risida"gi qonun</b> — 730-son, 2021-yil 23-noyabr. 10 bob, 72 moddadan iborat.</li>
+          <li class="fact"><b>Xalqaro shartnoma ustunligi:</b> O'zbekiston xalqaro shartnomasi ichki qonunchilikdan farqli qoida belgilasa — <b>xalqaro shartnoma qoidalari qo'llanadi</b>.</li>
+        </ul>
+      </div>
+    </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 9. ALL-NUMBERS CHEAT SHEET -->
+    <!-- ============================================================ -->
+    <section id="raqamlar" data-subject="raqamlar">
+    <details open>
+      <summary class="subject-summary">
+        <span class="marker"></span>
+        <span class="stitle">9 · Barcha raqamlar — yakuniy takrorlash</span>
+        <span class="ssub">barcha mavzulardagi yodlanadigan sonlar, bir joyda</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="subject-body">
+        <p class="lede">Imtihondan oldingi kechada faqat shu bo'limni ko'zdan kechirish kifoya qiladi. Har bir raqam yuqoridagi tegishli bo'limda batafsil tushuntirilgan.</p>
+
+        <h3>Tezlik chegaralari</h3>
+        <div class="table-wrap"><table><tbody>
+        <tr><td>Aholi punktida (umumiy)</td><td class="n">70 km/h</td></tr>
+        <tr><td>Toshkent/Nukus/markazlar (komissiya qarori)</td><td class="n">60 km/h</td></tr>
+        <tr><td>Maktab/bog'cha yonida (300 m)</td><td class="n">30 km/h</td></tr>
+        <tr><td>Turar joy dahasi</td><td class="n">20 km/h</td></tr>
+        <tr><td>Shahar tashqarisi — yengil avto</td><td class="n">100 km/h</td></tr>
+        <tr><td>Shahar tashqarisi — shaharlararo avtobus</td><td class="n">90 km/h</td></tr>
+        <tr><td>Shahar tashqarisi — boshqa avtobus/yuk &gt;3,5t</td><td class="n">80 km/h</td></tr>
+        <tr><td>Shahar tashqarisi — tirkamali yuk avto</td><td class="n">70 km/h</td></tr>
+        <tr><td>Kuzovda odam/bolalar guruhi tashish</td><td class="n">60 km/h</td></tr>
+        <tr><td>Shatakka olishda</td><td class="n">50 km/h</td></tr>
+        <tr><td>Zich tumanda tavsiya etilgan</td><td class="n">~5 km/h</td></tr>
+        <tr><td>Temir yo'l kesishmasidan ruxsatsiz o'tish (minimal)</td><td class="n">8 km/h</td></tr>
+        </tbody></table></div>
+
+        <h3>Masofalar</h3>
+        <div class="table-wrap"><table><tbody>
+        <tr><td>Avariya to'xtash belgisi — aholi punktida / tashqarisida</td><td class="n">15 m / 30 m</td></tr>
+        <tr><td>Ogohlantiruvchi belgi — aholi punktida / tashqarisida</td><td class="n">50–100 m / 150–300 m</td></tr>
+        <tr><td>Temir yo'l kesishmasiga shlagbaumdan / relsdan</td><td class="n">≥5 m / ≥10 m</td></tr>
+        <tr><td>To'xtash — piyoda o'tish joyidan</td><td class="n">10 m</td></tr>
+        <tr><td>To'xtash — bekatdan</td><td class="n">15 m</td></tr>
+        <tr><td>To'xtab turish — temir yo'l kesishmasidan</td><td class="n">50 m</td></tr>
+        <tr><td>Quvib o'tish uchun ko'rinish — aholi punktida / tashqarisida</td><td class="n">40 m / 60 m</td></tr>
+        <tr><td>Shatak — egiluvchan / qattiq bog'lash</td><td class="n">4–6 m / ≤4 m</td></tr>
+        <tr><td>Jgut yaradan yuqoriga</td><td class="n">10–15 sm</td></tr>
+        <tr><td>U-burilish taqiqlanadigan minimal ko'rinish</td><td class="n">100 m</td></tr>
+        </tbody></table></div>
+
+        <h3>Foizlar, burchaklar va texnik me'yorlar</h3>
+        <div class="table-wrap"><table><tbody>
+        <tr><td>Qo'l tormozi — yengil avto/avtobus qiyaligi</td><td class="n">25%</td></tr>
+        <tr><td>Qo'l tormozi — yuk avto/poyezd qiyaligi</td><td class="n">31%</td></tr>
+        <tr><td>Qo'l tormozi — umumiy/og'ir transport qiyaligi</td><td class="n">16%</td></tr>
+        <tr><td>Rul erkin yurishi — M1</td><td class="n">10°</td></tr>
+        <tr><td>Rul erkin yurishi — M2/M3/N1</td><td class="n">20°</td></tr>
+        <tr><td>Rul erkin yurishi — N2/N3</td><td class="n">25°</td></tr>
+        <tr><td>Old/yon oyna yorug'lik o'tkazuvchanligi (min)</td><td class="n">70%</td></tr>
+        <tr><td>Shina protektor — M1/N1/O1/O2 (min)</td><td class="n">1,6 mm</td></tr>
+        <tr><td>Shina protektor — N2/N3/O3/O4 (min)</td><td class="n">1,0 mm</td></tr>
+        <tr><td>Shina protektor — M2/M3 (min)</td><td class="n">2,0 mm</td></tr>
+        <tr><td>Ko'rish maydoni torayishi — haydashga taqiq</td><td class="n">&gt;20%</td></tr>
+        <tr><td>Tezlik 2× → tormozlash masofasi</td><td class="n">4×</td></tr>
+        </tbody></table></div>
+
+        <h3>Vaqt va yosh</h3>
+        <div class="table-wrap"><table><tbody>
+        <tr><td>To'xtash / to'xtab turish chegarasi</td><td class="n">10 daqiqa</td></tr>
+        <tr><td>Jgut — issiq havoda / sovuq havoda qayta qo'yish</td><td class="n">1 soat / 30 daqiqa</td></tr>
+        <tr><td>Yirik qon tomiridan o'lim (max)</td><td class="n">7–10 daqiqa</td></tr>
+        <tr><td>Asfiksiya (cho'kish) — o'lim xavfi</td><td class="n">2–3 daqiqa</td></tr>
+        <tr><td>Yangi transportni ro'yxatdan o'tkazish muddati</td><td class="n">10 kun</td></tr>
+        <tr><td>Guvohnomadan mahrum qilish — min/maks</td><td class="n">15 kun / 3 yil</td></tr>
+        <tr><td>Ortiqcha charchash boshlanishi (uzluksiz haydash)</td><td class="n">≥12 soat</td></tr>
+        <tr><td>Ish vaqti me'yori (haftalik / kunlik)</td><td class="n">40 soat / 7 soat</td></tr>
+        <tr><td>Minimal yosh — moped / A toifa</td><td class="n">16 yosh</td></tr>
+        <tr><td>Minimal yosh — B, C toifa</td><td class="n">18 yosh</td></tr>
+        <tr><td>Minimal yosh — D, DE toifa</td><td class="n">21 yosh</td></tr>
+        <tr><td>Jarima chegirmasi — 50% / 30%</td><td class="n">15 kun / 16–30 kun</td></tr>
+        <tr><td>12 ballik tizim — davr / max</td><td class="n">12 oy / 12 ball</td></tr>
+        </tbody></table></div>
+
+        <h3>Elektr va bosim</h3>
+        <div class="table-wrap"><table><tbody>
+        <tr><td>Akkumulyator kuchlanishi</td><td class="n">12 V</td></tr>
+        <tr><td>Generator regulyatori</td><td class="n">13,6–14,2 V</td></tr>
+        <tr><td>LPG (propan-butan) bosimi</td><td class="n">16 atm</td></tr>
+        <tr><td>CNG (metan) bosimi</td><td class="n">200 atm</td></tr>
+        <tr><td>Termostat ochilishi</td><td class="n">~90°C</td></tr>
+        <tr><td>Sovutish ventilyatori yoqilish/o'chish</td><td class="n">105°C / 102°C</td></tr>
+        <tr><td>Ximoya moslamasi — qizil/sariq/yashil</td><td class="n">10A / 20A / 30A</td></tr>
+        </tbody></table></div>
+
+        <h3>Favqulodda telefon raqamlari</h3>
+        <div class="kicker-grid">
+          <div class="kicker"><div class="kv">101</div><div class="kl">yong'in xizmati</div></div>
+          <div class="kicker"><div class="kv">102</div><div class="kl">militsiya</div></div>
+          <div class="kicker"><div class="kv">103</div><div class="kl">tez yordam</div></div>
+          <div class="kicker"><div class="kv">112</div><div class="kl">yagona xizmat (bosqichma-bosqich joriy etilmoqda)</div></div>
+        </div>
+      </div>
+    </details>
+    </section>
+
+    <div class="no-match" id="no-match">Qidiruvingizga mos fakt topilmadi.</div>
+
+    <footer class="pagefoot">
+      <p><b>Manba va metodologiya:</b> Bu qo'llanma <code>theory_resources/</code> papkasidagi 8 ta asl fayldan (~13 400 qator) siqilgan. Har bir modda raqami, sana va texnik me'yor ikki bosqichda tekshirilgan: (1) oldingi sessiyada <code>hhj.md</code>ning 8 ta MJtK/JK moddasi ejarima.uz orqali, (2) bu sessiyada 6 ta ziddiyatli/xato raqam (favqulodda telefon, rul erkin yurishi, ogohlantiruvchi uchburchak masofasi, shina protektori, 12 ballik tizim mexanizmi, 2026 jarima summalari) shaxsan WebSearch orqali tekshirilgan.</p>
+      <p>Asl matnlar o'zgarishsiz — bu qo'llanma faqat qo'shimcha, tezkor takrorlash vositasi. Har doim shubha tug'ilsa, tegishli <code>theory_resources/*.md</code> faylga qayting.</p>
+      <p>Tavsiya: bu qo'llanmani <a href="https://autotestlar.uz/prava-test/questions" target="_blank" rel="noopener">autotestlar.uz</a>dagi vaqt cheklovli 20-savolli testlar bilan birga ishlating — xato javoblar qaysi bo'limni qayta o'qish kerakligini ko'rsatadi.</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  var input = document.getElementById('filter');
+  var status = document.getElementById('filter-status');
+  var noMatch = document.getElementById('no-match');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section[data-subject]'));
+  var counts = {};
+
+  sections.forEach(function(sec){
+    var id = sec.getAttribute('data-subject');
+    var rows = sec.querySelectorAll('.fact, tbody tr');
+    counts[id] = rows.length;
+  });
+  Object.keys(counts).forEach(function(id){
+    var el = document.querySelector('[data-count-for="'+id+'"]');
+    if(el) el.textContent = counts[id];
+  });
+
+  // Hides h3/h4 headings (and the ul/ol/table-wrap blocks under them) when nothing
+  // beneath them matches the current query; always keeps p/callout/kicker-grid blocks
+  // visible since they're not individually filtered.
+  function refineHeadings(body, q){
+    if(!body) return;
+    var children = Array.prototype.slice.call(body.children);
+    var level = function(tag){ return tag === 'H3' ? 3 : tag === 'H4' ? 4 : 0; };
+
+    children.forEach(function(el){
+      if(el.classList.contains('facts') || el.classList.contains('table-wrap')){
+        var anyVisible = !q || el.querySelector('.fact:not(.hidden), tbody tr:not(.hidden)') !== null;
+        el.classList.toggle('hidden', q ? !anyVisible : false);
+      }
+    });
+
+    for(var i = 0; i < children.length; i++){
+      var el = children[i];
+      var lvl = level(el.tagName);
+      if(!lvl) continue;
+      var hasContent = !q;
+      for(var j = i + 1; j < children.length && !hasContent; j++){
+        var next = children[j];
+        var nlvl = level(next.tagName);
+        if(nlvl && nlvl <= lvl) break;
+        if(nlvl) continue;
+        if(!next.classList.contains('hidden')) hasContent = true;
+      }
+      el.classList.toggle('hidden', q ? !hasContent : false);
+    }
+  }
+
+  var timer = null;
+  input.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(runFilter, 60);
+  });
+
+  function runFilter(){
+    var q = input.value.trim().toLowerCase();
+    var totalVisible = 0;
+
+    sections.forEach(function(sec){
+      var details = sec.closest('details');
+      var rows = sec.querySelectorAll('.fact, tbody tr');
+      var visibleInSection = 0;
+
+      rows.forEach(function(row){
+        var match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+        row.classList.toggle('hidden', !match);
+        if(match) visibleInSection++;
+      });
+
+      totalVisible += visibleInSection;
+
+      if(q){
+        sec.hidden = visibleInSection === 0;
+        if(visibleInSection > 0 && details) details.open = true;
+      } else {
+        sec.hidden = false;
+      }
+
+      var navLink = document.querySelector('nav.toc a[href="#'+sec.id+'"]');
+      if(navLink) navLink.classList.toggle('dim', q !== '' && visibleInSection === 0);
+
+      refineHeadings(sec.querySelector('.subject-body'), q);
+    });
+
+    noMatch.style.display = (q && totalVisible === 0) ? 'block' : 'none';
+    status.textContent = q ? (totalVisible + ' ta fakt topildi') : '';
+  }
+
+  // smooth in-page nav + auto-open target section
+  document.querySelectorAll('nav.toc a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      var details = target && target.closest('details');
+      if(details) details.open = true;
+    });
+  });
+})();
+</script>

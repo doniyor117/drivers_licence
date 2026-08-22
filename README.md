@@ -24,3 +24,11 @@ Ushbu materiallar 2026-yil avgust holatiga O'zbekiston Respublikasining amaldagi
 (lex.uz) va rasmiy Yo'l harakati qoidalari (VM 172-son, 2022-yil 12-aprel) asosida tekshirilgan.
 Tekshiruv davomida aniqlangan kamchiliklar va ularni bartaraf etish ishlari commit tarixida
 qayd etilgan.
+
+## Qisqartirilgan qo'llanma (`study_notes/`)
+
+`study_notes/index.html` — yuqoridagi 8 ta faylning imtihon uchun siqilgan, dizayn qilingan
+HTML versiyasi (~13 400 qatordan ~2000 ta faktga). Asl fayllar o'zgarishsiz qoladi — bu shunchaki
+tezkor takrorlash vositasi. Bir nechta raqam (favqulodda telefon, rul erkin yurishi, ogohlantiruvchi
+uchburchak masofasi va h.k.) asl fayllardagi xato/ziddiyatlarni tuzatib, mustaqil tekshirilgan holda
+keltirilgan — batafsili `CLAUDE.md`da.

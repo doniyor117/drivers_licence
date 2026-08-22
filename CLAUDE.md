@@ -37,9 +37,11 @@ map changes, but keep README's version short (no audit/methodology detail there)
 
 ## Git workflow used on this project
 
-- Working branch: `claude/verify-file-essentials-9ny1ep` (tracks
-  `origin/claude/verify-file-essentials-9ny1ep`). `main` is the pristine original import
-  (commit `d4ba57a`, "init") — don't touch it directly.
+- Working branch: `claude/drivers-license-theory-s8svd6` (tracks
+  `origin/claude/drivers-license-theory-s8svd6`). `main` is the pristine original import
+  (commit `d4ba57a`, "init") — don't touch it directly. (An earlier branch name,
+  `claude/verify-file-essentials-9ny1ep`, appeared in this file from an earlier session; it's
+  stale — the branch above is the one actually in use.)
 - Commit messages describe the actual content fix, not "update file".
 - **Large-file workflow**: several files here are 400–6000 lines. When fixing one:
   1. Delegate research/fact-checking and the actual edit to a background `general-purpose`
@@ -117,6 +119,59 @@ risk). The three files not touched by the fix list — `qa.md`, `battxk.md`, `ax
 were read during the original audit and did not surface issues serious enough to make the
 priority fix list, but have not had the same line-by-line fact-check treatment as the five
 files above. Treat them as unverified-but-not-flagged, not as clean.
+
+## `study_notes/` — condensed HTML exam guide (2026-08-22)
+
+Added `study_notes/index.html` — a single self-contained, designed HTML page condensing all 8
+`theory_resources/` files (~13,400 lines) into ~2,000 exam-facts (~15% of source volume),
+organized by subject with a live filter box, collapsible sections, and light/dark theming.
+**The original `theory_resources/*.md` files were not touched** — this is purely an additive
+study aid, generated and reviewed in one session per the user's request. Do not treat
+`study_notes/index.html` as a second source of truth for legal facts — if the two ever disagree,
+`theory_resources/` is authoritative and `study_notes/` needs a re-sync.
+
+**How it was built**: two background `general-purpose` agents did the condensation (per user
+instruction to minimize agent count) — one for `yhq.md` alone (largest file), one for the other
+seven combined — each given per-file target fact-counts, keep/cut guidance, and the must-fix list
+below. Their structured output was reviewed and hand-assembled into the final HTML/CSS/JS by the
+main session (not by the agents) so markup and design stayed coherent. Rendered and visually
+checked (light/dark/mobile/filter behavior) via a local Playwright/Chromium screenshot pass before
+publishing, since this repo has no test suite to rely on instead.
+
+**Six numeric items were independently verified via WebSearch this session** (beyond what the
+prior audit had already settled — see "What was already verified" below) and corrected in
+`study_notes/index.html` relative to what the source files say:
+
+| Item | Source files say | Verified correct value | Source files NOT changed |
+|---|---|---|---|
+| Emergency phone number | `yhbyk.md`: "050" | **101** (fire) / **102** (police) / **103** (ambulance); unified **112** rolling out but not yet primary | still says "050" — needs fixing in `yhbyk.md` itself |
+| Steering free-play (lyuft) | `battxk.md`: unitless "100/200/250"; `yhq.md`: same values with a stray Cyrillic "М" | **10° (M1) / 20° (M2,M3,N1) / 25° (N2,N3)** | `battxk.md` still unitless; `yhq.md`'s Cyrillic "М" not fixed at the source |
+| Warning-triangle placement distance | `axbhxa.md`: "15–30 m" in one place, "10–15 m" in two others (internal conflict) | **15 m in populated areas, 30 m outside** | `axbhxa.md` conflict not reconciled at the source |
+| Tyre tread depth (M1/N1 light vehicles) | `axbhxa.md`: "3 mm" (imported US 4/32" figure); `battxk.md`: "1,6 mm" | **1,6 mm** (battxk.md was right; axbhxa.md's 3mm is wrong) | `axbhxa.md` not fixed at the source |
+| 12-point demerit system | `hhj.md` L541–601: section titled "jarima ballari" with no actual point values | Mechanics confirmed (0.3–2 pts/violation, 12 pts/12mo → up to 6-month suspension, SMS warning at 8pts, decay after 6 clean months) — **no public per-violation point matrix was found**, so `study_notes/` states the mechanism only, not a fabricated table | `hhj.md` still has the empty section |
+| 2026 penalty amounts (BHM units) | `hhj.md`: pre-2025-reform amounts in the abolished "eng kam ish haqi" unit | Current BHM-denominated amounts for the ~10 most-tested violations (seatbelt 0.5, OSAGO 1, red light 2, illegal parking 2, phone 3, wrong-side/oncoming-lane 10, tinting 25, speeding 1/5/9 tiered, DUI 25+revocation); BHM = 412,000 so'm as of 2026 | `hhj.md` still has stale amounts — out of scope to fix there this session |
+
+`battxk.md`'s maintenance-interval table (L920–952, only its legend survived) was searched for but
+turned out not to be a fixed legal standard — service intervals are manufacturer-specific, not
+exam-testable — so `study_notes/` states the 4 maintenance-type names (KTXK/TXK-1/TXK-2/MTXK) and
+a few scattered real figures the agent found, without fabricating a full table.
+
+**One item flagged but deliberately left unresolved** (per the existing "fixing sources is out of
+scope, flag for the user" convention): `hhj.md` assigns the same injury+damage offense to
+**137-modda** in one place (L487–493) and **133-modda** in a legacy duplicate block (L951) —
+this is presented as an open conflict in `study_notes/` rather than guessed at, since 137-modda is
+also separately and consistently used elsewhere in the same file for hit-and-run.
+
+**What was already verified (not re-done this session)**: `hhj.md`'s 8 core MJtK/JK article
+numbers and `hm.md`'s Cugnot 1769 date, per the "Audit & fix history" section above — trusted
+as-is by both condensation agents.
+
+**Known gaps in `study_notes/index.html` for a future session to pick up**: the source-level fixes
+in the left column of the table above (six items across `yhbyk.md`, `battxk.md`, `yhq.md`,
+`axbhxa.md`) have not been applied to `theory_resources/` itself — only to the condensed guide.
+The `hhj.md` 137-vs-133 conflict is unresolved anywhere. Most `hhj.md` violation rows in
+`study_notes/` don't have a verified 2026 penalty amount (only the ~10 most-tested ones do) —
+filling in the rest would need one WebSearch pass per article against osonprava.uz or similar.
 
 ## Sourcing standard for future edits
 
