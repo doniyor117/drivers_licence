@@ -37,11 +37,15 @@ map changes, but keep README's version short (no audit/methodology detail there)
 
 ## Git workflow used on this project
 
-- Working branch: `claude/drivers-license-theory-s8svd6` (tracks
-  `origin/claude/drivers-license-theory-s8svd6`). `main` is the pristine original import
-  (commit `d4ba57a`, "init") — don't touch it directly. (An earlier branch name,
-  `claude/verify-file-essentials-9ny1ep`, appeared in this file from an earlier session; it's
-  stale — the branch above is the one actually in use.)
+- **Working branch: `main`.** Work directly on `main` and push there — per explicit user
+  instruction (2026-08-22), this is no longer a feature-branch workflow. `main` is the
+  repo's default branch on GitHub (confirmed via `git ls-remote --symref origin HEAD`).
+- History note: `main` started as a pristine import (commit `d4ba57a`, "init"), then absorbed
+  the fixes originally made on a feature branch (`ae0d9f4`..`a3b3aed`), then absorbed
+  `study_notes/index.html` (`acf99f3`..`0fc8113`) via a fast-forward merge from
+  `claude/drivers-license-theory-s8svd6`. That branch (and an earlier stale name,
+  `claude/verify-file-essentials-9ny1ep`, both referenced in older versions of this file) can
+  be deleted on GitHub — everything they had is already on `main`.
 - Commit messages describe the actual content fix, not "update file".
 - **Large-file workflow**: several files here are 400–6000 lines. When fixing one:
   1. Delegate research/fact-checking and the actual edit to a background `general-purpose`
