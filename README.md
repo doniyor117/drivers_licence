@@ -1,5 +1,7 @@
 # Haydovchilik guvohnomasi (B toifa) — nazariy tayyorgarlik materiallari
 
+![home_page_screenshot](assets/home_page.png)
+
 Ushbu repozitoriy O'zbekiston Respublikasida "B" toifa haydovchilik guvohnomasini olish uchun
 nazariy kursning o'quv materiallarini o'z ichiga oladi. Har bir fayl kursning bitta yo'nalishiga
 mos keladi va o'z navbatida bir nechta mavzuga bo'lingan (fayl ichida `Mavzu:` sarlavhasi va
