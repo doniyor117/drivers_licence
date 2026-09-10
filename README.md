@@ -1,5 +1,7 @@
 # Haydovchilik guvohnomasi (B toifa) — nazariy tayyorgarlik materiallari
 
+> Jonli [shu yerda](https://driverslicence.notion.site)
+
 ![home_page_screenshot](assets/home_page.png)
 
 Ushbu repozitoriy O'zbekiston Respublikasida "B" toifa haydovchilik guvohnomasini olish uchun
